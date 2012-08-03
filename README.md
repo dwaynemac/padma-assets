@@ -18,7 +18,13 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+In your application.css add:
+
+    *= require padma-assets
+
+In your application.js add:
+
+    //= require padma-assets
 
 ## Contributing
 
