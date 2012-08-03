@@ -1,0 +1,22 @@
+[data-icon]:before {
+  font-weight: normal;
+  font-family: 'Pictos Custom';
+  content: attr(data-icon);
+  -webkit-font-smoothing: antialiased;
+}
+
+.pictos {
+  font-weight: normal;
+  font-family: 'Pictos Custom';
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+ * Usage in HTML
+ *
+ *  <span data-icon='d'></span> -> icon
+ *  <a href=".." data-icon='d'>delete</a> -> icon + 'delete'
+ *
+ * In ERB use pictos_icon() helper defined in ApplicationHelper
+ *
+ */
