@@ -1,0 +1,42 @@
+/* Left Bar Styles */
+
+#schools_leftbar {
+	width:140px;
+	float:left;
+	margin: 20px 10px;
+}
+
+#schools_leftbar>.container {
+	width:auto;
+	overflow:hidden;
+	margin-bottom:20px;
+}
+
+/* Main Article Styles */
+
+#schools_article {
+	width:540px;
+	float:left;
+	margin: 20px 10px;
+}
+
+#schools_article>.container {
+	width:auto;
+	overflow:hidden;
+	margin-bottom:20px;
+}
+
+/* Right Bar Styles */
+
+#schools_rightbar {
+	width:220px;
+	float:left;
+	margin: 20px 10px;
+
+}
+
+#schools_rightbar>.container {
+	width:auto;
+	overflow:hidden;
+	margin-bottom:20px;
+}
