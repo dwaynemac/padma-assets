@@ -1,0 +1,33 @@
+body {
+	font-family: Verdana, Geneva, sans-serif;
+	color:#4D4D4D;
+}
+
+/* Page Container Styles */
+
+.pageContainer {
+	width:960px;
+	margin:0px auto;
+	overflow:auto;
+}
+
+/* Header Styles */
+
+.header {
+	width:auto;
+	height:70px;
+}
+
+/* Main Body Styles */
+
+.main {
+	/*test*/
+	overflow:auto;
+}
+
+/* Footer Styles */
+
+.footer {
+	width:960px;
+	height:20px;
+}

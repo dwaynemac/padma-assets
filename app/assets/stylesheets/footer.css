@@ -1,0 +1,97 @@
+#pageFooter {
+	position:relative;
+	width:93%;
+	height:18px;
+	/* background:url('footer_BG.gif'); TODO image not available */
+	border:solid 1px #CCC;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#pFComm {
+	position:absolute;
+	width:22%;
+	height:100%;
+}
+
+#pFComm a {
+	display:block;
+	width:16px;
+	height:16px;
+	float:left;
+	margin:1px 10px;
+}
+
+#pFMail {
+	background:url('icon_sprite_grid_16px.png') 0px 0px;
+}
+
+/* TODO: ICON Hover States*/
+
+a#pFMail:hover { 
+	background:url('icon_sprite_grid_16px.png') 0px 0px;
+}
+
+#pFMessages {
+	background:url('icon_sprite_grid_16px.png') -16px 0px;
+}
+
+#pFNotif {
+	background:url('icon_sprite_grid_16px.png') -160px -64px;
+}
+
+#pFToDo {
+	background:url('icon_sprite_grid_16px.png') -176px -64px;
+}
+
+#pFChat {
+	width:22%;
+	height:100%;
+	position:absolute;
+	right:0px;
+	border-left: 1px solid #CCC;
+	overflow: hidden;
+}
+
+#pFChat p {
+	font: 75% Arial, Helvetica, sans-serif;
+	margin: 3px 2px;
+	float:left;
+/*	color:#09F; */
+	color:#0071BC;
+}
+
+#pFUserImg {
+	width:16px;
+	height:16px;
+	margin: 1px 2px;
+	background:url('icon_sprite_grid_16px.png') -96px 0px;
+	float:left;
+}
+
+#pFComm .badge {
+	display:block;
+	position: relative;
+	font-family:monospace;
+	font-size:11px;
+	font-weight:bold;
+	color:#FFF;
+}
+
+#pFComm .badge.d1 {
+	left:8px;
+	top:-8px;
+	width:11px;
+	height:15px;
+	padding:1px 0px 0px 5px;
+	background:url('icon_notiBadge_D1.png') -160px 0px;
+}
+
+#pFComm .badge.d2 {
+	left:5px;
+	top:-8px;
+	width:17px;
+	height:15px;
+	padding:1px 0px 0px 4px;
+	background:url('icon_notiBadge_D2.png') -0px 0px;	
+}

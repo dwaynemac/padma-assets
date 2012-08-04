@@ -1,0 +1,42 @@
+/* Left Bar Styles */
+
+#users_leftBar {
+	width:140px;
+	float:left;
+	margin: 20px 10px;
+}
+
+#users_leftBar>.container {
+	width:auto;
+	overflow:hidden;
+	margin-bottom:20px;
+}
+
+/* Main Article Styles */
+
+#users_article {
+	width:540px;
+	float:left;
+	margin: 20px 10px;
+}
+
+#users_article>.container {
+	width:auto;
+	overflow:hidden;
+	margin-bottom:20px;
+}
+
+/* Right Bar Styles */
+
+#users_rightBar {
+	width:220px;
+	float:left;
+	margin: 20px 10px;
+
+}
+
+#users_rightBar>.container {
+	width:auto;
+	overflow:hidden;
+	margin-bottom:20px;
+}

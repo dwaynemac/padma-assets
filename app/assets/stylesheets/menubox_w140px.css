@@ -1,0 +1,126 @@
+#menuBox {
+	width:auto;
+	border:solid 1px #CCC;
+}
+
+/* Menu Items Style */
+
+#LB_menu {
+	margin:0px;
+	padding:0px;
+	width:100%;
+	list-style:none;
+}
+
+#LB_menu li{
+	border-bottom:1px solid #CFCFCF;
+	background:url('menubox_body_background_01.png') repeat-x; /* TODO: CSS3 Background */
+	background-color:#E5E5E5;
+} /* a:1 b:0 c:1 = 101 */
+
+#LB_menu li:last-child {
+	border:none;
+}
+
+#LB_menu a {
+	display:block;
+	height:30px;
+ 	margin-left:0px;
+	padding: 0px 0px 0px 0px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight: bold;
+	color:#4D4D4D;
+
+} /* Target Priority a:1 b:0 c:1 = 101 */
+
+#LB_menu a  span:first-child {
+/*	float:left; */
+	display:inline-block;
+	width:16px;
+	height:16px;
+	margin-left:5px;
+	margin-top:7px;
+	background:url('icon_sprite_grid_16px.png') -128px -16px no-repeat;
+}
+
+#LB_menu a  span:last-child {
+/*	float:left; */
+	display:inline-block;
+	line-height:12px;
+	margin:0px;
+	vertical-align: top;
+	margin-left:5px;
+	margin-top:9px;
+}
+
+#LB_menu a:hover span:first-child {
+	color:#09F;
+	background:url('icon_sprite_grid_16px.png') -128px -32px no-repeat;
+}
+
+#LB_menu a:active span:first-child {
+	background:url('icon_sprite_grid_16px.png') -128px -48px no-repeat;
+}
+
+#LB_menu a:hover span:last-child {
+	color:#09F;
+}
+
+#LB_menu a:active span:last-child {
+	color:#0071BC;
+}
+
+
+
+/* Sub Menu Items Styles */
+#LB_menu ul {
+	display:none;
+}
+
+#LB_menu ul li {
+	border-bottom:1px solid #CFCFCF;
+	border:none;
+	background:url('menubox_body_background_02.png') repeat-x;
+	background-color:#C0C0C0;
+} /* a:1 b:0 c:2 = 102 */
+
+#LB_menu ul a{
+	font-weight: normal;
+	display:block;
+	height:10px;
+ 	margin-left:5px;
+	padding: 10px 0px 10px 22px;
+	background:none;
+}
+
+#LB_menu ul a:hover{
+	color:#09F;
+	background:none;
+}
+
+/* Dinamic Classes */
+
+#LB_menu .selected a span:first-child {
+	background:url('icon_sprite_grid_16px.png') -144px -32px no-repeat;
+} /* Target Priority a:1 b:1 c:1 = 111 */
+
+#LB_menu a.selected:hover span:first-child {
+	color:#0071BC;
+	background:url('icon_sprite_grid_16px.png') -144px -32px no-repeat;
+}
+
+#LB_menu .selected a span:last-child {
+	color:#09F;
+} /* Target Priority a:1 b:1 c:1 = 111 */
+
+#LB_menu .selected ul {
+	display: block;
+}
+
+#LB_menu .selected ul a{
+	background:none;
+}
+
+
+
