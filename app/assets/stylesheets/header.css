@@ -122,9 +122,10 @@ input[class="submit_search"] {
 	display:block;
 	margin:auto;
 	margin-top:4px;
-	width:30px;
+    margin-left: 35%;
+	width:100%;
 	height:30px;
-	background:url('logo_30px.png');
+	background:url('logo_30px.png') no-repeat;
 }
 
 /* Menu Box Styles */
