@@ -25,11 +25,16 @@ $dark_red: red;
     @include button-background-color(#FFF, $light_grey);
     vertical-align: middle;
     cursor: pointer;
-    &:hover {
+    &:hover:enabled {
       @include button-background-color($light_grey, $dark_grey);
     }
-    &:active {
+    &:active:enabled {
       @include button-background-color($dark_grey, $light_grey);
+    }
+    &:disabled {
+      span:last-child {
+        color: rgb(204, 204, 204);
+      }
     }
   }
 
