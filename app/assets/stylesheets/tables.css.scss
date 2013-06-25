@@ -61,7 +61,12 @@ table.padma-table {
   }
 
   input[type="checkbox"] {
-    margin:0px;
+    margin-left: -7px;
+  }
+
+  .delete {
+    margin-left: -4px;
+    margin-right: 3px;
   }
 
   th .current {
