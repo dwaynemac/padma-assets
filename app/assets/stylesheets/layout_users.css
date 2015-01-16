@@ -1,21 +1,7 @@
-/* Left Bar Styles */
-
-#users_leftBar {
-	width:140px;
-	float:left;
-	margin: 20px 10px;
-}
-
-#users_leftBar>.container {
-	width:auto;
-	overflow:hidden;
-	margin-bottom:20px;
-}
-
 /* Main Article Styles */
 
 #users_article {
-	width:540px;
+	width:700px;
 	float:left;
 	margin: 20px 10px;
 }
