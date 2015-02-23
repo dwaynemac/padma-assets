@@ -154,11 +154,8 @@ input[class="submit_search"] {
 #H_menu li a {
 	display:block;
 	width:104px;
-	height:26px;
-	padding-top:12px;
-	text-align: center;
-    background:none;
-    text-decoration:none;
+	line-height:38px;
+	text-align: center;    text-decoration:none;
 	color: #4D4D4D;
     font-family:Arial, Helvetica, sans-serif;
 	font-size:14px;
@@ -182,10 +179,7 @@ input[class="submit_search"] {
 }
 
 #H_search {
-	position:relative;
-	top:6px;
-	left:10px;
-	padding:0px;
+	padding:6px 0 0;
 	width:229px;
 }
 
