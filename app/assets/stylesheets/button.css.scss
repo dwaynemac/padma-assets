@@ -260,6 +260,7 @@ $dark_red: red;
 
 // Make a button look and behave like a link
 .button-link {
+  background-color: transparent;
   box-shadow: none;
   color: #337ab7;
   font-weight: normal;
