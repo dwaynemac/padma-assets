@@ -1,0 +1,32 @@
+	<li class="dtitle">Contactos</li>
+    <li><%= link_to t('contacts.smart_lists.all_contacts'), contacts_url %></li>
+    <%- PadmaContact::VALID_STATUSES.each do |st| -%>
+      <li>
+        <%= link_to t("contact.attributes.valid_statuses.#{st}").pluralize, eval("#{st.pluralize}_path") %>
+      </li>
+    <%- end -%>
+    <li><%= link_to t('contacts.smart_lists.this_month_birthdays'), contacts_url(contact_search: {
+        date_attribute: {
+            category: 'birthday',
+            month: Time.zone.today.month
+        },
+        chosen_columns: %W(full_name birthday)
+    }) %></li>
+    
+    <li class="dtitle">Administrativo</li>
+   
+    <li><%= link_to t('contacts.smart_lists.enrollments'), enrollments_url %></li>
+    <li><%= link_to t('contacts.smart_lists.dropouts'), drop_outs_url %></li>
+    
+  <li class="dtitle">Comunicaciones</li>
+    <li><%= link_to t('contacts.smart_lists.communications'), communications_url %></li>
+    <li><%= link_to t('contacts.smart_lists.visits'), interviews_communications_url %></li>
+    <li><%= link_to t('contacts.smart_lists.phonecalls'), phone_calls_communications_url %></li>
+    <li><%= link_to t('contacts.smart_lists.emails'), emails_communications_url %></li>
+    <li><%= link_to t('contacts.smart_lists.web'), web_communications_url %></li>
+    
+ <li class="dtitle">Actividades</li>
+    <li><%= link_to t('contacts.smart_lists.comments'), comments_url %></li>
+    <% Comment::COMMENT_TYPES.each do |t| -%>
+      <li><%= link_to t("contacts.smart_lists.comments_#{t}"), comments_url(comment_search: {comment_types: [t]}) %></li>
+    <% end -%>

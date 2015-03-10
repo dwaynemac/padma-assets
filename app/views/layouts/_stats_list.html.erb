@@ -1,0 +1,22 @@
+	<li>
+      <%= link_to t("layouts.stats_list.pdg_report"),
+                  "#{APP_CONFIG['overmind-url']}/schools/#{current_user.current_account.name}/reports/pedagogic/#{Date.today.year}/#{Date.today.month}",
+                  target: '_blank' %>
+    </li>
+    <li>
+      <%= link_to t("layouts.stats_list.overmind"),
+                  "#{APP_CONFIG['overmind-url']}/schools/pa/#{current_user.current_account.name}",
+                  target: '_blank' %>
+    </li>
+    <li>
+      <%= link_to t('layouts.stats_list.marketing_methods_rankings'),
+                  marketing_methods_url %>
+    </li>
+    <li>
+      <%= link_to t('layouts.attendance_menu.stats'),
+                  "#{APP_CONFIG['attendance-url']}/stats",
+                  target: '_blank' %>
+    </li>
+    <li>
+      <%= link_to "Statistica Office", new_statistica_url %>
+    </li>
