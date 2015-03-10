@@ -88,9 +88,8 @@
 #LB_menu ul a{
 	font-weight: normal;
 	display:block;
-	height:10px;
- 	margin-left:5px;
-	padding: 10px 0px 10px 22px;
+	line-height: 30px;
+	padding-left: 27px;
 	background:none;
 }
 
