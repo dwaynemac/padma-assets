@@ -14,5 +14,5 @@ Gem::Specification.new do |gem|
   gem.name          = "padma-assets"
   gem.require_paths = ["lib"]
   gem.version       = Padma::Assets::VERSION
-	gem.add_dependency "railties", "~> 3.1"
+  gem.add_dependency "railties", ">= 3.1"
 end
