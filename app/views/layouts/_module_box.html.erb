@@ -41,7 +41,7 @@
       </ul>
       
       <ul class="nav navbar-nav navbar-right">
-      <li><%= link_to t('layouts.header.menu.new_contact'), new_contact_path, class: 'tipsyS', 'original-title' => t('add_new_contact') %></li> 
+      <li><%= link_to t('layouts.header.menu.new_contact'), "#{APP_CONFIG['crm-url']}/contacts/new", class: 'tipsyS', 'original-title' => t('add_new_contact') %></li> 
       <li> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"  id="username">luis.perichon <span class="caret"></span></a>         
       <ul class="dropdown-menu" role="menu">
       <li><a href="#">Perfil de usuario</a></li>

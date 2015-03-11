@@ -6,7 +6,7 @@
 <div class="wrapper">  
 <h2>Dashboard</h2>
 
-    <%= form_tag contacts_path, {:id => "H_searchForm", :method => :get} do -%>
+    <%= form_tag "#{APP_CONFIG['crm-url']}/contacts", {:id => "H_searchForm", :method => :get} do -%>
        <select>
   <option value="todas">Todas</option>
   <option value="todas2">Todas 2</option>

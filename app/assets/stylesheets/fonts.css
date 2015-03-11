@@ -1,0 +1,19 @@
+
+/* fonts */
+
+@font-face {
+  font-family: 'Gotham-Medium';
+  src: url('/assets/Gotham-Medium.eot?#iefix') format('embedded-opentype'),  url('/assets/Gotham-Medium.otf')  format('opentype'),
+	     url('./assets/Gotham-Medium.woff') format('woff'), url('/assets/Gotham-Medium.ttf')  format('truetype'), url('/assets/Gotham-Medium.svg#Gotham-Medium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Gotham-Bold';
+  src: url('/assets/Gotham-Bold.eot?#iefix') format('embedded-opentype'),  url('/assets/Gotham-Bold.otf')  format('opentype'),
+	     url('/assets/Gotham-Bold.woff') format('woff'), url('/assets/Gotham-Bold.ttf')  format('truetype'), url('/assets/Gotham-Bold.svg#Gotham-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
