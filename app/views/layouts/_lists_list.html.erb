@@ -1,32 +1,28 @@
 	<li class="dtitle">Contactos</li>
-    <li><%= link_to t('contacts.smart_lists.all_contacts'), contacts_url %></li>
-    <%- PadmaContact::VALID_STATUSES.each do |st| -%>
+  <li><%= link_to t('contacts.smart_lists.all_contacts'), "#{APP_CONFIG['crm-url']}/contacts" %></li>
+    <%- %W(students former_students prospects).each do |st| -%>
       <li>
-        <%= link_to t("contact.attributes.valid_statuses.#{st}").pluralize, eval("#{st.pluralize}_path") %>
+        <%= link_to t("contact.attributes.valid_statuses.#{st}").pluralize, "#{APP_CONFIG['crm-url']}/contacts/#{st}"  %>
       </li>
     <%- end -%>
-    <li><%= link_to t('contacts.smart_lists.this_month_birthdays'), contacts_url(contact_search: {
-        date_attribute: {
-            category: 'birthday',
-            month: Time.zone.today.month
-        },
-        chosen_columns: %W(full_name birthday)
-    }) %></li>
+    <li>
+      <%= link_to t('contacts.smart_lists.this_month_birthdays'), "#{APP_CONFIG['crm-url']}/contacts?contact_search%5Bchosen_columns%5D%5B%5D=full_name&contact_search%5Bchosen_columns%5D%5B%5D=birthday&contact_search%5Bdate_attribute%5D%5Bcategory%5D=birthday&contact_search%5Bdate_attribute%5D%5Bmonth%5D=3") %>
+    </li>
     
     <li class="dtitle">Administrativo</li>
    
-    <li><%= link_to t('contacts.smart_lists.enrollments'), enrollments_url %></li>
-    <li><%= link_to t('contacts.smart_lists.dropouts'), drop_outs_url %></li>
+    <li><%= link_to t('contacts.smart_lists.enrollments'), "#{APP_CONFIG['crm-url']}/enrollments" %></li>
+    <li><%= link_to t('contacts.smart_lists.dropouts'), "#{APP_CONFIG['crm-url']}/drop_outs" %></li>
     
   <li class="dtitle">Comunicaciones</li>
-    <li><%= link_to t('contacts.smart_lists.communications'), communications_url %></li>
-    <li><%= link_to t('contacts.smart_lists.visits'), interviews_communications_url %></li>
-    <li><%= link_to t('contacts.smart_lists.phonecalls'), phone_calls_communications_url %></li>
-    <li><%= link_to t('contacts.smart_lists.emails'), emails_communications_url %></li>
-    <li><%= link_to t('contacts.smart_lists.web'), web_communications_url %></li>
+    <li><%= link_to t('contacts.smart_lists.communications'), "#{APP_CONFIG['crm-url']}/communications" %></li>
+    <li><%= link_to t('contacts.smart_lists.visits'), "#{APP_CONFIG['crm-url']}/communications/interviews" %></li>
+    <li><%= link_to t('contacts.smart_lists.phonecalls'), "#{APP_CONFIG['crm-url']}/communications/phone_calls" %></li>
+    <li><%= link_to t('contacts.smart_lists.emails'), "#{APP_CONFIG['crm-url']}/communications/emails" %></li>
+    <li><%= link_to t('contacts.smart_lists.web'), "#{APP_CONFIG['crm-url']}/communications/web" %></li>
     
  <li class="dtitle">Actividades</li>
-    <li><%= link_to t('contacts.smart_lists.comments'), comments_url %></li>
-    <% Comment::COMMENT_TYPES.each do |t| -%>
-      <li><%= link_to t("contacts.smart_lists.comments_#{t}"), comments_url(comment_search: {comment_types: [t]}) %></li>
+    <li><%= link_to t('contacts.smart_lists.comments'), "#{APP_CONFIG['crm-url']}/comments" %></li>
+    <% %W(FollowUp Gestion Revisacion Reunion).each do |t| -%>
+      <li><%= link_to t("contacts.smart_lists.comments_#{t}"), "#{APP_CONFIG['crm-url']}/comments?comment_search%5Bcomment_types%5D%5B%5D=#{t}" %></li>
     <% end -%>
