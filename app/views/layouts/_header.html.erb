@@ -3,7 +3,8 @@
     <%= render 'layouts/module_box' %>
     <nav class="subnav" data-priority="secondary" >
       <div class="wrapper">  
-        <h2><%= 'Que pasa si acá pongo algo super largo' %></h2>
+        <h2><%= @breadcrum || '_' %></h2>
+        
         <%= form_tag "#{APP_CONFIG['crm-url']}/contacts", {:id => "H_searchForm", :method => :get} do -%>
           <select name="scope">
             <option value="local"><%= t('header-menu.search.locally') %></option>
