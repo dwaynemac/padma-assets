@@ -1,12 +1,16 @@
     <li>
-      <%= link_to t('layouts.mailing_menu.templates'),
+      <%= link_to t('header-menu.mailing.templates'),
                   "#{APP_CONFIG['mailing-url']}/templates" %>
     </li>
     <li>
-      <%= link_to t('layouts.mailing_menu.triggers'),
+      <%= link_to t('header-menu.mailing.triggers'),
                   "#{APP_CONFIG['mailing-url']}/triggers" %>
     </li>
     <li>
-      <%= link_to t('layouts.mailing_menu.scheduled_mails'),
+      <%= link_to t('header-menu.mailing.scheduled_mails_all'),
+                  "#{APP_CONFIG['mailing-url']}/scheduled_mails" %>
+    </li>
+    <li>
+      <%= link_to t('header-menu.mailing.scheduled_mails_future'),
                   "#{APP_CONFIG['mailing-url']}/scheduled_mails" %>
     </li>
