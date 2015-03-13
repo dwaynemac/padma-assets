@@ -9,19 +9,19 @@
       <%= link_to t('contacts.smart_lists.this_month_birthdays'), "#{APP_CONFIG['crm-url']}/contacts?contact_search%5Bchosen_columns%5D%5B%5D=full_name&contact_search%5Bchosen_columns%5D%5B%5D=birthday&contact_search%5Bdate_attribute%5D%5Bcategory%5D=birthday&contact_search%5Bdate_attribute%5D%5Bmonth%5D=3" %>
     </li>
     
-    <li lass="dropdown-header">Administrativo</li>
+    <li lcass="dropdown-header">Administrativo</li>
    
     <li><%= link_to t('contacts.smart_lists.enrollments'), "#{APP_CONFIG['crm-url']}/enrollments" %></li>
     <li><%= link_to t('contacts.smart_lists.dropouts'), "#{APP_CONFIG['crm-url']}/drop_outs" %></li>
     
-  <li lass="dropdown-header">Comunicaciones</li>
+  <li class="dropdown-header">Comunicaciones</li>
     <li><%= link_to t('contacts.smart_lists.communications'), "#{APP_CONFIG['crm-url']}/communications" %></li>
     <li><%= link_to t('contacts.smart_lists.visits'), "#{APP_CONFIG['crm-url']}/communications/interviews" %></li>
     <li><%= link_to t('contacts.smart_lists.phonecalls'), "#{APP_CONFIG['crm-url']}/communications/phone_calls" %></li>
     <li><%= link_to t('contacts.smart_lists.emails'), "#{APP_CONFIG['crm-url']}/communications/emails" %></li>
     <li><%= link_to t('contacts.smart_lists.web'), "#{APP_CONFIG['crm-url']}/communications/web" %></li>
     
- <li lass="dropdown-header">Actividades</li>
+ <li class="dropdown-header">Actividades</li>
     <li><%= link_to t('contacts.smart_lists.comments'), "#{APP_CONFIG['crm-url']}/comments" %></li>
     <% %W(FollowUp Gestion Revisacion Reunion).each do |t| -%>
       <li><%= link_to t("contacts.smart_lists.comments_#{t}"), "#{APP_CONFIG['crm-url']}/comments?comment_search%5Bcomment_types%5D%5B%5D=#{t}" %></li>
