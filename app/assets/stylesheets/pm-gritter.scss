@@ -1,0 +1,12 @@
+// Gritter with bootstrap.
+.gritter-item-wrapper {
+	&.alert {
+		border: none;
+		border-radius: 0;
+		padding: 0;
+	}
+	> .alert {
+		border-radius: 0;
+		margin: 0;
+	}
+}
