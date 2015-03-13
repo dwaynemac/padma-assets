@@ -1,17 +1,17 @@
 	<li>
-      <%= link_to t("layouts.stats_list.pdg_report"),
+      <%= link_to t("header-menu.stats.pdg_report"),
                   "#{APP_CONFIG['overmind-url']}/schools/#{current_user.current_account.name}/reports/pedagogic/#{Date.today.year}/#{Date.today.month}" %>
     </li>
     <li>
-      <%= link_to t("layouts.stats_list.overmind"),
+      <%= link_to t("header-menu.stats.overmind"),
                   "#{APP_CONFIG['overmind-url']}/schools/pa/#{current_user.current_account.name}" %>
     </li>
     <li>
-      <%= link_to t('layouts.stats_list.marketing_methods_rankings'),
+      <%= link_to t('header-menu.stats.marketing_methods_rankings'),
                   "#{APP_CONFIG['crm-url']}/marketing_methods" %>
     </li>
     <li>
-      <%= link_to t('layouts.attendance_menu.stats'),
+      <%= link_to t('header-menu.attendance.stats'),
                   "#{APP_CONFIG['attendance-url']}/stats" %>
     </li>
     <li>

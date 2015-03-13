@@ -1,67 +1,52 @@
 <nav class="navbar navbar-inverse navbar-static-top">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a id="H_logo" class="navbar-brand" href="/me"> </a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-             <li> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Listas <span class="caret"></span></a>
-          
- 
-  <ul class="dropdown-menu" role="menu">
-           <%= render 'layouts/lists_list' %>
-  </ul>
-            </li>
-            
-            
-            <li> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Estad&iacute;sticas <span class="caret"></span></a>
-            <ul class="dropdown-menu" role="menu">
-<%= render 'layouts/stats_list' %>
-  </ul>
-            </li>
-            <li> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Mailing <span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu">
-           <%= render 'layouts/mailing_menu' %>
-              </ul>
-            </li>
-            <li> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Clases <span class="caret"></span></a>
-            <ul class="dropdown-menu" role="menu">
-           <%= render 'layouts/attendance_menu' %>
-            </ul>
-            </li>
-            
-            <li> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">M&oacute;dulos <span class="caret"></span></a>
-           <ul class="dropdown-menu" role="menu"> <li><a href="#">Financiero</a></li> <li><a href="#">M&oacute;dulo</a></li></ul>
-            </li>         
-      </ul>
-      
-      <ul class="nav navbar-nav navbar-right">
-      <li><%= link_to t('layouts.header.menu.new_contact'), "#{APP_CONFIG['crm-url']}/contacts/new", class: 'tipsyS', 'original-title' => t('add_new_contact') %></li> 
-      <li> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"  id="username">luis.perichon <span class="caret"></span></a>         
-      <ul class="dropdown-menu" role="menu">
-      <li><a href="#">Perfil de usuario</a></li>
-      <li><a href="#">Escuela</a></li>
-      <li><a href="#">Clases</a></li>
-      <li><a href="#">Pagos</a></li>
-      <li><a href="#">Pendientes</a></li>
-      <li><a href="#">Hist&oacute;rico</a></li>
-      <li><a href="<%= logout_url %>">SIGN OUT</a></li></ul>
-            </li>
-
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a id="H_logo" class="navbar-brand" href="<%= APP_CONFIG['crm-url'] %>"> </a>
+  </div>
+  <div id="navbar" class="collapse navbar-collapse">
+    <ul class="nav navbar-nav">
+      <li>
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><%= t('header-menu.lists.title') %> <span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+                 <%= render 'layouts/lists_list' %>
+        </ul>
       </li>
+      <li> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><%= t('header-menu.stats.title') %> <span class="caret"></span></a>
+      <ul class="dropdown-menu" role="menu">
+        <%= render 'layouts/stats_list' %>
       </ul>
+      </li>
+      <li> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><%= t('header-menu.mailing.title') %> <span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+          <%= render 'layouts/mailing_menu' %>
+        </ul>
+      </li>
+      <li> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><%= t('header-menu.attendance.title') %> <span class="caret"></span></a>
+      <ul class="dropdown-menu" role="menu">
+        <%= render 'layouts/attendance_menu' %>
+      </ul>
+      </li>
       
-        </div><!--/.nav-collapse -->
-    </nav>
-   
-   
-   
-   
-
-
-   
+      <li> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><%= t('header-menu.modules.title') %> <span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu"> <li><a href="#"><%= t('header-menu.modules.fnz') %></a></li></ul>
+      </li>         
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><%= link_to t('header-menu.new_contact'), "#{APP_CONFIG['crm-url']}/contacts/new", class: 'tipsyS' %></li> 
+      <li> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"  id="username"><%= current_user.username %> <span class="caret"></span></a>         
+        <ul class="dropdown-menu" role="menu">
+        <li><%= link_to t('header-menu.user_menu.user_profile'), APP_CONFIG['accounts-url'] %></li>
+        <% if current_user.current_account.name -%>
+          <li><%= link_to t('header-menu.user_menu.school_profile'), "#{APP_CONFIG['accounts-url']}/accounts/#{current_user.current_account.name}" %></li>
+        <% end -%>
+        <li><%= link_to t('header-menu.user_menu.billing'), "#{APP_CONFIG['accounts-url']}/accounts/#{current_user.current_account.name}/invoices/pending" %></li>
+        <li><%= link_to t('header-menu.user_menu.logout'), logout_url %></li></ul>
+      </li>
+    </ul>
+  </div><!--/.nav-collapse -->
+</nav>
