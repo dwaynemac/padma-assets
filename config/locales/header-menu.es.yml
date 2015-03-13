@@ -54,3 +54,6 @@ es:
       pdg_report: Resumen mensual
       overmind: Histórico anual (todos los índices)
       marketing_methods_rankings: Métodos de Marketing
+    search:
+      locally: Buscar en mi escuela
+      globally: Buscar en toda la red
