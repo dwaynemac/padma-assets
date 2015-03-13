@@ -1,35 +1,19 @@
 <header class="header">
   <div id="H_moduleArea">
-     <%= render 'layouts/module_box' %>
-     
-       <nav class="subnav" data-priority="secondary" >
-<div class="wrapper">  
-<h2>Dashboard</h2>
-
-    <%= form_tag "#{APP_CONFIG['crm-url']}/contacts", {:id => "H_searchForm", :method => :get} do -%>
-       <select>
-  <option value="todas">Todas</option>
-  <option value="todas2">Todas 2</option>
-  <option value="todas3">Todas 3</option>
-</select> 
-      <%= hidden_field_tag :scope, :local, :id => "full_text_search_scope" %>
-
-
-      <% options = if current_user.verbose_help? 
-          {:id => "sField", :class => "tipsyN", 'north-tipsy' => t('layouts.search_box.field_tooltip')}
-        else
-          {:id => "sField"}
-        end
-      -%>
-      <%= text_field_tag :q, nil, options %>
-
-      <%= submit_tag "&nbsp;".html_safe, :class => "submit_search" -%>
-
-    <%- end -%>
-
- 
-</div>
-</nav>
+    <%= render 'layouts/module_box' %>
+    <nav class="subnav" data-priority="secondary" >
+      <div class="wrapper">  
+        <h2><%= @breadcrum || '_' %></h2>
+        
+        <%= form_tag "#{APP_CONFIG['crm-url']}/contacts", {:id => "H_searchForm", :method => :get} do -%>
+          <select name="scope">
+            <option value="local"><%= t('header-menu.search.locally') %></option>
+            <option value="global"><%= t('header-menu.search.globally') %></option>
+          </select> 
+          <%= text_field_tag :q, nil, iD: 'sField' %>
+          <%= submit_tag "&nbsp;".html_safe, :class => "submit_search" -%>
+        <%- end -%>
+      </div>
+    </nav>
   </div><!-- #H_moduleArea -->
-
 </header> <!-- .header -->

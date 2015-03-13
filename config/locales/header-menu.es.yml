@@ -1,0 +1,59 @@
+# encoding: UTF-8
+es:
+  header-menu:
+    new_contact: Agregar Contacto
+    modules:
+      title: Módulos
+      fnz: Financiero
+    user_menu:
+      user_profile: Mi perfil
+      school_profile: Configuración Unidad
+      billing: Pagos
+      logout: Cerrar sessión
+    lists:
+      title: Listas
+      contacts:
+        title: Contactos
+        all: Todos los contactos
+        student: Alumno
+        former_student: Ex-Alumnos
+        prospect: Prospects
+        current_month_birthdays: Cumpleaños de este mes
+      subscription_changes:
+        title: Administrativo
+        enrollments: Matrículas
+        dropouts: Evasiones
+      communications:
+        title: Comunicaciones
+        all: Todas las comunicaciones
+        visits: Entrevistas
+        phonecalls: Llamadas
+        emails: Emails
+        web: Web
+      comments:
+        title: Actividades
+        all: Todas las actividades
+        FollowUp: Acompañamientos
+        Gestion: Gestiones evolutivas
+        Revisacion: Revisaciones Médicas
+        Reunion: Reuniones con el director
+    attendance:
+      title: Clases
+      attendances: Asistencias
+      time_slots: Horarios de clase
+      trial_lessons: Clases de prueba
+      stats: Reporte de participación
+    mailing:
+      title: Mailing
+      templates: Modelos de mail
+      triggers: Disparadores automáticos
+      scheduled_mails_all: Histórico de mails
+      scheduled_mails_future: Mails programados
+    stats:
+      title: Estadísticas
+      pdg_report: Resumen mensual
+      overmind: Histórico anual (todos los índices)
+      marketing_methods_rankings: Métodos de Marketing
+    search:
+      locally: Buscar en mi escuela
+      globally: Buscar en toda la red
