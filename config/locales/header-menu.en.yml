@@ -1,0 +1,59 @@
+# encoding: UTF-8
+en:
+  header-menu:
+    new_contact: Add contact
+    modules:
+      title: Modules
+      fnz: Finances
+    user_menu:
+      user_profile: My profile
+      school_profile: School configuration
+      billing: Payments
+      logout: Logout
+    lists:
+      title: Lists
+      contacts:
+        title: Contacts
+        all: All contacts
+        students: Students
+        former_students: Former students
+        prospects: Prospects
+        current_month_birthdays: Month Birthdays
+      subscription_changes:
+        title: Ins/Outs
+        enrollments: Enrollments
+        dropouts: Drop outs
+      communications:
+        title: Communications
+        all: All communications
+        visits: Interviews
+        phonecalls: Phonecalls
+        emails: Emails
+        web: Web
+      comments:
+        title: Comments
+        all: All comments
+        FollowUp: Follow ups
+        Gestion: Gestion Evolutiva
+        Revisacion: Medical Check
+        Reunion: Meet with director
+    attendance:
+      title: Lessons
+      attendances: Attendance
+      time_slots: Time Slots
+      trial_lessons: Trial Lessons
+      stats: Attendance report
+    mailing:
+      title: Mailing
+      templates: Templates
+      triggers: Triggers
+      scheduled_mails_all: Scheduled Mails
+      scheduled_mails_future: Future mails
+    stats:
+      title: Statistics
+      pdg_report: Month summary
+      overmind: Anual report (all indexes)
+      marketing_methods_rankings: Marketing Methods
+    search:
+      locally: Search in my school
+      globally: Search all network
