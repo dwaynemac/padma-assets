@@ -15,9 +15,9 @@ es:
       contacts:
         title: Contactos
         all: Todos los contactos
-        student: Alumno
-        former_student: Ex-Alumnos
-        prospect: Prospects
+        students: Alumno
+        former_students: Ex-Alumnos
+        prospects: Prospects
         current_month_birthdays: Cumpleaños de este mes
       subscription_changes:
         title: Administrativo

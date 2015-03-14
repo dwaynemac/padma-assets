@@ -1,6 +1,6 @@
 	<li class="dtitle"><%= t('header-menu.lists.contacts.title') %></li>
   <li><%= link_to t('header-menu.lists.all_contacts'), "#{APP_CONFIG['crm-url']}/contacts" %></li>
-    <%- %W(student former_student prospect).each do |st| -%>
+    <%- %W(students former_students prospects).each do |st| -%>
       <li>
         <%= link_to t("header-menu.lists.contacts.#{st}"), "#{APP_CONFIG['crm-url']}/contacts/#{st}"  %>
       </li>
