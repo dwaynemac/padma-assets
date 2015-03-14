@@ -3,7 +3,7 @@
     <%= render 'layouts/module_box' %>
     <nav class="subnav" data-priority="secondary" >
       <div class="wrapper">  
-        <h2><%= @breadcrum || '_' %></h2>
+        <h2><%= yield(:breadcrum) %></h2>
         
         <%= form_tag "#{APP_CONFIG['crm-url']}/contacts", {:id => "H_searchForm", :method => :get} do -%>
           <select name="scope">
