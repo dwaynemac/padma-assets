@@ -188,6 +188,11 @@ $dark_red: red;
     opacity: .65;
     box-shadow: none;
   }
+  &.button-xs {
+    font-size: 12px;
+    line-height: 1.5;
+    padding: 1px 5px !important;
+  }
 }
 
 
