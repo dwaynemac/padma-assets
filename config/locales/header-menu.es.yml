@@ -14,7 +14,7 @@ es:
       title: Listas
       contacts:
         title: Contactos
-        all: Todos los contactos
+        all_contacts: Todos los contactos
         students: Alumnos
         former_students: Ex-Alumnos
         prospects: Prospects
@@ -54,6 +54,8 @@ es:
       pdg_report: Resumen mensual
       overmind: Histórico anual (todos los índices)
       marketing_methods_rankings: Métodos de Marketing
+      teacher_ranking: Equipo de instructores
+      schools_ranking: Ranking de escuelas
     search:
       locally: Buscar en mi escuela
       globally: Buscar en toda la red

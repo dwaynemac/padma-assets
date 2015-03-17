@@ -7,6 +7,14 @@
                   "#{APP_CONFIG['overmind-url']}/schools/pa/#{current_user.current_account.name}" %>
     </li>
     <li>
+      <%= link_to t("header-menu.stats.teacher_ranking"),
+                  "#{APP_CONFIG['overmind-url']}/schools/#{current_user.current_account.name}/teacher_ranking" %>
+    </li>
+    <li>
+      <%= link_to t("header-menu.stats.schools_ranking"),
+                  "#{APP_CONFIG['overmind-url']}/ranking" %>
+    </li>
+    <li>
       <%= link_to t('header-menu.stats.marketing_methods_rankings'),
                   "#{APP_CONFIG['crm-url']}/marketing_methods" %>
     </li>
