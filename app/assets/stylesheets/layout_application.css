@@ -7,23 +7,23 @@ body {
 /* Page Container Styles */
 
 .pageContainer {
+	height: 100%;
 	margin: 0px auto;
-	overflow:auto;
 }
 
 /* Header Styles */
 
 .header {
-	width:auto;
 	margin:0 auto;
+	width: auto;
 }
 
 /* Main Body Styles */
 
 .main {
 	/*test*/
-	overflow:auto;
-	max-width:960px; margin:0 auto;
+	margin:0 auto;
+	max-width:960px;
 }
 
 /* Footer Styles */
