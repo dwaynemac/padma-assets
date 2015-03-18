@@ -8,7 +8,7 @@ Gem::Specification.new do |gem|
   gem.summary       = %q{Assets to be re-used in PADMA applications}
   gem.homepage      = ""
 
-	gem.files = Dir["{app,lib,vendor}/**/*"]
+	gem.files         = Dir["{app,lib,vendor,config}/**/*"]
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.name          = "padma-assets"
