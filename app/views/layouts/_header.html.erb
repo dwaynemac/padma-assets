@@ -2,19 +2,21 @@
   <div id="H_moduleArea">
     <%= render 'layouts/module_box' %>
     <nav class="subnav" data-priority="secondary" >
-      <div class="wrapper">  
-        <h2><%= yield(:breadcrum) %></h2>
-
-        <%= yield(:header_submenu) %>
-        
-        <%= form_tag "#{APP_CONFIG['crm-url']}/contacts", {:id => "H_searchForm", :method => :get} do -%>
-          <select name="scope">
-            <option value="local"><%= t('header-menu.search.locally') %></option>
-            <option value="global"><%= t('header-menu.search.globally') %></option>
-          </select> 
-          <%= text_field_tag :q, nil, iD: 'sField' %>
-          <%= submit_tag "&nbsp;".html_safe, :class => "submit_search" -%>
-        <%- end -%>
+      <div class='container'>
+        <div class="wrapper">
+          <h2><%= yield(:breadcrum) %></h2>
+          <%= yield(:header_submenu) %>
+          <%= form_tag "#{APP_CONFIG['crm-url']}/contacts", {:id => "H_searchForm", :class => 'search-form',:method => :get} do -%>
+            <div class='aui-button-select'>
+              <select name="scope">
+                <option value="local"><%= t('header-menu.search.locally') %></option>
+                <option value="global"><%= t('header-menu.search.globally') %></option>
+              </select>
+            </div>
+            <%= text_field_tag :q, nil, iD: 'sField' %>
+            <%= submit_tag "Buscar".html_safe, :class => "submit_search button button-primary search-button" -%>
+          <%- end -%>
+        </div>
       </div>
     </nav>
   </div><!-- #H_moduleArea -->

@@ -3,26 +3,16 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 table.padma-table {
   overflow:hidden;
-  border-top-width: 1px;
-  border-top-style: solid;
-  border-top-color: #d3d3d3;
-  border-right-width: 2px;
-  border-right-style: solid;
-  border-right-color: #d3d3d3;
-  border-left-width: 1px;
-  border-left-style: solid;
-  border-left-color: #d3d3d3;
-  border-bottom-width: 2px;
-  border-bottom-style: solid;
-  border-bottom-color: #d3d3d3;
-  width:100%;
-  margin:0 auto 0;
+  border: solid 1px;
+  border-color: #d3d3d3;
+  width: 100%;
+  margin: 0 auto;
   th {
-    height:10px;
-    padding-top:14px;
-    padding-bottom:6px;
-    padding-left:10px;
-    background:#e8eaeb;
+    height: 10px;
+    padding-top: 14px;
+    padding-bottom: 6px;
+    padding-left: 10px;
+    background: #e8eaeb;
     color: #4D4D4D;
     font-family: Arial,Helvetica,sans-serif;
     font-size: 12px;
@@ -31,7 +21,7 @@ table.padma-table {
     vertical-align: top;
     border-right: 1px solid #CFCFCF;
     border-bottom: 1px solid #CFCFCF;
-    text-align:left;
+    text-align: left;
   }
 
   td {
