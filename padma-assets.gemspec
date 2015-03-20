@@ -1,6 +1,4 @@
 # -*- encoding: utf-8 -*-
-require File.expand_path('../lib/padma-assets/version', __FILE__)
-
 Gem::Specification.new do |gem|
   gem.authors       = ["Dwayne Macgowan"]
   gem.email         = ["dwaynemac@gmail.com"]
@@ -13,6 +11,6 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.name          = "padma-assets"
   gem.require_paths = ["lib"]
-  gem.version       = Padma::Assets::VERSION
+  gem.version       = '0.1.7'
   gem.add_dependency "railties", ">= 3.1"
 end

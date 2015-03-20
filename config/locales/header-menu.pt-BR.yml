@@ -15,9 +15,9 @@ pt-BR:
       contacts:
         title: Contatos
         all_contacts: Todos os contatos
-        student: Aluno
-        former_student: Ex-Alunos
-        prospect: Prospects
+        students: Aluno
+        former_students: Ex-Alunos
+        prospects: Prospects
         current_month_birthdays: Aniversários do más corrente
       subscription_changes:
         title: Administrativo
