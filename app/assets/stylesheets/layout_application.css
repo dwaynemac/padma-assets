@@ -8,14 +8,6 @@ body {
 
 .pageContainer {
 	height: 100%;
-	margin: 0px auto;
-}
-
-/* Header Styles */
-
-.header {
-	margin:0 auto;
-	width: auto;
 }
 
 /* Main Body Styles */
@@ -29,6 +21,6 @@ body {
 /* Footer Styles */
 
 .footer {
-	width:960px;
-	height:20px;
+	width: 960px;
+	height: 20px;
 }

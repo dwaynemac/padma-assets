@@ -46,13 +46,6 @@
 	width: 79px;
 }
 
-#H_logo {
-	background: url('logo_30px.png') no-repeat center center;
-	display: block;
-	height: 38px;
-	width: 100%;
-}
-
 /* Scope Select Styles */
 
 #H_scopeSelect {
@@ -163,10 +156,12 @@
 }
 
 /* NEW HEADER */
-#H_logo.navbar-brand {
+.navbar-brand {
 	background: url("logo-padma-w.png") no-repeat scroll center left rgba(0, 0, 0, 0);
+	display: block;
 	height: 47px;
 	margin: 1.5px 10px 0 0;
+	padding: 0;
 	width: 53px;
 }
 
@@ -200,7 +195,6 @@
 	background-color: #1f9dd9;
 	color: #fff;
 	margin-right: 10px;
-	height: 52px;
 	text-shadow: 0 -1px 0 rgba(0,0,0,.1);
 	-webkit-transition: background-color 120ms cubic-bezier(.25,.25,0,1);
 	transition: background-color 120ms cubic-bezier(.25,.25,0,1);
@@ -213,9 +207,22 @@
 /* dropdown header */
 .navbar-nav > li > .dropdown-menu {
 	border: none;
-	max-height: 400px;
-	overflow-x: hidden;
-	overflow-y: auto;
+}
+
+@media (max-height: 1024px) {
+	.navbar-nav > li > .dropdown-menu {
+		max-height: 600px;
+		overflow-x: hidden;
+		overflow-y: auto;
+	}
+}
+
+@media (max-height: 768px) {
+	.navbar-nav > li > .dropdown-menu {
+		max-height: 400px;
+		overflow-x: hidden;
+		overflow-y: auto;
+	}
 }
 
 .navbar-nav > li > .dropdown-menu a {
@@ -234,7 +241,7 @@
 	text-transform: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
 	#navbar .navbar-nav li:hover .dropdown-menu { display: block; }
 }
 
@@ -257,10 +264,16 @@ nav.subnav h2 {
 	font-size: 11px;
 	float: left;
 	line-height: 54px;
-	margin-right: 0 10px 0 0;
+	margin: 0 10px 0 -15px;
 	padding: 0 10px;
 	text-decoration: none;
 	text-transform: uppercase;
+}
+
+@media (max-width: 990px) {
+	nav.subnav h2 {
+		margin-left: 0;
+	}
 }
 
 .subnav .search-form {
@@ -275,7 +288,7 @@ nav.subnav h2 {
 	display: -ms-flexbox;
 	display: flex;
 	float: right;
-	margin: 10px 15px 0;
+	margin: 10px 0;
 }
 
 .search-form input[type="text"],
@@ -353,24 +366,7 @@ nav.subnav  nav > li > a {
 	color:#25669e;
 }
 
-@media (max-width:1200px){
-	#H_logo.navbar-brand {
-		margin-left: 10px;
-	}
-}
-
-@media (max-width:767px){
-	#H_logo.navbar-brand {
-		margin: 10px;
-	}
-
-	.navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
-		color: #fff;
-	}
-}
-
 /* custom bootstrap */
-
 /* dropdown */
 .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:focus,
@@ -398,15 +394,9 @@ nav.subnav  nav > li > a {
 /* navbar */
 .navbar-toggle {
 	border: none;
-	margin: 26.5px 20px 0 0 !important;
 }
 
 .navbar-inverse .navbar-collapse,
 .navbar-inverse .navbar-form {
 	border: none;
-}
-
-.navbar-inverse .navbar-toggle:focus,
-.navbar-inverse .navbar-toggle:hover {
-	background-color: transparent;
 }
