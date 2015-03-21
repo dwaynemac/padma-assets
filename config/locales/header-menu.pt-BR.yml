@@ -40,7 +40,7 @@ pt-BR:
     attendance:
       title: Aulas
       attendances: Presenças
-      time_slots: Horários de aula
+      time_slots: Turmas
       trial_lessons: Aula experimental
       stats: Relatório de participaçāo
     mailing:
