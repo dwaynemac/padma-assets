@@ -15,7 +15,7 @@ pt-BR:
       contacts:
         title: Contatos
         all_contacts: Todos os contatos
-        students: Aluno
+        students: Alunos
         former_students: Ex-Alunos
         prospects: Prospects
         current_month_birthdays: Aniversários do más corrente
@@ -40,7 +40,7 @@ pt-BR:
     attendance:
       title: Aulas
       attendances: Presenças
-      time_slots: Horários de aula
+      time_slots: Turmas
       trial_lessons: Aula experimental
       stats: Relatório de participaçāo
     mailing:
