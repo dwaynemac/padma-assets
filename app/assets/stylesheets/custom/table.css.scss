@@ -1,0 +1,40 @@
+.padmatable {
+	border: 1px solid #d3d3d3;
+	font: {
+		size: 12px;
+	}
+	margin-bottom: 10px;
+	> tbody,
+	> thead,
+	> tfoot {
+		> td,
+		> th {
+			padding: 5px;
+		}
+	}
+	> tbody {
+		> tr {
+			> th {
+				background: #f2f2f2;
+				background: -webkit-linear-gradient(top,#fff,#f2f2f2);
+				background: -moz-linear-gradient(top,#fff,#f2f2f2);
+				background: linear-gradient(top,#fff,#f2f2f2);
+				border: 1px solid #cfcfcf;
+				color: #4d4d4d;
+				font: {
+					weight: bold;
+				}
+				vertical-align: middle;
+			}
+			> td {
+				border-right: 1px solid #cfcfcf;
+				vertical-align: middle;
+			}
+			&:nth-child(odd) {
+				> td {
+					background-color: #f2f2f2;
+				}
+			}
+		}
+	}
+}

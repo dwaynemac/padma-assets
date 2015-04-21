@@ -1,0 +1,150 @@
+.activity-stream-header {
+	padding: 0 10px 10px;
+}
+
+.activity-header {
+	> h4 {
+		color: #fff;
+		font: {
+			size: 12px;
+			weight: bold;
+		}
+		margin: 0;
+		padding-bottom: 5px;
+		padding-top: 5px;
+		text-align: center;
+		text-shadow: 0 -1px 0 rgba(#000,.1);
+	}
+}
+
+.activity-month {
+	display: inline-block;
+	&:first-letter {
+		text-transform: uppercase;
+	}
+}
+
+.feed_entry {
+	list-style-type: none;
+}
+
+// button view more
+#next_page_activities {
+	> .dataArea {
+		float: none;
+		margin: 5px 0;
+		width: 100%;
+	}
+}
+
+#next_page_activities_link {
+	background-color: #fff;
+	border: solid 1px #f5f5f5;
+	border-radius: 3px;
+	color: #666;
+	display: block;
+	font: {
+		size: 13px;
+		weight: normal;
+	}
+	margin-left: 5px;
+	margin-right: 5px;
+	padding: 5px;
+	&:hover {
+		background-color: #f5f5f5;
+		color: black;
+		text-decoration: none;
+	}
+}
+
+.activity-item {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	font: {
+		size: 13px;
+	}
+	padding: 10px;
+	text-align: left;
+	&:nth-child(even) {
+		background-color: #f2f2f2;
+	}
+	.communication-info {
+		.rest_in_place {
+			display: initial;
+		}
+	}
+	.delete,
+	.toggle-activity-extended {
+		opacity: 0;
+		-webkit-transition: opacity .2s ease-in;
+		transition: opacity .2s ease-in;
+		visibility: hidden;
+	}
+	&:hover {
+		.delete,
+		.toggle-activity-extended {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+}
+
+.toggle-activity-extended {
+	background-color: transparent;
+	border: none;
+	display: inline-block;
+	outline: 0;
+}
+
+.activity-icon {
+	margin-right: 10px;
+}
+
+.activity-summary {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	-moz-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+}
+
+.list-metabox {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	&:empty {
+		display: none;
+		visibility: hidden;
+	}
+	> li {
+		color: #4d4d4d;
+		display: inline-block;
+		font: {
+			size: 11px;
+			family: Arial, Helvetica, sans-serif;
+		}
+		width: 19%;
+		.pictos {
+			padding-right: 5px;
+			vertical-align: sub;
+		}
+	}
+}
+
+.activity-item {
+	.rest_in_place {
+		form {
+			position: relative;
+		}
+	}
+}

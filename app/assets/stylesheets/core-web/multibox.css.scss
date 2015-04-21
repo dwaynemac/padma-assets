@@ -1,0 +1,227 @@
+#A_multiBox .navBox .nav li a span/*Content Test Styles */
+table.multibox-prospects-list {
+  width: 100%;
+  margin-left: -25px;
+  text-align: left;
+
+  tr {
+    height: 15px;
+  }
+
+  td.full_name {
+    max-width: 50px;
+  }
+
+  td.coef {
+    width: 35px;
+  }
+
+  td.date {
+    width: 65px;
+  }
+
+  td.observations {
+    width: 270px;
+  }
+
+
+}
+
+#users_rightBar .box{ margin:0 0 20px;}
+
+// Styles
+#A_multiBox {
+  border: solid 1px #ddd;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  .panelBox {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -moz-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-height: 220px;
+    max-width: 545px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+  }
+  .panel {
+    border: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    display: none;
+    height: 100%;
+    left: 0;
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    &.show {
+      display: block;
+    }
+  }
+}
+
+.panelBox {
+  .panel {
+    .content {
+        color: #4d4d4d;
+        font: {
+          size: 10px;
+          weight: bold;
+        }
+        min-height:100%;
+        padding: 10px 25px;
+        position: relative;
+        h4 {
+          color: #4d4d4d;
+          font: {
+            size: 12px;
+            weight: bold;
+          }
+        }
+    }
+  }
+}
+
+.pane-footer {
+  background-color: #fff;
+  bottom: 0;
+  left: 0;
+  padding: 5px 10px;
+  position: absolute;
+  text-align: right;
+  width: 100%;
+  #add_new_task_link {
+    float: left;
+  }
+}
+
+.panelBox {
+  .content {
+    position: relative;
+    .multibox-content-body {
+      padding-bottom: 20px;
+    }
+  }
+}
+
+// nav
+.navBox {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -moz-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  max-width: 125px;
+  > .nav {
+    > li {
+      background: #f1f2f2;
+      background: -moz-linear-gradient(top, #fff, #f1f2f2);
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(1, #f1f2f2));
+      border-left: solid 1px #ddd;
+      height: 44px;
+      line-height: 24px;
+      + li {
+        border-top: solid 1px #ddd;
+      }
+      > a {
+        color: #4D4D4D;
+        font: {
+          size: 12px;
+          weight: bold;
+        }
+        overflow: hidden;
+        padding: 10px;
+        text-overflow: ellipsis;
+        -webkit-transition: color .2s ease;
+        transition: color .2s ease;
+        white-space: nowrap;
+        &:hover,
+        &:focus {
+          background-color: transparent;
+          color: #09f;
+        }
+      }
+      &.selected {
+        background: #fff;
+        border-left-color: #fff;
+        > a {
+          color: #09f;
+        }
+      }
+    }
+  }
+}
+
+// content table
+.multibox-prospects-list,
+.my_tasks_table {
+  &.table {
+    tr:first-child {
+      > th {
+        border-top: none;
+      }
+    }
+  }
+}
+
+.pane-boxtab {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin-bottom: 15px;
+  .tab-content {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    position: relative;
+    > .tab-pane {
+      font: {
+        size: 10px;
+        weight: bold;
+      }
+      height: 100%;
+      left: 0;
+      overflow-x: hidden;
+      overflow-y: auto;
+      padding: 5px 10px;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+  }
+}
+
+.column-tabs {
+  width: 125px;
+}
+
+.tab-pane::-webkit-scrollbar{width:8px!important}
+.tab-pane::-webkit-scrollbar-thumb{background-color:rgba(0,0,0,.2)}
+.tab-pane::-webkit-scrollbar-track{background:rgba(255,255,255,.08)}
+
+#boxlist-users {
+  border: solid 1px #ddd;
+}
+
+#boxlist-users-tabs {
+  width: 125px;
+}
