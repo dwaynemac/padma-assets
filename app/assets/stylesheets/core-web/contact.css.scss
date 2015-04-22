@@ -1,0 +1,297 @@
+// All styles Contacts
+$font-default: Arial, Helvetica, sans-serif;
+
+#contact_form {
+	float: left;
+	h5 {
+		margin-bottom: 5px;
+	}
+	.dependent {
+		display: none;
+	}
+	.form-fieldbox {
+		p {
+			font: {
+				size: 13px;
+			}
+			padding-top: 5px
+		}
+	}
+	header {
+		input[type="text"] {
+			border: none;
+		    color: #4d4d4d;
+		    display: inline-block;
+		    font: {
+		    	family: Verdana, Geneva, sans-serif;
+		    	size: 16px;
+		    	weight: bold;
+		    }
+		    width: 250px;
+		}
+	}
+	fieldset {
+		// remove all styles size
+		> fieldset {
+			background-color: #f8f8f8;
+			border: 1px solid #cfcfcf;
+			float: left;
+			margin: 0 0 7px 0;
+			&:first-child:hover {
+				background-color: transparent;
+			}
+			&.min_label {
+				margin: 0 4px 7px 0;
+				position: relative;
+				width: 345px;
+			}
+			a {
+				&:hover {
+					background: #008df2 url(bt_more-white.png) no-repeat 10px 10px;
+					color: #fff;
+				}
+				&.more-inputs {
+					background: #f8f8f8 url(bt_more-black.png) no-repeat 10px 10px;
+					color:#333;
+					display: block;
+					font: bold 12px/36px $font-default;
+					float: left;
+					height: 36px;
+					outline: none;
+					text-align: center;
+					text-decoration: none;
+					width: 100%;
+				}
+			}
+			a.remove,
+			> div {
+				> a.remove {
+					background:url(bt_less-red.png) no-repeat 10px 10px;
+					color: red;
+				}
+			}
+			> input {
+				&.no_bg {
+					background-color: transparent;
+					border: none;
+				}
+			}
+			> div {
+				&.input-container {
+					background-color: #f8f8f8;
+					border-bottom: 1px solid #cfcfcf;
+					display: none;
+					float: left;
+					min-height: 84px;
+					position: relative;
+					width: 100%;
+					z-index: 1000;
+					&:last-child {
+						border: none;
+						display: none;
+					}
+				}
+				> label {
+					color: #333;
+					font: bold 12px/23px $font-default;
+					float: left;
+					margin-bottom: 7px;
+					padding: 0 9px;
+					position: relative;
+					width: 210px;
+					z-index: 100;
+					&.public {
+						padding-left: 75px;
+						width: auto;
+					}
+					&.primary {
+						width: auto;
+					}
+					&[for="custom_value"] {
+						display: none;
+					}
+				}
+				> li {
+					> label {
+						font: bold 12px/23px $font-default;
+						line-height: 25px;
+						margin: 5px 0px;
+						min-width: 120px;
+						&.label_observation {
+							position: relative;
+							top: 120px;
+						}
+						&.label_communication_date {
+							position: relative;
+							top: 18px;
+						}
+					}
+					> div {
+						font-size: 12px;
+						float: right;
+						> select {
+							font: normal 12px/22px $font-default;
+						}
+						&.communicated_at_form {
+							width: 210px;
+						}
+					}
+					> input,
+					> select {
+						border: 1px solid #cfcfcf;
+						font: normal 12px/22px $font-default;
+						height:23px;
+						float: right;
+						padding: 0;
+						position: relative;
+						vertical-align: middle;
+						width:177px;
+						z-index: 100;
+						> option {
+							border: none;
+							padding: 0;
+						}
+					}
+					> input {
+						height: 21px;
+						padding: 0 0 0 5px;
+						width: 170px;
+					}
+					textarea {
+						float: right;
+						height:130px;
+						position: relative;
+						top: 5px;
+						width: 173px;
+					}
+					> .select2-container {
+						border: 1px solid #cfcfcf;
+						font: normal 12px/22px $font-default;
+						float: right;
+						height: 23px;
+						overflow: hidden;
+						padding: 0;
+						position: relative;
+						vertical-align: middle;
+						width: 177px;
+						z-index: 100;
+					}
+					.checkboxes {
+						padding-left: 135px;
+						font: bold 12px/23px $font-default;
+					}
+				}
+			}
+			&[rel="custom_attributes"] {
+				> div.input-container {
+					> label {
+						padding-right:9px;
+						padding-left: 79px;
+						width: 190px;
+						&.primary {
+							width: auto;
+						}
+					}
+				}
+			}
+		}
+		&.min_label {
+			> div.input-container {
+				width: 228px;
+			}
+		}
+		> div {
+			> label {
+				> input {
+					background: transparent;
+					border: none;
+					color: #333;
+					font: bold 17px $font-default;
+					float: left;
+					height: 34px;
+					margin-left: 10px;
+					padding-left: 8px;
+					width:230px;
+				}
+			}
+		}
+		input {
+			&[type="submit"] {
+				background:url(bt_cadastrar.png) 0 0;
+				border: none;
+				color: #fff;
+				cursor: pointer;
+				font:bold 17px $font-default;
+				display: block;
+				height: 38px;
+				text-align: center;
+				width: 699px;
+				&:hover {
+					background-position: -704px 0;
+				}
+			}
+		}
+	}
+	figure {
+		float: left;
+		height: auto;
+		margin-bottom: 10px;
+		width: auto;
+	}
+	.contact-attributes {
+		margin-bottom: 10px;
+	}
+	.contact-attribute {
+		display: inline-block;
+	    margin-top: 5px;
+	    vertical-align: top;
+	}
+	.slide_dialog {
+		display: block;
+	}
+}
+
+#contact_form > fieldset > fieldset[rel="address"],
+#contact_form > fieldset > fieldset[rel="custom_attributes"] {
+	width: 100%;
+}
+
+
+
+// field errors
+.field_with_errors {
+	display: inline-block;
+}
+
+.inline-errors,
+input.with_custom_input {
+	display: none;
+}
+
+// <li class='inputs' />
+li.input {
+	list-style-type: none;
+	padding: 0 30px;
+}
+
+// ?????
+#duplicates ul {
+	margin-left: 25px;
+}
+
+.people.new #people_article {
+    width: 700px;
+}
+
+// Mailstring
+textarea#mail_string_area {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+  	margin-bottom: 10px;
+  	min-height: 105px;
+  	resize: none;
+  	width: 100%;
+}
