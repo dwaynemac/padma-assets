@@ -295,3 +295,514 @@ textarea#mail_string_area {
   	resize: none;
   	width: 100%;
 }
+
+// Profile crm-hub/app/stylesheets/contacts.css.scss
+#act_on_multiple_form.contacts {
+  display: none;
+}
+
+#contact-timeslots {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#contact-timeslots li {
+  font-weight: normal;
+  list-style-type: circle;
+  margin-left: 15px;
+  margin-top:  3px;
+}
+
+#last-seen-at .iBData {
+  font-weight: normal;
+}
+
+#async-activity-stream img {
+  text-align: center;
+}
+
+.help {
+  cursor: help;
+}
+
+.slide_dialog .close {
+  position: relative;
+  float: right;
+  margin-right: 10px;
+  top: -25px;
+  font-size: 20px;
+}
+
+#choose-columns-button-li {
+  list-style-type: none;
+}
+
+#A_navPanels {
+  .slide_dialog div {
+    border: 0;
+  }
+
+  #new_contact_attribute_fields a.type_link {
+    display: inline-block;
+    border: 0;
+  }
+
+  #new_attachment_fields a.type_link {
+    display: inline-block;
+    border: 0;
+  }
+
+  #new_comment_fields .buttons {
+    ol {
+      margin-top: 0;
+
+      li .bt {
+        padding-top: 0;
+      }
+    }
+  }
+
+  .chzn-container {
+    overflow: visible;
+    padding: inherit;
+  }
+
+  .chzn-container-multi .chzn-choices .search-field {
+    height: 26px;
+  }
+
+
+  // FORM IN contacts/_new_communication_form.html.erb
+  #new_communication_fields {
+
+    .hidden {
+      display: none;
+    }
+
+    #communication_media_input { float: left; }
+    #communication_incoming_input { float: left;}
+
+    #communication_observations_input {
+      height: 80px;
+    }
+
+    #communication_marketing_method_ids {
+      width: 200px;
+    }
+
+    #date_fieldset {
+      .fragments {
+        width: 500px;
+        float: left;
+      }
+    }
+
+    .checkboxes {
+      margin: 15px;
+      li {
+        float: right;
+      }
+    }
+
+    #communication_ref_link_input {
+      input {
+        height: 5px;
+        width: 505px;
+        margin: none;
+        font-size: 0.8em;
+      }
+
+      label {
+        width: 50px;
+        margin: none;
+      }
+
+    }
+  }
+
+  // FORM IN contacts/_new_comment_form.html.erb
+  #new_comment_fields {
+
+    #comment_observations_input {
+      height: 80px;
+    }
+
+    #date_fieldset {
+      .fragments {
+        width: 500px;
+        float: left;
+      }
+    }
+
+    #comment_commented_at_input li {
+      display: inline;
+      float: left;
+    }
+
+    .checkboxes {
+      margin: 15px;
+      li {
+        float: right;
+      }
+    }
+  }
+}
+
+#userbox_extended {
+
+  // buttons on the header float to the right.
+  header .bt {
+    float: right;
+  }
+}
+
+// button hover
+#follow-button {
+  .button {
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+  }
+  &.green {
+    .button:hover {
+      background-color: #5cb85c;
+      border-color: #4cae4c;
+      color: #fff;
+    }
+  }
+  &.red {
+    .button:hover {
+      background-color: #d9534f;
+      border-color: #d43f3a;
+      color: #fff;
+    }
+  }
+}
+
+.feed_entry {
+
+  &:hover {
+    .extra {
+      display: inline-block;
+    }
+  }
+
+  .coefficient {
+    font-weight: bold;
+  }
+
+  .commentType {
+    font-weight: bold;
+  }
+}
+
+.feed_entry.divider {
+  background-color: #adadad !important;
+}
+
+.extra {
+  display: none;
+}
+
+.contact_attribute_values:hover > .extra {
+  display: inline-block;
+}
+
+.attachment_values:hover > .extra {
+  display: inline-block;
+}
+
+.delete {
+ font-family: 'Pictos Custom';
+ font-size: 1.5em;
+ color: #4D4D4D;
+ vertical-align: top;
+}
+
+.visibility {
+ font-family: 'Pictos Custom';
+ font-size: 1.5em;
+ color: #4D4D4D;
+ cursor: pointer;
+ vertical-align: top;
+}
+
+.primary {
+ font-family: 'Pictos Custom';
+ font-size: 1.5em;
+ cursor: pointer;
+ vertical-align: top;
+}
+
+.primary_attribute {
+  color: #ffd700;
+}
+
+.secondary_attribute {
+  color: #4D4D4D;
+}
+
+/*
+   Style form in contacts/_search_form.html.erb
+*/
+#list-filter-dialog {
+  li {
+    margin-top:   30px;
+    margin-left:  20px;
+  //min-width:    175px;
+  }
+
+  #contact_search_email_input,
+  #contact_search_country_input,
+  #contact_search_date_attribute_category_input,
+  #contact_search_date_attributes_category_input,
+  #contact_search_coefficient_input,
+  #contact_search_level_input
+  #contact_search_local_status_for_input,
+  #contact_search_first_name_input,
+  #contact_search_last_seen_at_input,
+  #local_teacher_for_wrapper li
+  {
+    clear: left;
+  }
+
+  #contact_search_coefficient_input,
+  #contact_search_level_input, #contact_search_last_seen_at_input, #contact_search_visit_period_start_input,
+  #contact_search_visit_period_end_input,
+  #contact_search_televisit_period_start_input,
+  #contact_search_televisit_period_end_input,
+  #contact_search_enrollment_period_start_input,
+  #contact_search_enrollment_period_end_input,
+  #contact_search_dropout_period_start_input,
+  #contact_search_dropout_period_end_input {
+    li {
+      margin-top: 0px;
+    }
+  }
+
+  #contact_search_postal_code_input input {
+    width: 60px;
+  }
+
+  .chzn-choices {
+    //width: 90%;
+    li {
+      margin: 3px;
+      float: left;
+    }
+  }
+
+  .chzn-drop li {
+    margin: auto;
+    float: none;
+  }
+
+  .dependent {
+    display: none;
+  }
+
+  .state_select_container {
+    min-width: 150px;
+  }
+
+  .city_select_container {
+    min-width: 150px;
+  }
+
+  .neighborhood_select_container {
+    min-width: 150px;
+  }
+}
+
+
+/*
+   Style form in contacts/_attachments.html.erb
+*/
+#AttachmentFields {
+  font-size:  0.75em;
+  margin-left:  0px;
+
+  .label {
+    color: #666;
+  }
+
+  .input {
+    margin-bottom: 5px;
+    padding: 0px;
+  }
+
+  input[type="text"] {
+    display: block;
+    width: 100%;
+    height: 30px;
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    &:focus {
+      border-color: #66afe9;
+      outline: 0;
+      box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+    }
+  }
+
+  .checkboxes {
+    margin-top: 5px;
+  }
+
+  #public {
+    width: auto;
+  }
+
+  .buttons {
+    margin-top: 5px;
+  }
+}
+.upload {
+  border-top: solid 1px #CCC;
+  width: 100%;
+  padding-top: 10px;
+  margin-top: 10px;
+
+  .progress {
+    margin-top: 8px;
+    border: solid 1px #555;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    .bar {
+      height: 10px;
+      background: url(pbar-ani.gif);
+    }
+  }
+}
+
+.changes_hidden {
+  visibility: hidden;
+}
+
+.dropzone.in {
+    border: 3px dashed #C0C0C0;
+}
+
+.dropzone.fade {
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -ms-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+    opacity: 1;
+}
+
+/* Style in /contacts/new */
+.tag_style {
+  .inputs {
+    display: inline-block;
+  }
+}
+
+#tag_ids_in_new_form_chzn {
+  .chzn-results {
+    max-height: 100px;
+  }
+  li { cursor: hand; cursor: pointer; }
+}
+
+#select_tag_for_contacts_chzn {
+  width: 80%;
+  .chzn-results {
+    max-height: 85px;
+  }
+}
+
+#add_multiple_tags_submit {
+  display: inline;
+  height: 29px;
+  vertical-align: top;
+}
+
+#tag_loading{
+  display: none;
+  background: transparent url("spinner.gif") top left no-repeat;
+  width: 14px;
+  height: 14px;
+  vertical-align: 50%;
+}
+
+.show_tag_loading {
+  display: inline-block;
+}
+
+.remove_tag_loading {
+  display: none;
+}
+
+#tags_form {
+	form {
+		.inputs {
+			width: 90%;
+			display: inline-block;
+		}
+	}
+}
+
+.icon-installment-complete:before {
+	color: green;
+	content: "✔";
+}
+
+.icon-installment-pending:before {
+	color: yellow;
+	content: "!";
+}
+
+.icon-installment-overdue:before {
+	color: red;
+	content: "x";
+}
+
+.message {
+	font: {
+		size: 12px;
+	}
+	padding: 5px;
+}
+
+.due.message {
+	background-color: #feefb3;
+}
+
+.overdue.message {
+	background-color: #ffbaba;
+}
+
+.installments {
+	margin: 10px 0;
+}
+
+.gritter-item-wrapper a {
+	color: wheat;
+}
+
+.state_select_container.
+.city_select_container,
+.neighborhood_select_container {
+	display: none;
+}
+
+/* Style for select2 address in contacts show*/
+.select2-container {
+	width: 80%;
+}
+
+.barely_visible {
+	color: #00E;
+	cursor: pointer;
+}

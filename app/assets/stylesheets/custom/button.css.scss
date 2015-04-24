@@ -131,3 +131,14 @@
 		color: #fff;
 	}
 }
+
+// after replace with glyphicon/font-awesome icons
+.delete,
+.visibility,
+.primary {
+	font-family: "Pictos Custom";
+	font-size: 1.5em;
+	color: #4D4D4D;
+	cursor: pointer;
+	vertical-align: top;
+}
