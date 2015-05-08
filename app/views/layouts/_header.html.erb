@@ -4,8 +4,10 @@
     <nav class="subnav" data-priority="secondary" >
       <div class='container'>
         <div class="wrapper">
-          <h2><%= yield(:breadcrum) %></h2>
-          <%= yield(:header_submenu) %>
+          <div class='pane-breadcrumb'>
+            <h2><%= yield(:breadcrum) %></h2>
+            <%= yield(:header_submenu) %>
+          </div>
           <%= form_tag "#{APP_CONFIG['crm-url']}/contacts", {:id => "H_searchForm", :class => 'search-form',:method => :get} do -%>
             <div class='aui-button-select'>
               <select name="scope">

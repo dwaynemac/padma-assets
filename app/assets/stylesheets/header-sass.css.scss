@@ -138,13 +138,32 @@
 
 // navbar subnav
 nav.subnav {
-	background-color: #f5f5f5;
 	font: {
 		family: "Gotham-Medium", verdana;
 		size: 11px;
 		weight: normal;
 	}
 	height: 54px;
+	.wrapper {
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		-moz-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		background-color: #f5f5f5;
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: flex;
+	}
+	.pane-breadcrumb {
+		-webkit-box-flex: 1;
+		-webkit-flex: 1;
+		-moz-box-flex: 1;
+		-ms-flex: 1;
+		flex: 1;
+	}
 	h2 {
 		background-color: #eaeaea;
 		color: #2d74b2;
@@ -157,6 +176,9 @@ nav.subnav {
 		padding: 0 10px;
 		text-decoration: none;
 		text-transform: uppercase;
+		> a {
+			display: block;
+		}
 	}
 	.search-form {
 		-webkit-box-align: center;
@@ -170,7 +192,7 @@ nav.subnav {
 		display: -ms-flexbox;
 		display: flex;
 		float: right;
-		margin: 10px 15px 0;
+		margin-left: 10px;
 	}
 }
 
