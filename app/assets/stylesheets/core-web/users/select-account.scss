@@ -1,0 +1,64 @@
+$font-default: Arial, Helvetica, sans-serif;
+
+#select_account {
+	.logo {
+		position:relative;
+		width:500px;
+		height:52px;
+		margin: 25px auto;
+		h1 {
+			color:#4D4D4D;
+			position:absolute;
+			top:0;
+			right:0;
+			padding:0;
+			font: {
+				family: $font-default;
+				weight:normal;
+			}
+		}
+	}
+	.container {
+		width:960px;
+		height:600px;
+		margin:auto;
+	}
+	.text {
+		color:#4D4D4D;
+		font: {
+			family: $font-default;
+			size: 12px;
+			weight:normal;
+		}
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	.form {
+		width:470px;
+		margin: 0 auto;
+		padding: 15px;
+		border:1px solid #ccc;
+		background: rgba(#fff,.8);
+		border-radius: 5px;
+		-webkit-box-shadow: 0 0 2px #D8D8D8;
+		box-shadow: 0 0 2px #D8D8D8;
+	}
+	fieldset {
+		float:left;
+		text-align:center;
+		border:none;
+		ol {
+			font: {
+				family: $font-default;
+				size: 12px;
+				weight: bold;
+			}
+			> li {
+				color:#4D4D4D;
+			}
+		}
+		label {
+			margin-right:10px;
+		}
+	}
+}
