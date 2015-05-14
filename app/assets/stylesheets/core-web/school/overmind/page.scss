@@ -231,3 +231,220 @@
 caption {
 	background: #fff;
 }
+
+// reports
+.main-content {
+	font: 12px/15px "Lato", sans-serif;
+	color: #8a8ea5;
+	margin: 0;
+	background-color: #222;
+	min-width: 1285px;
+}
+
+.reports-container {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+	#wrapper {
+		margin: 0 auto;
+		max-width: 100%;
+	}
+}
+
+.pane-area-container {
+	background-color: #f8f9fe;
+	border-radius: 3px;
+	padding: 15px;
+}
+
+.pane-area-distribution {
+	background-color: #e6e7f0;
+	border-radius: 0 0 3px 3px;
+	.area-section-title {
+		background-color: #fff;
+		text-align: left;
+	}
+	.area-section-content {
+		background-color: #f8f9fe;
+		padding: 25px 20px;
+	}
+}
+
+.pane-pedagogic {
+	background-color: #fff;
+	.dategroup {
+		margin-right: 0;
+		.btn,
+		.btn:hover {
+			background-color: #fff;
+			&.previ,
+			&.next {
+				width: 15px;
+			}
+		}
+		.year {
+			color: #e37772;
+			padding-left: 30px !important;
+			padding-right: 30px !important;
+		}
+		.previ {
+			background-image: url(/assets/reports/prei-bg_10.jpg);
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: 7px 14px;
+			&:active,
+			&:active:focus,
+			&.active,
+			&:focus,
+			&.focus {
+				background-image: url(/assets/reports/prei-bg_10.jpg);
+			}
+		}
+		.next {
+			background-image: url(/assets/reports/next-bg_12.jpg);
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: 7px 14px;
+			&:active,
+			&:active:focus,
+			&.active,
+			&:focus,
+			&.focus {
+				background-image: url(/assets/reports/next-bg_12.jpg);
+			}
+		}
+	}
+}
+
+.pane-area-section {
+	margin-bottom: 40px;
+}
+
+.area-section {
+	background-color: #fff;
+	border: 1px solid #e9edf1;
+	border-radius: 3px;
+	overflow: hidden;
+}
+
+.area-section-title {
+	background-color: #f8f9fe;
+	color: #8a8ea5;
+	font: {
+		size: 20px;
+	}
+	overflow: hidden;
+	padding: 10px 15px;
+	text-align: center;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.area-section-value-num {
+	color: #8a8ea5;
+	font: {
+		size: 60px;
+		weight: 700;
+	}
+	padding: 10px;
+	text-align: center;
+}
+
+.area-section-image-holder {
+	padding-bottom: 25px;
+	text-align: center;
+	> img {
+		max-width: 100%;
+	}
+}
+
+$padding-list-alumns: 37.5px;
+.area-distribution-list {
+	background-image: url(/assets/reports/saparator.jpg);
+	background-repeat: no-repeat;
+	background-position: left 15px;
+	background-size: 1px 106px;
+	&.list-alumns {
+		background-position: left center;
+		background-position: left -webkit-calc(50% + 1px);
+		background-size: 1px 61px;
+		padding: 37.5px 0;
+	}
+}
+
+.list-alumns {
+	position: relative;
+	&:before {
+		background-image: url(/assets/reports/saparator4.jpg);
+		content: '';
+		height: 1px;
+		position: absolute;
+		right: 100%;
+		top: 50%;
+		top: -moz-calc(50% - 1px);
+		width: 169px;
+	}
+}
+
+.distribution-list-item {
+	position: relative;
+	background-image: url(/assets/reports/bg-list.png);
+	background-repeat: no-repeat;
+	background-position: left 15px;
+	background-size: 42px 1px;
+	font: {
+		size: 17px;
+	}
+	color: #726d6d;
+	overflow: hidden;
+	padding: 3px 0 3px 50px;
+	position: relative;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	&:before {
+		content: '';
+		background-image: url(/assets/reports/ico5.png);
+		background-repeat: no-repeat;
+		height: 20px;
+		width: 20px;
+		position: absolute;
+		top: 6.5px;
+		left: 15px;
+	}
+	&.item-female {
+		&:before {
+			background-image: url(/assets/reports/ico6.png);
+		}
+	}
+	&.item-average {
+		margin-top: 45px;
+		&:before {
+			display: none;
+		}
+		&:after {
+			background-image: url(/assets/reports/saparator3.jpg);
+			background-repeat: no-repeat;
+			height: 35px;
+			content: '';
+			position: absolute;
+			width: 33px;
+			left: 27px;
+			top: 15px;
+		}
+		> .item-child {
+			padding: 10px 15px;
+		}
+	}
+	&.item-begginer {
+		&:before {
+			background-image: url(/assets/reports/ico7.png);
+		}
+	}
+	&.item-graduate {
+		&:before {
+			background-image: url(/assets/reports/ico8.png);
+		}
+	}
+}
