@@ -1,0 +1,81 @@
+.profile-container {
+	.avatar {
+		margin-bottom: 10px;
+	}
+}
+
+.profile-main {
+	.user-name,
+	.account-name {
+		font: {
+			weight: bold;
+		}
+	}
+	.user-fullname,
+	.user-email {
+		font: {
+			size: 12px;
+		}
+	}
+}
+
+// schoolbox
+.school-aside {
+	.profile-main {
+		line-height: 2;
+		margin: 10px 0;
+	}
+	.account-fullname {
+		input[type="text"] {
+			background-color: #fff;
+			border: 1px solid #ccc;
+			border-radius: 2px;
+			height: 30px;
+			outline: 0;
+			padding: 3px 6px;
+		}
+		.best_in_place {
+			cursor: pointer;
+			display: block;
+			width: calc(100% - 20px);
+		}
+		.glyphicon {
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+			height: 30px;
+			line-height: 30px;
+			white-space: nowrap;
+			&:before {
+				font-family: "Glyphicons Halflings";
+				padding-right: 10px;
+			}
+		}
+	}
+}
+
+.new-account {
+	input[type="text"] {
+		border: 1px solid #ccc;
+		border-radius: 2px;
+		height: 34px;
+		-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+		box-shadow:inset 0 1px 1px rgba(0,0,0,.075);
+		-webkit-transition:border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+		-o-transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+		transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+		padding: 6px 12px;
+		&:focus {
+			border-color: #66afe9;
+			outline: 0;
+			-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+			box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+		}
+	}
+}
+
+.form-newrole {
+	select {
+		display: inline-block;
+		width: auto;
+		vertical-align: middle;
+	}
+}
