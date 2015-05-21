@@ -30,14 +30,43 @@ hr {
       family: Arial, Helvetica, sans-serif;
     }
 }
-
+// buttons
+.btn {
+	&.selectpicker {
+		background-color: #eee;
+		background-image:-webkit-linear-gradient(bottom,#eee,#fff);
+		background-image:-moz-linear-gradient(bottom,#eee,#fff);
+		background-image:linear-gradient(bottom,#eee,#fff);
+	}
+}
 .btn-group {
 	margin: 15px;
 	&.bootstrap-select {
 		margin: 0;
 	}
 }
-
+.btn-glyphicon {
+	&:before {
+		display: inline-block;
+		content: '';
+		font: {
+			family: "Glyphicons Halflings";
+			style: normal;
+			weight: normal;
+		}
+		line-height: 1;
+		position: relative;
+		top: 1px;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		padding-right: 3px;
+	}
+}
+.input-inline-addon {
+	display: inline-block;
+	vertical-align: middle;
+}
+// page header
 .page-header {
 	&.page-header-margin-middle {
 		margin-bottom: 10px;
@@ -147,5 +176,39 @@ hr {
 		&:after {
 			opacity: 1;
 		}
+	}
+}
+.clear {
+	&:before,
+	&:after {
+		content: '';
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+.control-label {
+	&.control-label-block {
+		display: block;
+	}
+}
+// alert
+.alert-message-inline {
+	display: inline-block;
+}
+.alert-md {
+	padding: 10px;
+}
+// text
+.text-grey {
+	color: #999;
+}
+// bootstrap-select
+.bootstrap-select {
+	&[class*="span"],
+	&[class*="col-"] {
+		padding-left: 0;
+		padding-right: 0;
 	}
 }

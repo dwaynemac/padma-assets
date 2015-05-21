@@ -1,0 +1,5 @@
+.form-group {
+	&:empty {
+		margin-bottom: 0;
+	}
+}
