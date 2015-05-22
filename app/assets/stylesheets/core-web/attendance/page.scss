@@ -1,0 +1,32 @@
+#attendancetable {
+	.attendance_actions {
+		text-align: right;
+		width: 250px;
+	}
+}
+
+// Trial lessons
+.lessons-list {
+	> li {
+		+ li {
+			margin-top: 5px;
+		}
+	}
+}
+
+// Stats
+#stats-form {
+	overflow: hidden;
+}
+
+#stats-custom-period,
+#vacancies-think {
+	display: none;
+}
+
+// Contacts
+#contacts-timeslots {
+	> .panel-body {
+		display: none;
+	}
+}
