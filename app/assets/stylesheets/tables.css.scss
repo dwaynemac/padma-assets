@@ -18,27 +18,26 @@ table.padma-table {
   width:100%;
   margin:0 auto 0;
   th {
-    height:10px;
-    padding-top:14px;
-    padding-bottom:6px;
-    padding-left:10px;
-    background:#e8eaeb;
+    background:rgba(0, 0, 0, 0) -moz-linear-gradient(100% 100% 90deg, #f1f2f2, white) repeat scroll 0 0!important;
     color: #4D4D4D;
     font-family: Arial,Helvetica,sans-serif;
     font-size: 12px;
     font-weight: bold;
-    margin: 6px;
     vertical-align: top;
     border-right: 1px solid #CFCFCF;
     border-bottom: 1px solid #CFCFCF;
     text-align:left;
+	padding-top:10px;
+    padding-bottom:8px;
+	padding-left:10px;
+	padding-right:10px;
   }
 
   td {
-    height:10px;
     padding-top:10px;
     padding-bottom:8px;
-    padding-left:10px;
+	padding-left:10px;
+	padding-right:10px;
     border-top:0px solid #e0e0e0;
     border-right:1px solid #CFCFCF;
     color: #4D4D4D;
@@ -84,8 +83,6 @@ table.padma-table {
   }
 }
 
-/* For appearance */
-
 .sticky-wrap {
 	overflow-x: auto;
 	overflow-y: hidden;
@@ -115,7 +112,7 @@ table.padma-table {
 	}
 		.sticky-wrap .sticky-intersect th {
 			background-color:#f2f2f2;
-			color: #000000;
+			color: #4D4D4D;
 		}
 .sticky-wrap td,
 .sticky-wrap th {
@@ -125,11 +122,26 @@ table.padma-table {
 .sticky-thead thead td,
 .sticky-thead thead th {
 	box-sizing: border-box;
-	background-color:#f2f2f2;
-	color: #000000;
-	line-height:40px;
+	background: #ffffff; /* Old browsers */
+background: -moz-linear-gradient(top,  #ffffff 0%, #f1f2f2 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#f1f2f2)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #ffffff 0%,#f1f2f2 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #ffffff 0%,#f1f2f2 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #ffffff 0%,#f1f2f2 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #ffffff 0%,#f1f2f2 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f1f2f2',GradientType=0 ); /* IE6-9 */
+	color: #4D4D4D;
 	font-size:12px;
+	border-bottom:1px solid #cccccc; 
+	border-top:1px solid #cccccc; 
+	border-left:1px solid #cccccc;
+	padding:10px 8px 8px 8px;
+	line-height:14px;
+	font-family: Arial,Helvetica,sans-serif;
 }
+
+.sticky-thead thead th:first-child{ padding:0 12px 0 4px;}
+
 
 /* Not needed for sticky header/column functionality */
 td.user-name {
