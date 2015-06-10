@@ -1,4 +1,4 @@
-body{ font-family:"Helvetica Neue", Helvetica, Arial, sans-serif; color:#000000; font-size:13px;}
+body{ font-family:Arial,sans-serif!important; font-size:13px; color:#6f7b8a; }
 a{ color:#304269;}
 a:hover{ text-decoration:underline; color:#4A6491;}
 h1, h2, h3, h4  {font-family:Gotham-Bold, Helvetica, sans-serif; }
@@ -6,20 +6,20 @@ h5, h6{ font-family:Gotham-Medium, Helvetica, sans-serif; }
 h1, h2{color:#0971b7;}
 h1{font-size:28px; }
 h2{font-size:20px; }
-h3{ font-size:12px; color:#000000; text-transform:uppercase;}
+h3{ font-size:12px; text-transform:uppercase;}
 h4{ font-size:14px; }
-h4, h5{color:#505458;}
+h3, h4, h5{color:#505458;}
 
 .mbottom-10 {margin-bottom: 10px}
 .mtop-10 {margin-top: 10px}
 
 /* BOTONES */
-::-webkit-input-placeholder {color: black;}
-:-moz-placeholder { /* Firefox 18- */  color: black;  }
-::-moz-placeholder {  /* Firefox 19+ */   color: black;  }
-:-ms-input-placeholder {    color: black;  }
-.btn-default{background:#dddddd; font-size:13px; padding:0 24px; line-height:38px; border:none; color:#6a6a6a;}
-.btn-default.active,.btn-default.focus,.btn-default:active,.btn-default:focus,.btn-default:hover,.open>.dropdown-toggle.btn-default{background-color:#cdcccd;border-color:none; color:#444444;}
+::-webkit-input-placeholder {color: color:#282323;}
+:-moz-placeholder { /* Firefox 18- */  color:#282323;}
+::-moz-placeholder {  /* Firefox 19+ */   color:#282323;}
+:-ms-input-placeholder {  color:#282323;}
+.btn-default{background:#d1dade; font-size:13px; padding:0 24px; line-height:38px; border:none; color:#5a6367;}
+.btn-default.active,.btn-default.focus,.btn-default:active,.btn-default:focus,.btn-default:hover,.open>.dropdown-toggle.btn-default{background-color:#b9c3c8; border-color:none; color:#5e5e5e;}
 .btn-sm.btn-default{ padding:0 16px; line-height:30px; }
 
 .btn-primary{ background:#0971b7; font-size:13px; padding:0 24px; line-height:38px; border:none;}
@@ -37,15 +37,21 @@ h4, h5{color:#505458;}
 
 /* TABS */
 .nav-tabs > li > a{ border-color:#ddd #ddd transparent; border-width:1px; border-style:solid; color:#0971b7;}
-.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover{ background:#f2f2f2; color:#6a6a6a; }
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover{  border-color: transparent; background:#d1dade; color:#5a6367; }
 .nav-tabs > li.active > a:hover{ text-decoration:none;}
 .nav-tabs > li a:focus, .nav-tabs > li a:hover{text-decoration:underline;}
 .tab-content{ border-bottom:1px solid #ddd; border-left:1px solid #ddd; border-right:1px solid #ddd;}
 
 /* FORMS */
-.form-control{border:2px solid #dddddd; box-shadow:none; font-size:13px;}
+.form-control{ border:2px solid #e5e9ec; box-shadow:none; font-size:13px; color:#282323;}
 .form-control input[type="text"] { height:30px;}
-input:hover{ -webkit-box-shadow: 0 0 0 3px #f5f5f5; -moz-box-shadow: 0 0 0 3px #f5f5f5; -o-box-shadow: 0 0 0 3px #f5f5f5; -khtml-box-shadow: 0 0 0 3px #f5f5f5; box-shadow: 0 0 0 3px #f5f5f5;}
+input:hover, textarea:hover{ -webkit-box-shadow: 0 0 0 3px #f5f5f5; -moz-box-shadow: 0 0 0 3px #f5f5f5; -o-box-shadow: 0 0 0 3px #f5f5f5; -khtml-box-shadow: 0 0 0 3px #f5f5f5; box-shadow: 0 0 0 3px #f5f5f5;}
+.uneditable-input, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"]{ color:#6f7b8a;}
+
+.form-control::-webkit-input-placeholder { color:#6f7b8a;}
+.form-control:-moz-placeholder { /* Firefox 18- */  color:#6f7b8a;}
+.form-control::-moz-placeholder {  /* Firefox 19+ */   color:#6f7b8a;}
+.form-control:-ms-input-placeholder {  color:#6f7b8a;}
 
 .has-success .checkbox, .has-success .checkbox-inline, .has-success .control-label, .has-success .help-block, .has-success .radio, .has-success .radio-inline, .has-success.checkbox label, .has-success.checkbox-inline label, .has-success.radio label, .has-success.radio-inline label, .has-success .form-control-feedback{ color:#5cb85c;}
 .has-success .form-control{border-color:#5cb85c;}
@@ -60,7 +66,8 @@ input:hover{ -webkit-box-shadow: 0 0 0 3px #f5f5f5; -moz-box-shadow: 0 0 0 3px #
 .form-group .help{ color:#a7abb1; font-size:12px;}
 
 .form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control{background-color:#f1f1f1; box-shadow:none;}
-#edit_user ul li { word-wrap: break-word;}
+.has-feedback label ~ .form-control-feedback{ top:41px;}
+
 
 .edit-form select {
   appearance: none;
@@ -71,19 +78,24 @@ input:hover{ -webkit-box-shadow: 0 0 0 3px #f5f5f5; -moz-box-shadow: 0 0 0 3px #
 
 
 /* -- Styled Selects - wrapped due to FF appearance bug & MSIE -- */
-.styled_select {display: block; position: relative; margin: 0; padding: 0; border: 2px solid #dddddd; overflow: hidden; -webkit-border-radius: 4px; -moz-border-radius: 4px; -o-border-radius: 4px; -khtml-border-radius: 4px; border-radius: 4px; background-color: #ffffff; width: auto; }
+.styled_select {display: block; position: relative; margin: 0; padding: 0; border: 2px solid #e5e9ec; overflow: hidden; -webkit-border-radius: 4px; -moz-border-radius: 4px; -o-border-radius: 4px; -khtml-border-radius: 4px; border-radius: 4px; background-color: #ffffff; width: auto; }
 #edit_user .edit_form span.styled_select{ display:inline-block;}
 .sel{ display:block;}
 .styled_select.match-width {display: inline-block; *display: inline; zoom: 1;}
-.styled_select select {position: relative; display: block; margin: 0; padding: 7px 40px 7px 12px; white-space: nowrap; width: 100%; font-size: 13px; font-size: 1.3rem; color: #666666; border: none; background: transparent; cursor: pointer; -moz-appearance: window; -webkit-appearance: none; -ms-appearance: none; -o-appearance: none; appearance: none; outline: none; z-index: 2;}
+.styled_select select {position: relative; display: block; margin: 0; padding: 7px 40px 7px 12px; white-space: nowrap; width: 100%; font-size: 13px; font-size: 1.3rem; color: #6f7b8a; border: none; background: transparent; cursor: pointer; -moz-appearance: window; -webkit-appearance: none; -ms-appearance: none; -o-appearance: none; appearance: none; outline: none; z-index: 2;}
 .styled_select select::-ms-expand {display: none;}
 .styled_select:hover { -webkit-box-shadow: 0 0 0 3px #f5f5f5; -moz-box-shadow: 0 0 0 3px #f5f5f5; -o-box-shadow: 0 0 0 3px #f5f5f5; -khtml-box-shadow: 0 0 0 3px #f5f5f5; box-shadow: 0 0 0 3px #f5f5f5;}
 .styled_select:after {position: absolute; top: 0; right: 0; width: 32px; height: 100%; speak: none; content: ''; z-index: 1;}
-.styled_select:before {position: absolute; top: 38%; right: 20px; width: 4px; height: 4px; margin: 0;  speak: none; content: "\e252";font-family:"Glyphicons Halflings";font-size: 10px;  color: #666666;}
+.styled_select:before {position: absolute; top: 38%; right: 20px; width: 4px; height: 4px; margin: 0;  speak: none; content: "\e252";font-family:"Glyphicons Halflings";font-size: 10px;  color: #e5e9ec;}
 .ie8 .styled_select select,
 .ie9 .styled_select select {padding-right: 12px;}
 .ie8 .styled_select:after,
 .ie9 .styled_select:after,
 .ie8 .styled_select:before,
 .ie9 .styled_select:before {display: none;}
-   
+
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td{ padding:12px;}
+.table thead tr th{ text-transform:uppercase;}
+.table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th{ border-color:#e2e8eb;}
+.table-hover tbody tr:hover>td,.table-hover tbody tr:hover>th{background-color:#e2e8eb;}
+.table-hover tbody tr:hover>td .progress{background-color:#ffffff;}
