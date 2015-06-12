@@ -61,7 +61,7 @@ input:hover, textarea:hover{ -webkit-box-shadow: 0 0 0 3px #f5f5f5; -moz-box-sha
 
 .has-warning .checkbox, .has-warning .checkbox-inline, .has-warning .control-label, .has-warning .help-block, .has-warning .radio, .has-warning .radio-inline, .has-warning.checkbox label, .has-warning.checkbox-inline label, .has-warning.radio label, .has-warning.radio-inline label, .has-warning .form-control-feedback{ color:#e4d045;}
 .has-warning .form-control{border-color:#e4d045;}
-.form-group label{ color:#55606e; form-weight:normal; margin:14px 10px 8px 0; font-weight:normal; font-size:14px;}
+.form-group label{ color:#55606e; form-weight:normal; margin:14px 10px 8px 0; font-weight:normal; font-size:14px; display:block;}
 .form-label{ margin-top:2px;}
 .form-group .help{ color:#a7abb1; font-size:12px;}
 
@@ -77,13 +77,13 @@ input:hover, textarea:hover{ -webkit-box-shadow: 0 0 0 3px #f5f5f5; -moz-box-sha
 }
 
 
-/* -- Styled Selects - wrapped due to FF appearance bug & MSIE -- */
+/* -- selects -- */
 .select {
 	border:2px solid #e5e9ec;
-  background-color: #fff;
+    background-color: #fff;
 	border-radius: 4px;
 	position: relative;
-
+	display: inline-block;
 }
 
 .select:hover {
