@@ -1,0 +1,22 @@
+.panel {
+	border-radius: 0;
+	position: relative;
+	> header {
+		font: {
+			family: Arial, Helvetica, sans-serif;
+			size: 12px;
+		}
+		padding: 10px 10px 0;
+	}
+}
+
+.panel-default {
+	background-image: url('../infobox_body_background.gif');
+	background-position: top;
+	background-repeat: repeat-x;
+	border-color: #ccc;
+}
+
+.panel-body {
+	padding: 10px;
+}

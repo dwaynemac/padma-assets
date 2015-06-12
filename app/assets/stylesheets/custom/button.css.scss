@@ -1,0 +1,148 @@
+.btn {
+	background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+	border: 1px solid transparent;
+	border-radius: 2px;
+	box-shadow: 0 1px 0 rgba(#000,.05);
+	cursor: pointer;
+	display: inline-block;
+	font: {
+	family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	size: 12px;
+	weight: bold;
+	}
+	line-height: 1.42857143;
+	margin-bottom: 0;
+	outline: 0;
+	padding: 6px 12px !important;
+	text-align: center;
+	touch-action: manipulation;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	vertical-align: middle;
+	white-space: nowrap;
+	&:after {
+	    content: '';
+	    display: inline-block;
+	    vertical-align: middle;
+	    height: 100%;
+	}
+	&:active,
+	&:active:focus,
+	&:focus {
+		outline: none;
+	}
+	&:active,
+	&.active {
+		background-image: none;
+		box-shadow: inset 0 1px 2px rgba(#000,.1);
+	}
+	&.disabled,
+	&[disabled],
+	fieldset[disabled] & {
+		cursor: not-allowed;
+		pointer-events: none; // Future-proof disabling of clicks
+		opacity: .65;
+		box-shadow: none;
+	}
+	&.button-xs,
+	&.btn-xs {
+		font-size: 12px;
+		line-height: 1.5;
+		padding: 1px 5px !important;
+	}
+	&.btn-sm {
+		padding: 5px 10px !important;
+	}
+}
+
+.btn-default {
+	border-color: #d3d3d3;
+	background: #f8f8f8;
+	color: #333;
+	&:hover,
+	&:focus,
+	&.focus {
+		border-color: #c6c6c6;
+		background: #f0f0f0;
+		box-shadow: 0 1px 0 rgba(#000,.10);
+		color: #333;
+		text-decoration: none;
+	}
+	&:active,
+	&:active:focus,
+	&.active,
+	&:focus,
+	&.focus {
+		background-image: none;
+		box-shadow: inset 0 1px 0 #ddd;
+	}
+}
+
+.btn-primary {
+	background-color: #3991e3;
+	border-color: #3991e3;
+	color: #fff;
+  	&:active,
+	&.active,
+	&:hover,
+	&:focus {
+		background-color: darken(#3991e3,10%);
+		border-color: darken(#3991e3,10%);
+		color: #fff;
+	}
+}
+
+.btn-success {
+	background: #5cb85c;
+	border-color: #5cb85c;
+	color: #fff;
+	&:active,
+	&.active,
+	&:hover,
+	&:focus {
+		background: darken(#5cb85c, 5%);
+		border-color: darken(#5cb85c, 5%);
+		color: #fff;
+	}
+}
+
+.btn-warning {
+	background: #f0ad4e;
+	border-color: #eea236;
+	color: #fff;
+	&:active,
+	&.active,
+	&:hover,
+	&:focus {
+		background: darken(#f0ad4e, 5%);
+		border-color: darken(#eea236, 5%);
+		color: #fff;
+	}
+}
+
+.btn-danger {
+	color: #fff;
+	background-color: #d9534f;
+	border-color: #d43f3a;
+	&:active,
+	&.active,
+	&:hover,
+	&:focus {
+		background: darken(#d9534f, 5%);
+		border-color: darken(#d43f3a, 5%);
+		color: #fff;
+	}
+}
+
+// after replace with glyphicon/font-awesome icons
+.delete,
+.visibility,
+.primary {
+	font-family: "Pictos Custom";
+	font-size: 1.5em;
+	color: #4D4D4D;
+	cursor: pointer;
+	vertical-align: top;
+}

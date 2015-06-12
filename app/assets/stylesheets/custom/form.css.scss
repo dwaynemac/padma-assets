@@ -1,0 +1,12 @@
+.form-group {
+	&:empty {
+		margin-bottom: 0;
+	}
+}
+.form-horizontal {
+	.multiselect-container {
+		.checkbox {
+			min-height: inherit;
+		}
+	}
+}

@@ -1,0 +1,9 @@
+.multiselect-container {
+	> li {
+		> a {
+			.checkbox {
+				padding-top: 0;
+			}
+		}
+	}
+}
