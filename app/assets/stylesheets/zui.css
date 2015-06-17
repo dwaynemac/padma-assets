@@ -10,6 +10,11 @@ h3{ font-size:12px; text-transform:uppercase;}
 h4{ font-size:14px; }
 h2, h3, h4, h5{color:#55606e;}
 
+
+a.glyphicon{ color:#304269;}
+a.glyphicon:hover{ text-decoration:underline; color:#4A6491;}
+.glyphicon{	color:#6f7b8a; margin: 0 10px 0 0;}
+
 .mbottom-10 {margin-bottom: 10px}
 .mtop-10 {margin-top: 10px}
 
@@ -20,11 +25,11 @@ h2, h3, h4, h5{color:#55606e;}
 :-ms-input-placeholder {  color:#282323;}
 .btn-default{background:#d1dade; font-size:13px; padding:0 24px; line-height:38px; border:none; color:#5a6367;}
 .btn-default.active,.btn-default.focus,.btn-default:active,.btn-default:focus,.btn-default:hover,.open>.dropdown-toggle.btn-default{background-color:#b9c3c8; border-color:none; color:#5e5e5e;}
-.btn-sm.btn-default{ padding:0 16px; line-height:30px; }
+.btn-sm.btn-default{ padding:0 16px; line-height:30px; font-size:13px; font-weight:normal; }
 
-.btn-primary{ background:#0971b7; font-size:13px; padding:0 24px; line-height:38px; border:none;}
+.btn-primary{ background:#0971b7; font-size:13px; padding:0 24px; line-height:38px; border:none; min-width:60px;}
 .btn-primary.active,.btn-primary.focus,.btn-primary:active,.btn-primary:focus,.btn-primary:hover,.open>.dropdown-toggle.btn-primary{background-color:#0766a6;border-color:none;}
-.btn-sm{ padding:0 16px; line-height:30px; border:none; }
+.btn-sm{ padding:0 16px; line-height:24px; border:none;  font-size:13px; font-weight:normal; min-width:60px;}
 
 .btn-default.disabled, .btn-default.disabled.active, .btn-default.disabled.focus, .btn-default.disabled:active, .btn-default.disabled:focus, .btn-default.disabled:hover, .btn-default[disabled], .btn-default.active[disabled], .btn-default.focus[disabled], .btn-default[disabled]:active, .btn-default[disabled]:focus, .btn-default[disabled]:hover, fieldset[disabled] .btn-default, fieldset[disabled] .btn-default.active, fieldset[disabled] .btn-default.focus, fieldset[disabled] .btn-default:active, fieldset[disabled] .btn-default:focus, fieldset[disabled] .btn-default:hover{ background:#f5f5f5; border-color:#f2f2f2; color:#cbcbcb;}
 
@@ -48,8 +53,7 @@ h2, h3, h4, h5{color:#55606e;}
 
 
 /* FORMS */
-.form-control{ border:2px solid #e5e9ec; box-shadow:none; font-size:13px; color:#282323;}
-.form-control input[type="text"] { height:30px;}
+.form-control input[type="text"] , input[type="text"] { height:38px; line-height:38px; border:2px solid #e5e9ec; box-shadow:none; font-size:13px; color:#282323; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; padding:0 0 0 10px;}
 input:hover, textarea:hover{ -webkit-box-shadow: 0 0 0 3px #f5f5f5; -moz-box-shadow: 0 0 0 3px #f5f5f5; -o-box-shadow: 0 0 0 3px #f5f5f5; -khtml-box-shadow: 0 0 0 3px #f5f5f5; box-shadow: 0 0 0 3px #f5f5f5;}
 .uneditable-input, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"]{ color:#6f7b8a;}
 
@@ -66,7 +70,7 @@ input:hover, textarea:hover{ -webkit-box-shadow: 0 0 0 3px #f5f5f5; -moz-box-sha
 
 .has-warning .checkbox, .has-warning .checkbox-inline, .has-warning .control-label, .has-warning .help-block, .has-warning .radio, .has-warning .radio-inline, .has-warning.checkbox label, .has-warning.checkbox-inline label, .has-warning.radio label, .has-warning.radio-inline label, .has-warning .form-control-feedback{ color:#e4d045;}
 .has-warning .form-control{border-color:#e4d045;}
-.form-group label{ color:#55606e; form-weight:normal; margin:24px 10px 8px 0; font-weight:normal; font-size:14px; display:block;}
+.form-group label, label{ color:#55606e; form-weight:normal; margin:24px 10px 8px 0; font-weight:normal; font-size:14px; display:block;}
 .form-label{ margin-top:2px;}
 .form-group .help{ color:#a7abb1; font-size:12px;}
 
@@ -124,7 +128,7 @@ input:hover, textarea:hover{ -webkit-box-shadow: 0 0 0 3px #f5f5f5; -moz-box-sha
 	outline: none;
 	outline: 0;
 	width: 100%;
-	padding: 7px 40px 7px 12px;
+	padding: 8px 40px 8px 12px;
   position: relative;
   z-index: 2;
   	cursor:pointer;
@@ -160,5 +164,6 @@ ul.list-unstyled li{ font-size:13px; color:#55606e; margin:4px 0;}
 .filters_area > div{ float:left; margin: 0 10px 0 0;}
 
 
-
-
+.label-default { background:#1f9dd9; font-size:13px; font-weight:normal; padding:0.4em 0.6em 0.4em;}
+.label-default  a.glyphicon{ color:#1a77a3; top:2px; margin:0;}
+.label-default  a.glyphicon:hover{ color:#104a66;}
