@@ -161,7 +161,6 @@ ul.list-unstyled li{ font-size:13px; color:#55606e; margin:4px 0;}
 
 .btn-info.disabled, .btn-info.disabled.active, .btn-info.disabled.focus, .btn-info.disabled:active, .btn-info.disabled:focus, .btn-info.disabled:hover, .btn-info[disabled], .btn-info.active[disabled], .btn-info.focus[disabled], .btn-info[disabled]:active, .btn-info[disabled]:focus, .btn-info[disabled]:hover, fieldset[disabled] .btn-info, fieldset[disabled] .btn-info.active, fieldset[disabled] .btn-info.focus, fieldset[disabled] .btn-info:active, fieldset[disabled] .btn-info:focus, fieldset[disabled] .btn-info:hover{ background:#f2f2f2; border-color:#ebebeb; color:#6a6a6a}
 
-.filters_area > div{ float:left; margin: 0 10px 0 0;}
 
 
 .label-default { background:#1f9dd9; font-size:13px; font-weight:normal; padding:0.4em 0.6em 0.4em;}
