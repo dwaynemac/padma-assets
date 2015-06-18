@@ -10,5 +10,3 @@ if (window.location.hostname.toLowerCase().search(productionHost) < 0) {
 } else {
     mixpanel.init(prodToken);
 }
-
-mixpanel.init();
