@@ -10,6 +10,6 @@ class GeneralAbility
   private
 
   def alpha?(user)
-    user.current_account.padma.try(:tester_level) == 'alpha'
+    user.account_tester_level == 'alpha'
   end
 end
