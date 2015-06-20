@@ -14,3 +14,9 @@
       <%= link_to t('header-menu.mailing.scheduled_mails_future'),
                   "#{APP_CONFIG['mailing-url']}/scheduled_mails/pending" %>
     </li>
+    <% if can?(:manage, :mailchimp) -%>
+    <li>
+     <%= link_to t('header-menu.mailing.mailchimp_configuration'),
+                       "#{APP_CONFIG['mailing-url']}/mailchimp/configuration" %>
+    </li>
+    <% end -%>
