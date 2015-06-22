@@ -1,0 +1,12 @@
+@import "colors";
+/* Librería UI */
+#users_article .nav-tabs > li > a{ border-color:#ddd #ddd transparent; border-width:0; border-style:solid; color:$basicblue; border-radius:0; color:#304269; background:#f5f5f5;}
+#users_article .nav-tabs { border:none!important;}
+#users_article .nav-tabs > li.active > a, #users_article .nav-tabs > li.active > a:focus, #users_article .nav-tabs > li.active > a:hover{  border-color: transparent; background:#d1dade; color:#55606e; -webkit-box-shadow:1px 1px 1px rgba(0,0,0,0.1);-moz-box-shadow:1px 1px 1px rgba(0,0,0,0.1);box-shadow:1px 1px 1px rgba(0,0,0,0.1);-webkit-border-bottom-right-radius:3px;-webkit-border-top-right-radius:3px;-moz-border-radius-bottom-right:3px;-moz-border-radius-topright:3px;border-bottom-right-radius:3px;border-top-right-radius:3px;}
+#users_article .nav-tabs > li.active > a:hover{ text-decoration:none;}
+#users_article .nav-tabs > li a:focus, .nav-tabs > li a:hover{text-decoration:underline; }
+#users_article .tab-content{ background:#d1dade; min-height:200px; margin: 0; padding:10px; border:none;}
+#users_article h2{ margin:0;}
+.tab-content{ border:1px solid #d1dade;}
+.nav-tabs{ border-bottom:none;}
+/* fin librería UI */

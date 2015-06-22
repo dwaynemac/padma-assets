@@ -1,43 +1,34 @@
-.padmatable {
-	border: 1px solid #d3d3d3;
-	font: {
-		size: 12px;
-	}
-	margin-bottom: 10px;
-	> tbody,
-	> thead,
-	> tfoot {
-		> td,
-		> th {
-			padding: 5px;
-		}
-	}
-	> tbody {
-		> tr {
-			> th {
-				background: #f2f2f2;
-				background: -webkit-linear-gradient(top,#fff,#f2f2f2);
-				background: -moz-linear-gradient(top,#fff,#f2f2f2);
-				background: linear-gradient(top,#fff,#f2f2f2);
-				border: 1px solid #cfcfcf;
-				color: #4d4d4d;
-				font: {
-					weight: bold;
-				}
-				vertical-align: middle;
-			}
-			> td {
-				border-right: 1px solid #cfcfcf;
-				vertical-align: middle;
-			}
-			&:nth-child(odd) {
-				> td {
-					background-color: #f2f2f2;
-				}
-			}
-		}
-	}
+@import "colors";
+
+/* Librería UI */
+.table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {padding: 12px 8px; border-top:1px solid $bluishgrey;}
+
+table{ border:none;
+	th{font: 0.846em $font-stack; font-weight:bold;  white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
+	td {font: 1em $font-stack; font-weight:normal;}
+	& thead tr th{ text-transform:uppercase;}
+	& > tbody > tr > td, .table > tbody > tr > th, & > tfoot > tr > td, & > tfoot > tr > th, & > thead > tr > td, & > thead > tr > th{ border-color:lighten( $darkbgrey, 10% );}
+	& tr td.pending{background:lighten( $bluishgrey, 10% );}
+	th{ color:$darkbgrey; font-weight:bold;}
+	& thead th { border-color:$bluishgrey;}
+	& thead td a, & thead th a { color:$linkcolor;}
+	& thead th:hover a , & thead th a:hover { color:#4A6491; text-decoration: underline!important;}
+  	th .current {
+    padding-right: 40px;
+    background-repeat: no-repeat;
+    background-position: right center;}
+	
+ 	 th .asc {    background-image: url('../arrow_up.png'); }
+ 	 th .desc {    background-image: url('../arrow_down.png');}
 }
+.table-hover{
+ & tbody tr:hover >td, & tbody tr:hover>th { background-color: $bluishgrey;}  
+ & tbody tr:hover > td .progress{background-color:white;}
+}
+
+
+
+.table-bordered{border-color:$bluishgrey;}
 
 .table-noborder {
 	> thead > tr > th,
@@ -49,3 +40,53 @@
 		border-top: none !important;
 	}
 }
+
+/* FIn lLibrería UI */
+
+
+/* sticky wrap */
+
+.sticky-wrap {
+	overflow-x: auto;
+	overflow-y: hidden;
+	position: relative;
+	width: 100%;
+		& .sticky-thead, & .sticky-col, & .sticky-intersect {font-weight:bold;	opacity: 0;
+		position: absolute;		top: 0;		left: 0;		transition: all .125s ease-in-out;
+		z-index: 50;		width: auto; /* Prevent table from stretching to full size */}
+	& .sticky-thead{box-shadow: 0 0.25em 0.1em -0.1em rgba(0,0,0,.125);z-index: 100;width: 100%; /* Force stretch */}
+	& sticky-intersect { opacity: 1; z-index: 150;}
+	& sticky-intersect .sticky-intersect th {	background-color:#f2f2f2;color: #4D4D4D;} 
+	& td, & th{box-sizing: border-box;}
+	}
+
+
+.sticky-thead {
+		border:1px solid $bluishgrey;
+		& thead td, & thead th {
+		border-left: 1px solid $bluishgrey;
+		box-sizing: border-box;
+		background:#ffffff;
+		color: $darkbgrey;
+		font: 0.846em $font-stack;
+		font-weight:bold;
+		line-height:1.2 em;
+		font-family: Arial,Helvetica,sans-serif;
+		padding:12px 8px;
+		text-transform:uppercase;}
+		& thead th a { color:$linkcolor;}
+		& th a.current:hover { color:#4A6491; text-decoration: underline!important;}
+		& th:first-child{ padding:0 6px 0 10px!important;}
+}
+
+
+
+/* Not needed for sticky header/column functionality */
+td.user-name {
+	text-transform: capitalize;
+}
+.sticky-wrap.overflow-y {
+	overflow-y: auto;
+	max-height: 50vh;
+}
+

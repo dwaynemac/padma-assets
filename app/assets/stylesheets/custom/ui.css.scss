@@ -1,0 +1,44 @@
+@import "colors";
+body{ font: 13px $font-stack; color:$darkbgrey; }
+a{ color:$linkcolor;
+	&:hover{ text-decoration:underline; color:#4A6491;}
+}
+h1, h2, h3, h4, h5  {font-family:Gotham-Bold, Helvetica, sans-serif; margin:10px 0;}
+h5, h6{ font-family:Gotham-Medium, Helvetica, sans-serif; }
+h1{color:$basicblue;}
+h1{font-size:28px; }
+h2{font-size:20px; }
+h3{ font-size:12px; text-transform:uppercase;}
+h4{ font-size:14px; }
+h2, h3, h4, h5{color:$basicgrey;}
+
+
+a.glyphicon{color:$basicgrey;
+			&:hover { text-decoration:underline; color:#4A6491;}
+}		
+.glyphicon{	color:$darkbgrey;}
+
+.mbottom-10 {margin-bottom: 10px}
+.mtop-10 {margin-top: 10px}
+
+
+#avatar-image{ margin:24px 0 10px;}
+ul.list-unstyled { margin:20px 0 0;}
+ul.list-unstyled li{ font-size:1em; color:$basicgrey; margin:4px 0;}
+.navbar-nav > li { margin:0;}
+
+
+.label-default { background:#1f9dd9; font-size:1em; font-weight:normal; padding:0.4em 0.6em 0.4em;}
+.label-default  a.glyphicon{ color:#1a77a3; top:2px; margin:0;}
+.label-default  a.glyphicon:hover{ color:#104a66;}
+
+
+
+.has-success .checkbox, .has-success .checkbox-inline, .has-success .control-label, .has-success .help-block, .has-success .radio, .has-success .radio-inline, .has-success.checkbox label, .has-success.checkbox-inline label, .has-success.radio label, .has-success.radio-inline label, .has-success .form-control-feedback{ color:$success;}
+.has-success .form-control{border-color:#5cb85c;}
+
+.has-error .checkbox, .has-error .checkbox-inline, .has-error .control-label, .has-error .help-block, .has-error .radio, .has-error .radio-inline, .has-error.checkbox label, .has-error.checkbox-inline label, .has-error.radio label, .has-error.radio-inline label, .has-error .form-control-feedback{ color:$error;}
+.has-error .form-control{border-color:#d9534f;}
+
+.has-warning .checkbox, .has-warning .checkbox-inline, .has-warning .control-label, .has-warning .help-block, .has-warning .radio, .has-warning .radio-inline, .has-warning.checkbox label, .has-warning.checkbox-inline label, .has-warning.radio label, .has-warning.radio-inline label, .has-warning .form-control-feedback{ color:$warning;}
+.has-warning .form-control{border-color:#e4d045;}
