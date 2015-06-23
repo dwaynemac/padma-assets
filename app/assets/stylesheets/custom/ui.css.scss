@@ -1,9 +1,11 @@
 @import "colors";
 body{ font: 13px $font-stack; color:$darkbgrey; }
 a{ color:$linkcolor;
-	&:hover{ text-decoration:underline; color:#4A6491;}
+	&:visited{ color:$linkcolor;}
+	&:hover{ text-decoration:underline; color:$linkcolor;}
+	&:active, &:focus{ color:darken($linkcolor, 14%);}
 }
-h1, h2, h3, h4, h5  {font-family:Gotham-Bold, Helvetica, sans-serif; margin:10px 0;}
+h1, h2, h3, h4, h5  { font-family:Gotham-Bold, Helvetica, sans-serif; margin:10px 0;}
 h5, h6{ font-family:Gotham-Medium, Helvetica, sans-serif; }
 h1{color:$basicblue;}
 h1{font-size:28px; }
@@ -13,9 +15,11 @@ h4{ font-size:14px; }
 h2, h3, h4, h5{color:$basicgrey;}
 
 
-a.glyphicon{color:$basicgrey;
-			&:hover { text-decoration:underline; color:#4A6491;}
-}		
+a.glyphicon{
+	color:darken( $bluishgrey, 40% );
+			&:hover { text-decoration:underline; color:darken( $bluishgrey, 80% );}
+	}
+			
 .glyphicon{	color:$darkbgrey;}
 
 .mbottom-10 {margin-bottom: 10px}
@@ -57,3 +61,4 @@ ul.list-unstyled li{ font-size:1em; color:$basicgrey; margin:4px 0;}
 .alert-warning a:hover{color:darken($warning, 36%);}
 
 .bg-primary, .bg-success, .bg-info, .bg-warning, .bg-danger{ padding:4px 6px;}
+.has-feedback{ overflow:hidden;}

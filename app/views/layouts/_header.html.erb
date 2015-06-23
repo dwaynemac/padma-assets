@@ -8,12 +8,15 @@
         <%= yield(:header_submenu) %>
         
         <%= form_tag "#{APP_CONFIG['crm-url']}/contacts", {:id => "H_searchForm", :method => :get} do -%>
+         <%= submit_tag "&nbsp;".html_safe, :class => "submit_search" -%>
+          <%= text_field_tag :q, nil, iD: 'sField' %>
+          
+          <div class="select">
           <select name="scope">
             <option value="local"><%= t('header-menu.search.locally') %></option>
             <option value="global"><%= t('header-menu.search.globally') %></option>
           </select> 
-          <%= text_field_tag :q, nil, iD: 'sField' %>
-          <%= submit_tag "&nbsp;".html_safe, :class => "submit_search" -%>
+         </div>
         <%- end -%>
       </div>
     </nav>

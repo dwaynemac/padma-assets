@@ -14,18 +14,20 @@
 
 /* librería UI */
 
-::-webkit-input-placeholder {color:#cccccc;}
-:-moz-placeholder { /* Firefox 18- */  color:#cccccc;}
-::-moz-placeholder {  /* Firefox 19+ */   color:#cccccc;}
-:-ms-input-placeholder {  color:#cccccc;}
-.form-control::-webkit-input-placeholder { color:#cccccc;}
-.form-control:-moz-placeholder { /* Firefox 18- */  color:#cccccc;}
-.form-control::-moz-placeholder {  /* Firefox 19+ */   color:#cccccc;}
-.form-control:-ms-input-placeholder {  color:#cccccc;}
+
+.form-control::-moz-placeholder, .form-control:-ms-input-placeholder, .form-control:-moz-placeholder, .form-control::-webkit-input-placeholder, :-ms-input-placeholder, ::-moz-placeholder, :-moz-placeholder, ::-webkit-input-placeholder{ color:#cccccc; font: 1em $font-stack; padding:10px 0 0 10px; font-weight:normal;}
 
 
-.form-control input[type="text"] , input[type="text"] { height:32px; line-height:32px; border:2px solid $bluishgrey; box-shadow:none; font-size:13px; color:#282323; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; padding:0 0 0 10px;
-&:hover{-webkit-box-shadow: 0 0 0 3px #f5f5f5; -moz-box-shadow: 0 0 0 3px #f5f5f5; -o-box-shadow: 0 0 0 3px #f5f5f5; -khtml-box-shadow: 0 0 0 3px #f5f5f5; box-shadow: 0 0 0 3px #f5f5f5;}
+
+.form-control input[type="text"] , input[type="text"],.uneditable-input, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .form-control { 
+	height:32px; 
+	line-height:32px; 
+	border:2px solid $bluishgrey; 
+	box-shadow:none; font-size:13px; 
+	color:#282323;
+	 -webkit-border-radius: 4px; 
+	-moz-border-radius: 4px; border-radius: 4px; padding:0 0 0 10px;
+		&:hover{-webkit-box-shadow: 0 0 0 3px #f5f5f5; -moz-box-shadow: 0 0 0 3px #f5f5f5; -o-box-shadow: 0 0 0 3px #f5f5f5; -khtml-box-shadow: 0 0 0 3px #f5f5f5; box-shadow: 0 0 0 3px #f5f5f5;}
 }
 
 textarea:hover{ -webkit-box-shadow: 0 0 0 3px #f5f5f5; -moz-box-shadow: 0 0 0 3px #f5f5f5; -o-box-shadow: 0 0 0 3px #f5f5f5; -khtml-box-shadow: 0 0 0 3px #f5f5f5; box-shadow: 0 0 0 3px #f5f5f5;}
@@ -36,8 +38,8 @@ textarea:hover{ -webkit-box-shadow: 0 0 0 3px #f5f5f5; -moz-box-shadow: 0 0 0 3p
 .form-label{ margin-top:2px;}
 .form-group .help{ color:#a7abb1; font-size:12px;}
 
-.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control{background-color:lighten( $bluishgrey, 2% ); box-shadow:none;}
-.has-feedback label ~ .form-control-feedback{ top:26px;}
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control{border-color:lighten( $bluishgrey, 4% ); background:lighten( $bluishgrey, 4% ); box-shadow:none;}
+.has-feedback label ~ .form-control-feedback{ top:24px;}
 
 
 .edit-form select {
@@ -79,18 +81,19 @@ textarea:hover{ -webkit-box-shadow: 0 0 0 3px #f5f5f5; -moz-box-shadow: 0 0 0 3p
 	appearance: none;
 	display: block;
 	background-color: transparent;
-	border-radius: 4px;
-	border: 2px solid $bluishgrey;
+	border:none;
 	outline: none;
 	outline: 0;
 	width: 100%;
-	padding: 6px 40px 6px 12px;
+	padding: 7px 40px 5px 12px;
 	position: relative;
 	z-index: 2;
   	cursor:pointer;
 	font: 13px $font-stack;
+	color:#6f7b8a;
 }
 	& > select::-ms-expand { display: none;}
+	& > select option{ line-height:30px;}
 }
 
 
