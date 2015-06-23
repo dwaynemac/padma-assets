@@ -45,6 +45,7 @@
           <li><%= link_to t('header-menu.user_menu.school_profile'), "#{APP_CONFIG['accounts-url']}/accounts/#{current_user.current_account.name}" %></li>
         <% end -%>
         <li><%= link_to t('header-menu.user_menu.billing'), "#{APP_CONFIG['accounts-url']}/accounts/#{current_user.current_account.name}/invoices/pending" %></li>
+        <li><%= link_to "Secretaria Virtual", "http://www.metododerose.org/secretariavirtual", target: "_blank" %></li>
         <li><%= link_to t('header-menu.user_menu.logout'), logout_url %></li></ul>
       </li>
     </ul>
