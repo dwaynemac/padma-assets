@@ -9,7 +9,7 @@
 
 .btn-primary{ background:$basicblue; font-size:13px; padding:0 24px; line-height:38px; border:none; min-width:60px;}
 .btn-primary.active,.btn-primary.focus,.btn-primary:active,.btn-primary:focus,.btn-primary:hover,.open>.dropdown-toggle.btn-primary{background-color:darken( $basicblue, 10% );border-color:none;}
-.btn-sm{ padding:0 16px; line-height:24px; border:none;  font-size:13px; font-weight:normal; min-width:60px;}
+.btn-sm{ padding:0 16px; line-height:30px; border:none;  font-size:13px; font-weight:normal; min-width:60px;}
 
 .btn-info{ font-size:1em; padding:0 16px; line-height:1.9em; height:30px; background-color:$lightgrey;border-color:#ebebeb; color:#6a6a6a; font-weight:normal;}
 .btn-info.active,.btn-info.focus,.btn-default:active,.btn-info:focus,.btn-info:hover,.open >.dropdown-toggle.btn-info{background-color:darken( $lightgrey, 10% );border-color:#e0e0e1; color:#5d5d5d;}

@@ -28,19 +28,32 @@ ul.list-unstyled li{ font-size:1em; color:$basicgrey; margin:4px 0;}
 .navbar-nav > li { margin:0;}
 
 
-.label-default { background:#1f9dd9; font-size:1em; font-weight:normal; padding:0.4em 0.6em 0.4em;}
+.label-default { background:#1f9dd9; font-size:1em; font-weight:normal; padding:0.4em 0.6em 0.4em; margin:0 4px 0 0;}
 .label-default  a.glyphicon{ color:#1a77a3; top:2px; margin:0;}
 .label-default  a.glyphicon:hover{ color:#104a66;}
 
 
 
 .has-success .checkbox, .has-success .checkbox-inline, .has-success .control-label, .has-success .help-block, .has-success .radio, .has-success .radio-inline, .has-success.checkbox label, .has-success.checkbox-inline label, .has-success.radio label, .has-success.radio-inline label, .has-success .form-control-feedback{ color:$success;}
-.has-success .form-control{border-color:#5cb85c;}
-.alert-success{ background-color:$success;}
+.has-success .form-control{border-color:$success;}
+.alert-success{ background-color:lighten($success, 30%); color:darken($success, 16%); border-color:$success;}
+.alert-success .alert-link{color:darken($success, 16%);}
+.alert-success a:hover{color:darken($success, 26%);}
+
 .has-error .checkbox, .has-error .checkbox-inline, .has-error .control-label, .has-error .help-block, .has-error .radio, .has-error .radio-inline, .has-error.checkbox label, .has-error.checkbox-inline label, .has-error.radio label, .has-error.radio-inline label, .has-error .form-control-feedback{ color:$error;}
 .has-error .form-control{border-color:#d9534f;}
-
+.alert-danger{ background-color:lighten($error, 30%); color:darken($error, 16%); border-color:$error;}
+.alert-danger .alert-link{color:darken($error, 16%);}
+.alert-danger a:hover{color:darken($error, 26%);}
 .has-warning .checkbox, .has-warning .checkbox-inline, .has-warning .control-label, .has-warning .help-block, .has-warning .radio, .has-warning .radio-inline, .has-warning.checkbox label, .has-warning.checkbox-inline label, .has-warning.radio label, .has-warning.radio-inline label, .has-warning .form-control-feedback{ color:$warning;}
 .has-warning .form-control{border-color:#e4d045;}
 
+.alert-info { background-color:lighten($lightblue, 40%); color:darken($lightblue, 16%); border-color:$lightblue;}
+.alert-info .alert-link{color:darken($lightblue, 16%);}
+.alert-info a:hover{color:darken($lightblue, 26%);}
 
+.alert-warning { background-color:lighten($warning, 40%); color:darken($warning, 30%); border-color:$warning;}
+.alert-warning .alert-link{color:darken($warning, 32%);}
+.alert-warning a:hover{color:darken($warning, 36%);}
+
+.bg-primary, .bg-success, .bg-info, .bg-warning, .bg-danger{ padding:4px 6px;}
