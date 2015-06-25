@@ -1,5 +1,5 @@
-//= require bootstrap.min
 //= require jquery-2.1.4.min
+//= require bootstrap.min
 //= require jquery.ba-throttle-debounce.min
 //= require jquery.gritter.min
 //= require jquery-iframe-transport
