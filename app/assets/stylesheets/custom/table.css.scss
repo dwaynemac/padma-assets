@@ -10,10 +10,10 @@ table{ border:none;
 	& > tbody > tr > td, .table > tbody > tr > th, & > tfoot > tr > td, & > tfoot > tr > th, & > thead > tr > td, & > thead > tr > th{ border-color:lighten( $darkbgrey, 10% );}
 	& tr td.pending{background:lighten( $bluishgrey, 10% );}
 	th{ color:$darkbgrey; font-weight:bold;}
+	th p{  white-space: nowrap; overflow: hidden;  text-overflow: ellipsis; max-width: 160px; margin:0;}
 	& thead th { border-color:$bluishgrey;}
-	& thead td a, & thead th a { color:$linkcolor;}
-	& thead th:hover a , & thead th a:hover { color:#4A6491; text-decoration: underline!important;}
-  	th .current {
+	head td a, & thead th a { color:$linkcolor;}
+	th .current {
     padding-right: 40px;
     background-repeat: no-repeat;
     background-position: right center;}
@@ -54,8 +54,8 @@ table{ border:none;
 		& .sticky-thead, & .sticky-col, & .sticky-intersect {font-weight:bold;	opacity: 0;
 		position: absolute;		top: 0;		left: 0;		transition: all .125s ease-in-out;
 		z-index: 50;		width: auto; /* Prevent table from stretching to full size */}
-	& .sticky-thead{box-shadow: 0 0.25em 0.1em -0.1em rgba(0,0,0,.125);z-index: 100;width: 100%; /* Force stretch */}
-	& sticky-intersect { opacity: 1; z-index: 150;}
+	& .sticky-thead{box-shadow: 0 0.25em 0.1em -0.1em rgba(0,0,0,.125);width: 100%; /* Force stretch */}
+	& sticky-intersect { opacity: 1;}
 	& sticky-intersect .sticky-intersect th {	background-color:#f2f2f2;color: #4D4D4D;} 
 	& td, & th{box-sizing: border-box;}
 	}
@@ -75,7 +75,6 @@ table{ border:none;
 		padding:12px 8px;
 		text-transform:uppercase;}
 		& thead th a { color:$linkcolor;}
-		& th a.current:hover { color:#4A6491; text-decoration: underline!important;}
 		& th:first-child{ padding:0 6px 0 10px!important;}
 }
 
@@ -89,4 +88,4 @@ td.user-name {
 	overflow-y: auto;
 	max-height: 50vh;
 }
-
+a.current:hover, a.current:focus{ cursor:pointer;}

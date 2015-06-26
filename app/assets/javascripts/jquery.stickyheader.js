@@ -70,13 +70,13 @@ $(function(){
 							// When top of wrapping parent is out of view
 							$stickyHead.add($stickyInsct).css({
 								opacity: 1,
-								top: $stickyWrap.scrollTop()
+								top: $stickyWrap.scrollTop(),
 							});
 						} else {
 							// When top of wrapping parent is in view
 							$stickyHead.add($stickyInsct).css({
 								opacity: 0,
-								top: 0
+								top: 0,
 							});
 						}
 					} else {
@@ -86,13 +86,15 @@ $(function(){
 							// When top of viewport is in the table itself
 							$stickyHead.add($stickyInsct).css({
 								opacity: 1,
-								top: $w.scrollTop() - $t.offset().top
+								top: $w.scrollTop() - $t.offset().top,
+								"z-index": 100
 							});
 						} else {
 							// When top of viewport is above or below table
 							$stickyHead.add($stickyInsct).css({
 								opacity: 0,
-								top: 0
+								top: 0,
+								"z-index": -1
 							});
 						}
 					}
@@ -102,7 +104,7 @@ $(function(){
 						// When left of wrapping parent is out of view
 						$stickyCol.add($stickyInsct).css({
 							opacity: 1,
-							left: $stickyWrap.scrollLeft()
+							left: $stickyWrap.scrollLeft(),
 						});
 					} else {
 						// When left of wrapping parent is in view
