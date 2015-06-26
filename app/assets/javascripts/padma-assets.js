@@ -12,4 +12,3 @@
 //= require mixpanel
 //= require notifications
 //= require ux-events
-//= require optin

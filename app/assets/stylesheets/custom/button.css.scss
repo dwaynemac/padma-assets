@@ -4,8 +4,8 @@
 .btn-default{background:$bluishgrey; font-size:13px; padding:0 24px; line-height:38px; border:none; color:darken( $bluishgrey, 50% );}
 .btn-default.active,.btn-default.focus,.btn-default:active,.btn-default:focus,.btn-default:hover,.open>.dropdown-toggle.btn-default{background-color:darken( $bluishgrey, 10% ); border-color:none; color:darken( $bluishgrey, 60% );}
 .btn-default.disabled, .btn-default.disabled.active, .btn-default.disabled.focus, .btn-default.disabled:active, .btn-default.disabled:focus, .btn-default.disabled:hover, .btn-default[disabled], .btn-default.active[disabled], .btn-default.focus[disabled], .btn-default[disabled]:active, .btn-default[disabled]:focus, .btn-default[disabled]:hover, fieldset[disabled] .btn-default, fieldset[disabled] .btn-default.active, fieldset[disabled] .btn-default.focus, fieldset[disabled] .btn-default:active, fieldset[disabled] .btn-default:focus, fieldset[disabled] .btn-default:hover{ background:#f5f5f5; border-color:$lightgrey; color:#cbcbcb;}
-a.btn-default{color:darken( $bluishgrey, 40% )!important;}
-a.btn-primary{ color:#ffffff!important;}
+a.btn.btn-default{color:darken( $bluishgrey, 40% );}
+a.btn.btn-danger, a.btn.btn-success{ color:#ffffff!important;}
 .btn-primary{ background:$basicblue; font-size:13px; padding:0 24px; line-height:38px; border:none; min-width:60px;}
 .btn-primary.active,.btn-primary.focus,.btn-primary:active,.btn-primary:focus,.btn-primary:hover,.open>.dropdown-toggle.btn-primary{background-color:darken( $basicblue, 10% );border-color:none;}
 .btn-sm{ padding:0 16px; line-height:30px; border:none;  font-size:13px; font-weight:normal; min-width:60px;}
@@ -13,7 +13,7 @@ a.btn-primary{ color:#ffffff!important;}
 .btn-info, a.btn-info{ font-size:1em; padding:0 16px; line-height:2em; height:30px; background-color:$lightgrey;border-color:#ebebeb; color:#6a6a6a; font-weight:normal;}
 .btn-info.active,.btn-info.focus,.btn-default:active,.btn-info:focus,.btn-info:hover,.open >.dropdown-toggle.btn-info{background-color:darken( $lightgrey, 10% );border-color:#e0e0e1; color:#5d5d5d;}
 .btn-info .glyphicon{ color:#6a6a6a;}
-
+a.btn.btn-danger{ color:#ffffff;}
 
 .btn-info.disabled, .btn-info.disabled.active, .btn-info.disabled.focus, .btn-info.disabled:active, .btn-info.disabled:focus, .btn-info.disabled:hover, .btn-info[disabled], .btn-info.active[disabled], .btn-info.focus[disabled], .btn-info[disabled]:active, .btn-info[disabled]:focus, .btn-info[disabled]:hover, fieldset[disabled] .btn-info, fieldset[disabled] .btn-info.active, fieldset[disabled] .btn-info.focus, fieldset[disabled] .btn-info:active, fieldset[disabled] .btn-info:focus, fieldset[disabled] .btn-info:hover{ background:$lightgrey; border-color:#ebebeb; color:#6a6a6a; line-height:1.9em;}
 

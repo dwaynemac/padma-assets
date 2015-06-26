@@ -11,9 +11,9 @@
 
 
 #users_article {
-	& h2{ margin:0;}
+	& h2{ margin:0 0 10px; }
 	& .tab-content{ background:$bluishgrey; min-height:200px; margin: 0; padding:10px; border:none;}
 }
 .tab-content{ border:1px solid #d1dade;}
 .nav-tabs{ border-bottom:none; margin:20px 0 0;}
-/* fin librería UI */
+#users_article .tab-content{ height:220px; overflow:scroll;}
