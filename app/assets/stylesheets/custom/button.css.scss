@@ -10,12 +10,12 @@ a.btn.btn-danger, a.btn.btn-success{ color:#ffffff!important;}
 .btn-primary.active,.btn-primary.focus,.btn-primary:active,.btn-primary:focus,.btn-primary:hover,.open>.dropdown-toggle.btn-primary{background-color:darken( $basicblue, 10% );border-color:none;}
 .btn-sm{ padding:0 16px; line-height:29px; height:30px; border:none;  font-size:13px; font-weight:normal; min-width:60px;}
 
-.btn-info, a.btn-info{ font-size:1em; padding:0 16px; line-height:2em; height:30px; background-color:$lightgrey;border-color:#ebebeb; color:#6a6a6a; font-weight:normal;}
+.btn-info, a.btn-info{ font-size:1em; padding:0 10px; line-height:2em; height:30px; background-color:$lightgrey;border-color:#ebebeb; color:#6a6a6a; font-weight:normal;}
 .btn-info.active,.btn-info.focus,.btn-default:active,.btn-info:focus,.btn-info:hover,.open >.dropdown-toggle.btn-info{background-color:darken( $lightgrey, 10% );border-color:#e0e0e1; color:#5d5d5d;}
 .btn-info .glyphicon{ color:#6a6a6a;}
 a.btn.btn-danger{ color:#ffffff;}
 
-.btn-info.disabled, .btn-info.disabled.active, .btn-info.disabled.focus, .btn-info.disabled:active, .btn-info.disabled:focus, .btn-info.disabled:hover, .btn-info[disabled], .btn-info.active[disabled], .btn-info.focus[disabled], .btn-info[disabled]:active, .btn-info[disabled]:focus, .btn-info[disabled]:hover, fieldset[disabled] .btn-info, fieldset[disabled] .btn-info.active, fieldset[disabled] .btn-info.focus, fieldset[disabled] .btn-info:active, fieldset[disabled] .btn-info:focus, fieldset[disabled] .btn-info:hover{ background:$lightgrey; border-color:#ebebeb; color:#6a6a6a; line-height:1.9em;}
+.btn-info.disabled, .btn-info.disabled.active, .btn-info.disabled.focus, .btn-info.disabled:active, .btn-info.disabled:focus, .btn-info.disabled:hover, .btn-info[disabled], .btn-info.active[disabled], .btn-info.focus[disabled], .btn-info[disabled]:active, .btn-info[disabled]:focus, .btn-info[disabled]:hover, fieldset[disabled] .btn-info, fieldset[disabled] .btn-info.active, fieldset[disabled] .btn-info.focus, fieldset[disabled] .btn-info:active, fieldset[disabled] .btn-info:focus, fieldset[disabled] .btn-info:hover{ background:lighten( $lightgrey, 1% ); border-color:#ebebeb; color:#cccccc; line-height:1.9em;}
 
 .btn-danger.active,.btn-danger.focus,.btn-danger:active,.btn-danger:focus,.btn-danger:hover,.open>.dropdown-toggle.btn-danger{ background:darken( $error, 20% ); border:none;}
 
