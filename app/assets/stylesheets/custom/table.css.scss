@@ -4,13 +4,13 @@
 .table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {padding: 12px 8px; border-top:1px solid $bluishgrey;}
 
 table{ border:none;
-	th{font: 0.846em $font-stack; font-weight:bold;  white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
+	th{font: 0.846em $font-stack;  }
 	td {font: 1em $font-stack; font-weight:normal;}
 	& thead tr th{ text-transform:uppercase;}
 	& > tbody > tr > td, .table > tbody > tr > th, & > tfoot > tr > td, & > tfoot > tr > th, & > thead > tr > td, & > thead > tr > th{ border-color:lighten( $darkbgrey, 10% );}
 	& tr td.pending{background:lighten( $bluishgrey, 10% );}
 	th{ color:$darkbgrey; font-weight:bold;}
-	th p{  white-space: nowrap; overflow: hidden;  text-overflow: ellipsis; max-width: 160px; margin:0;}
+	th a{  white-space: nowrap; overflow: hidden;  text-overflow: ellipsis; max-width: 160px; margin:0; display:block;}
 	& thead th { border-color:$bluishgrey;}
 	head td a, & thead th a { color:$linkcolor;}
 	th .current {
