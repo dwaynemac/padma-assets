@@ -1,23 +1,121 @@
-/* librería UI */
+// Import colors-ui
 @import "colors";
 
-.btn-default{background:$bluishgrey; font-size:13px; padding:0 24px; line-height:38px; border:none; color:darken( $bluishgrey, 50% );}
-.btn-default.active,.btn-default.focus,.btn-default:active,.btn-default:focus,.btn-default:hover,.open>.dropdown-toggle.btn-default{background-color:darken( $bluishgrey, 10% ); border-color:none; color:darken( $bluishgrey, 60% );}
-.btn-default.disabled, .btn-default.disabled.active, .btn-default.disabled.focus, .btn-default.disabled:active, .btn-default.disabled:focus, .btn-default.disabled:hover, .btn-default[disabled], .btn-default.active[disabled], .btn-default.focus[disabled], .btn-default[disabled]:active, .btn-default[disabled]:focus, .btn-default[disabled]:hover, fieldset[disabled] .btn-default, fieldset[disabled] .btn-default.active, fieldset[disabled] .btn-default.focus, fieldset[disabled] .btn-default:active, fieldset[disabled] .btn-default:focus, fieldset[disabled] .btn-default:hover{ background:#f5f5f5; border-color:$lightgrey; color:#cbcbcb;}
-a.btn.btn-default{color:darken( $bluishgrey, 40% );}
-a.btn.btn-danger, a.btn.btn-success{ color:#ffffff!important;}
-.btn-primary{ background:$basicblue; font-size:13px; padding:0 24px; line-height:38px; border:none; min-width:60px;}
-.btn-primary.active,.btn-primary.focus,.btn-primary:active,.btn-primary:focus,.btn-primary:hover,.open>.dropdown-toggle.btn-primary{background-color:darken( $basicblue, 10% );border-color:none;}
-.btn-sm{ padding:0 16px; line-height:29px; height:30px; border:none;  font-size:13px; font-weight:normal; min-width:60px;}
+// Declare new variables
+$bg-btn-default-disabled: #f5f5f5;
 
-.btn-info, a.btn-info{ font-size:1em; padding:0 10px; line-height:2em; height:30px; background-color:$lightgrey;border-color:#ebebeb; color:#6a6a6a; font-weight:normal;}
-.btn-info.active,.btn-info.focus,.btn-default:active,.btn-info:focus,.btn-info:hover,.open >.dropdown-toggle.btn-info{background-color:darken( $lightgrey, 10% );border-color:#e0e0e1; color:#5d5d5d;}
-.btn-info .glyphicon{ color:#6a6a6a;}
-a.btn.btn-danger{ color:#ffffff;}
+.btn {
+	font: {
+		size: 13px;
+	}
+	min-width: 60px;
+	padding: 10px 24px;
+	&.active,
+	&.focus,
+	&:active,
+	&:active:focus,
+	&:focus,
+	&:hover {
+		outline: none;
+	}
+	&-default {
+		background-color: $bluishgrey;
+		border: none;
+		color: darken( $bluishgrey, 50%);
+		&.active,
+		&.focus,
+		&:active,
+		&:focus,
+		&:hover {
+			background-color: darken($bluishgrey, 10%);
+			color: darken($bluishgrey, 60%);
+		}
+		&.disabled,
+		&[disabled],
+		fieldset[disabled] & {
+			background-color: $bg-btn-default-disabled;
+			border-color: $lightgrey;
+			color: #cbcbcb;
+		}
+	}
+	&-primary {
+		background-color: $basicblue;
+		border: none;
+		&.active,
+		&.focus,
+		&:active,
+		&:focus,
+		&:hover {
+			background-color: darken($basicblue, 10%);
+		}
+	}
+	&-info {
+		background-color: $lightgrey;
+		border-color: #ebebeb;
+		color: #6a6a6a;
+		&.active,
+		&.focus,
+		&:active,
+		&:focus,
+		&:hover {
+			background-color: darken($lightgrey, 10%);
+			border-color: #e0e0e1;
+			color: #5d5d5d;
+		}
+		&.disabled,
+		&[disabled],
+		fieldset[disabled] & {
+			background: lighten($lightgrey, 1%);
+			border-color: #ebebeb;
+			color: #ccc;
+		}
+	}
+	&-danger {
+		&.active,
+		&.focus,
+		&:active,
+		&:focus,
+		&:hover {
+			background-color: darken($error, 20%);
+			border-color: darken($error, 20%);
+		}
+	}
+}
 
-.btn-info.disabled, .btn-info.disabled.active, .btn-info.disabled.focus, .btn-info.disabled:active, .btn-info.disabled:focus, .btn-info.disabled:hover, .btn-info[disabled], .btn-info.active[disabled], .btn-info.focus[disabled], .btn-info[disabled]:active, .btn-info[disabled]:focus, .btn-info[disabled]:hover, fieldset[disabled] .btn-info, fieldset[disabled] .btn-info.active, fieldset[disabled] .btn-info.focus, fieldset[disabled] .btn-info:active, fieldset[disabled] .btn-info:focus, fieldset[disabled] .btn-info:hover{ background:lighten( $lightgrey, 1% ); border-color:#ebebeb; color:#cccccc; line-height:1.9em;}
+a {
+	&.btn-default {
+		color: darken($bluishgrey, 40%);
+	}
+	&.btn-success,
+	&.btn-danger {
+		color: #fff;
+	}
+}
 
-.btn-danger.active,.btn-danger.focus,.btn-danger:active,.btn-danger:focus,.btn-danger:hover,.open>.dropdown-toggle.btn-danger{ background:darken( $error, 20% ); border:none;}
+.open > .dropdown-toggle {
+	&.btn-default {
+		background-color: darken($bluishgrey, 10%);
+		color: darken($bluishgrey, 60%);
+	}
+	&.btn-primary {
+		background-color: darken($basicblue, 10%);
+	}
+	&.btn-info {
+		background-color: darken($lightgrey, 10%);
+		border-color: #e0e0e1;
+		color: #5d5d5d;
+	}
+	&.btn-danger {
+		background-color: darken($error, 20%);
+	}
+}
 
-/* FIN librería UI */
+.btn-sm,
+.btn-info {
+	line-height: 1.4;
+	padding: 6px 16px;
+}
 
+.btn-info .glyphicon {
+	color: #6a6a6a;
+}

@@ -1,64 +1,305 @@
+// Import colors-ui
 @import "colors";
-body{ font: 13px $font-stack; color:$darkbgrey; }
-a{ color:$linkcolor;
-	&:visited{ color:$linkcolor;}
-	&:hover{ text-decoration:underline; color:$linkcolor;}
-	&:active, &:focus{ color:darken($linkcolor, 14%);}
+
+// Declare new variables
+$font-headers-bold: Gotham-Bold, Helvetica, sans-serif;
+$font-headers-medium: Gotham-Medium, Helvetica, sans-serif;
+
+$bg-label-default: #1f9dd9;
+$icon-label-default: #1a77a3;
+$icon-hover-label-default: #104a66;
+$warning-border-color: #e4d045;
+$error-border-color: #d9534f;
+
+body {
+	color: $darkbgrey;
+	font: 13px $font-stack;
 }
-h1, h2, h3, h4, h5  { font-family:Gotham-Bold, Helvetica, sans-serif; margin:10px 0;}
-h5, h6{ font-family:Gotham-Medium, Helvetica, sans-serif; }
-h1{color:$basicblue;}
-h1{font-size:28px; }
-h2{font-size:20px; }
-h3{ font-size:12px; text-transform:uppercase;}
-h4{ font-size:14px; }
-h2, h3, h4, h5{color:$basicgrey;}
 
-
-a.glyphicon{
-	color:darken( $bluishgrey, 40% );
-			&:hover { text-decoration:underline; color:darken( $bluishgrey, 80% );}
+a{
+	color: $linkcolor;
+	&:hover,
+	&:visited {
+		color: $linkcolor;
 	}
-			
-.glyphicon{	color:$darkbgrey;}
+	&:hover {
+		text-decoration: underline;
+	}
+	&:active,
+	&:focus {
+		color: darken($linkcolor, 14%);
+	}
+}
 
-.mbottom-10 {margin-bottom: 10px}
-.mtop-10 {margin-top: 10px}
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-family: $font-headers-bold;
+	margin: 10px 0;
+}
+
+h5,
+h6 {
+	font-family: $font-headers-medium;
+}
+
+h1{
+	color: $basicblue;
+	font: {
+		size: 28px;
+	}
+}
+
+h2 {
+	font: {
+		size: 20px;
+	}
+}
+h3 {
+	font: {
+		size: 12px;
+	}
+	text-transform: uppercase;
+}
+
+h4 {
+	font: {
+		size: 14px;
+	}
+}
+
+h2,
+h3,
+h4,
+h5 {
+	color: $basicgrey;
+}
+
+code {
+	white-space: pre-wrap;
+}
 
 
-#avatar-image{ margin:24px 0 10px;}
-ul.list-unstyled { margin:20px 0 0;}
-ul.list-unstyled li{ font-size:1em; color:$basicgrey; margin:4px 0;}
-.navbar-nav > li { margin:0;}
+a.glyphicon {
+	color: darken($bluishgrey, 40%);
+	&:hover {
+		color: darken($bluishgrey, 80%);
+		text-decoration: underline;
+	}
+}
 
+.glyphicon {
+	color: $darkbgrey;
+}
 
-.label-default { background:#1f9dd9; font-size:1em; font-weight:normal; padding:0.4em 0.6em 0.4em; margin:0 4px 0 0;}
-.label-default  a.glyphicon{ color:#1a77a3; top:2px; margin:0;}
-.label-default  a.glyphicon:hover{ color:#104a66;}
+// ======= ???
+#avatar-image {
+	margin: 24px 0 10px;
+}
 
+// Lists
+.list-unstyled {
+	margin: 20px 0 0;
+	li {
+		color: $basicgrey;
+		font: {
+			size: 1em;
+		}
+		margin: 4px 0;
+	}
+}
 
+.navbar-nav {
+	> li {
+		margin: 0;
+	}
+}
 
-.has-success .checkbox, .has-success .checkbox-inline, .has-success .control-label, .has-success .help-block, .has-success .radio, .has-success .radio-inline, .has-success.checkbox label, .has-success.checkbox-inline label, .has-success.radio label, .has-success.radio-inline label, .has-success .form-control-feedback{ color:$success;}
-.has-success .form-control{border-color:$success;}
-.alert-success{ background-color:lighten($success, 30%); color:darken($success, 16%); border-color:$success;}
-.alert-success .alert-link{color:darken($success, 16%);}
-.alert-success a:hover{color:darken($success, 26%);}
+// Labels
+// ======= Revisar
+.label {
+	cursor: default;
+	font: {
+		size: 1em;
+		weight: normal;
+	}
+	margin: 0 4px 0 0;
+	padding: .4em .6em .4em;
+	&-default {
+		background-color: $bg-label-default;
+		a {
+			cursor: pointer;
+			text-decoration: none;
+			&.glyphicon {
+				color: $icon-label-default;
+				margin: 0;
+				top: 2px;
+				&:hover {
+					color: $icon-hover-label-default;
+				}
+			}
+		}
+	}
+}
 
-.has-error .checkbox, .has-error .checkbox-inline, .has-error .control-label, .has-error .help-block, .has-error .radio, .has-error .radio-inline, .has-error.checkbox label, .has-error.checkbox-inline label, .has-error.radio label, .has-error.radio-inline label, .has-error .form-control-feedback{ color:$error;}
-.has-error .form-control{border-color:#d9534f;}
-.alert-danger{ background-color:lighten($error, 30%); color:darken($error, 16%); border-color:$error;}
-.alert-danger .alert-link{color:darken($error, 16%);}
-.alert-danger a:hover{color:darken($error, 26%);}
-.has-warning .checkbox, .has-warning .checkbox-inline, .has-warning .control-label, .has-warning .help-block, .has-warning .radio, .has-warning .radio-inline, .has-warning.checkbox label, .has-warning.checkbox-inline label, .has-warning.radio label, .has-warning.radio-inline label, .has-warning .form-control-feedback{ color:$warning;}
-.has-warning .form-control{border-color:#e4d045;}
+// Forms
+.has-feedback {
+	overflow: hidden;
+}
 
-.alert-info { background-color:lighten($lightblue, 40%); color:darken($lightblue, 16%); border-color:$lightblue;}
-.alert-info .alert-link{color:darken($lightblue, 16%);}
-.alert-info a:hover{color:darken($lightblue, 26%);}
+// form-control has-success {}
+.has-success {
+	.checkbox,
+	.checkbox-inline,
+	.control-label,
+	.help-block,
+	.radio,
+	.radio-inline,
+	&.checkbox label,
+	&.checkbox-inline label,
+	&.radio label,
+	&.radio-inline label,
+	.form-control-feedback {
+		color: $success;
+	}
+	.form-control {
+		border-color: $success;
+	}
+}
 
-.alert-warning { background-color:lighten($warning, 40%); color:darken($warning, 30%); border-color:$warning;}
-.alert-warning .alert-link{color:darken($warning, 32%);}
-.alert-warning a:hover{color:darken($warning, 36%);}
+// form-control has-warning {}
+.has-warning {
+	.checkbox,
+	.checkbox-inline,
+	.control-label,
+	.help-block,
+	.radio,
+	.radio-inline,
+	&.checkbox label,
+	&.checkbox-inline label,
+	&.radio label,
+	&.radio-inline label,
+	.form-control-feedback {
+		color: $warning;
+	}
+	.form-control {
+		border-color: $warning-border-color;
+	}
+}
 
-.bg-primary, .bg-success, .bg-info, .bg-warning, .bg-danger{ padding:4px 6px;}
-.has-feedback{ overflow:hidden;}
+// form-control has-error {}
+.has-error {
+	.checkbox,
+	.checkbox-inline,
+	.control-label,
+	.help-block,
+	.radio,
+	.radio-inline,
+	&.checkbox label,
+	&.checkbox-inline label,
+	&.radio label,
+	&.radio-inline label,
+	.form-control-feedback {
+		color: $error;
+	}
+	.form-control {
+		border-color: $error-border-color;
+	}
+}
+
+// Alerts
+// alert-success
+.alert-success {
+	background-color: lighten($success, 30%);
+	border-color: $success;
+	color: darken($success, 16%);
+	.alert-link {
+		color: darken($success, 16%);
+	}
+	a {
+		&:hover {
+			color:darken($success, 26%);
+		}
+	}
+}
+
+// alert-danger
+.alert-danger {
+	background-color: lighten($error, 30%);
+	border-color: $error;
+	color: darken($error, 16%);
+	.alert-link {
+		color: darken($error, 16%);
+	}
+	a {
+		&:hover {
+			color: darken($error, 26%);
+		}
+	}
+}
+
+// alert-info
+.alert-info {
+	background-color: lighten($lightblue, 40%);
+	border-color: $lightblue;
+	color: darken($lightblue, 16%);
+	.alert-link {
+		color: darken($lightblue, 16%);
+	}
+	a {
+		&:hover {
+			color: darken($lightblue, 26%);
+		}
+	}
+}
+
+// alert-warning
+.alert-warning {
+	background-color: lighten($warning, 40%);
+	border-color: $warning;
+	color: darken($warning, 30%);
+	.alert-link {
+		color: darken($warning, 32%);
+	}
+	a {
+		&:hover {
+			color: darken($warning, 36%);
+		}
+	}
+}
+
+// Backgrounds
+.bg-primary,
+.bg-success,
+.bg-info,
+.bg-warning,
+.bg-danger {
+	padding: 4px 6px;
+}
+
+// Margins
+.mbottom-5 {
+	margin-bottom: 5px;
+}
+
+.mbottom-10 {
+	margin-bottom: 10px;
+}
+
+.mbottom-15 {
+	margin-bottom: 15px;
+}
+
+.mtop-5 {
+	margin-top: 5px;
+}
+
+.mtop-10 {
+	margin-top: 10px;
+}
+
+.mtop-15 {
+	margin-top: 15px;
+}
