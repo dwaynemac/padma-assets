@@ -127,18 +127,19 @@ a.glyphicon {
 	}
 	margin: 0 4px 0 0;
 	padding: .4em .6em .4em;
-	&-default {
-		background-color: $bg-label-default;
-		a {
-			cursor: pointer;
-			text-decoration: none;
-			&.glyphicon {
-				color: $icon-label-default;
-				margin: 0;
-				top: 2px;
-				&:hover {
-					color: $icon-hover-label-default;
-				}
+}
+
+.label-default {
+	background-color: $bg-label-default;
+	a {
+		cursor: pointer;
+		text-decoration: none;
+		&.glyphicon {
+			color: $icon-label-default;
+			margin: 0;
+			top: 2px;
+			&:hover {
+				color: $icon-hover-label-default;
 			}
 		}
 	}
