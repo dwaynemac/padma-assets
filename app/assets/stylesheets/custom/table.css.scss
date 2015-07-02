@@ -1,34 +1,92 @@
+// Import colors-ui
 @import "colors";
 
-/* Librería UI */
-.table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {padding: 12px 8px; border-top:1px solid $bluishgrey;}
+.table {
+	> thead,
+	> tbody,
+	> tfoot {
+		> tr {
+			> th,
+			> td {
+				border-top-color: $bluishgrey;
+				padding: 12px 8px;
+			}
+		}
+	}
+}
 
-table{ border:none;
-	th{font: 0.846em $font-stack;  }
-	td {font: 1em $font-stack; font-weight:normal;}
-	& thead tr th{ text-transform:uppercase;}
-	& > tbody > tr > td, .table > tbody > tr > th, & > tfoot > tr > td, & > tfoot > tr > th, & > thead > tr > td, & > thead > tr > th{ border-color:lighten( $darkbgrey, 10% );}
-	& tr td.pending{background:lighten( $bluishgrey, 10% );}
-	th{ color:$darkbgrey; font-weight:bold;}
-	th a{  white-space: nowrap; overflow: hidden;  text-overflow: ellipsis; max-width: 160px; margin:0; display:block;}
-	& thead th { border-color:$bluishgrey;}
-	head td a, & thead th a { color:$linkcolor;}
+table {
+	border: none;
+	> thead,
+	> tbody,
+	> tfoot {
+		> tr {
+			> th,
+			> td {
+				padding: 12px 8px;
+			}
+			> th {
+				color: $darkbgrey;
+				font: {
+					family: $font-stack;
+					size: .846em;
+					weight: bold;
+				}
+				text-transform: uppercase;
+				a {
+					display: block;
+					margin: 0;
+					max-width: 160px; // relative
+					overflow: hidden;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+				}
+			}
+			> td {
+				font: {
+					family: $font-stack;
+					size: 1em;
+					weight: normal;
+				}
+				&.pending {
+					background-color: lighten($bluishgrey, 10%);
+				}
+			}
+		}
+	}
+	& thead th {
+		border-color:$bluishgrey;
+	}
+	thead td a,
+	& thead th a {
+		color:$linkcolor;
+	}
 	th .current {
-    padding-right: 40px;
-    background-repeat: no-repeat;
-    background-position: right center;}
-	
- 	 th .asc {    background-image: url('../arrow_up.png'); }
- 	 th .desc {    background-image: url('../arrow_down.png');}
+    	padding-right: 40px;
+    	background-repeat: no-repeat;
+    	background-position: right center;
+    }
+ 	th .asc {
+ 		background-image: url('../arrow_up.png');
+ 	}
+ 	th .desc {
+ 		background-image: url('../arrow_down.png');
+ 	}
 }
-.table-hover{
- & tbody tr:hover >td, & tbody tr:hover>th { background-color: $bluishgrey;}  
- & tbody tr:hover > td .progress{background-color:white;}
+
+.table-hover {
+ 	> tbody tr:hover >td,
+ 	> tbody tr:hover> th {
+ 		background-color: $bluishgrey;
+ 	}
+ 	> tbody tr:hover > td .progress{
+ 		background-color:white;
+ 	}
 }
 
-
-
-.table-bordered{border-color:$bluishgrey;}
+.table-bordered {
+	border-color: $bluishgrey;
+}
 
 .table-noborder {
 	> thead > tr > th,
@@ -47,6 +105,7 @@ table{ border:none;
 /* sticky wrap */
 
 .sticky-wrap {
+	margin-bottom: 15px;
 	overflow-x: auto;
 	overflow-y: hidden;
 	position: relative;
@@ -58,7 +117,7 @@ table{ border:none;
 	& sticky-intersect { opacity: 1;}
 	& sticky-intersect .sticky-intersect th {	background-color:#f2f2f2;color: #4D4D4D;} 
 	& td, & th{box-sizing: border-box;}
-	}
+}
 
 
 .sticky-thead {
