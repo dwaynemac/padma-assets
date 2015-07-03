@@ -98,7 +98,9 @@ fieldset[disabled] .form-control {
 }
 
 .form-group label,
-label {
+label,
+label.label {
+	text-align:left;
 	color: $basicgrey;
 	font: {
 		size: 14px;
