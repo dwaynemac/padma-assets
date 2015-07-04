@@ -1,4 +1,7 @@
 // dropdown
+
+$bg-dropdown-responsive: #1e5788;
+
 .dropdown-menu {
 	> .active {
 		> a,
@@ -11,6 +14,9 @@
 	> li {
 		+ .dropdown-header {
 			margin-top: 6px;
+			@media (max-width: 767px) {
+				margin: 0;
+			}
 		}
 	}
 	&.multiselect-container {
@@ -28,4 +34,11 @@
 	text-overflow: ellipsis;
 	text-transform: uppercase;
 	white-space: nowrap;
+	@media (max-width: 767px) {
+		background-color: $bg-dropdown-responsive;
+		border: none;
+		color: #fff;
+		margin: 0;
+		text-align: center;
+	}
 }

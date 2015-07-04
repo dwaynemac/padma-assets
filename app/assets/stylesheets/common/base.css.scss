@@ -28,12 +28,14 @@ hr {
 		background-image:linear-gradient(bottom,#eee,#fff);
 	}
 }
+
 .btn-group {
 	margin: 15px;
 	&.bootstrap-select {
 		margin: 0;
 	}
 }
+
 .btn-glyphicon {
 	&:before {
 		display: inline-block;
@@ -51,10 +53,12 @@ hr {
 		padding-right: 3px;
 	}
 }
+
 .input-inline-addon {
 	display: inline-block;
 	vertical-align: middle;
 }
+
 // page header
 .page-header {
 	&.page-header-margin-middle {
@@ -167,6 +171,7 @@ hr {
 		}
 	}
 }
+
 .clear {
 	&:before,
 	&:after {
@@ -177,22 +182,27 @@ hr {
 		clear: both;
 	}
 }
+
 .control-label {
 	&.control-label-block {
 		display: block;
 	}
 }
+
 // alert
 .alert-message-inline {
 	display: inline-block;
 }
+
 .alert-md {
 	padding: 10px;
 }
+
 // text
 .text-grey {
 	color: #999;
 }
+
 // bootstrap-select
 .bootstrap-select {
 	&[class*="span"],

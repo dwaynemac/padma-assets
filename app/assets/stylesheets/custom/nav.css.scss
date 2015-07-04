@@ -1,3 +1,31 @@
+// Nav & Navbar
+// -------------------------------------
+
+.nav {
+	> li {
+		> a {
+			@media (max-width: 884px) {
+				padding-left: 8px;
+				padding-right: 8px;
+				-webkit-transition: padding .2s ease-in;
+				transition: padding .2s ease-in;
+			}
+			@media (min-width: 768px) and (max-width: 883px) {
+				padding-left: 6px;
+				padding-right: 6px;
+				-webkit-transition: padding .2s ease-in;
+				transition: padding .2s ease-in;
+			}
+		}
+	}
+}
+
+.navbar {
+	border: none;
+	border-radius: 0;
+	margin: 0;
+}
+
 .nav-vertical {
 	border-bottom: none;
 	> li {
@@ -44,10 +72,19 @@
 	}
 }
 
-// navbar toggle & collapse
 .navbar-toggle {
+	border-radius: 0;
 	border: none;
-	margin: 26.5px 20px 0 0 !important;
+	margin-bottom: 17px;
+	margin-top: 17px;
+	margin-right: 17px;
+	&:active,
+	&:active:focus,
+	&:focus,
+	&:hover {
+		background-color: rgba(#000,.1);
+		outline: none;
+	}
 }
 
 .navbar-inverse {
@@ -56,9 +93,26 @@
 		border: none;
 	}
 	.navbar-toggle {
-		&:focus,
-		&:hover {
+		background-color: rgba(#000,.1);
+		-webkit-transition: background-color 150ms ease;
+		transition: background-color 150ms ease;
+		&.collapsed {
 			background-color: transparent;
 		}
+		&:focus,
+		&:hover {
+			background-color: rgba(#000,.1);
+		}
+	}
+}
+
+.navbar-collapse {
+	box-shadow: none;
+}
+
+@media (max-width: 767px) {
+	.navbar-collapse {
+		padding-left: 0;
+		padding-right: 0;
 	}
 }

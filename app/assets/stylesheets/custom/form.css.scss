@@ -7,6 +7,7 @@
 		margin-bottom: 0;
 	}
 }
+
 .form-horizontal {
 	.multiselect-container {
 		.checkbox {
@@ -14,12 +15,6 @@
 		}
 	}
 }
-
-/* librería UI */
-
-.form-control::-moz-placeholder{color:#ccc;opacity:1}
-.form-control:-ms-input-placeholder{color:#ccc}
-.form-control::-webkit-input-placeholder{color:#ccc}
 
 .form-control {
 	&::-moz-placeholder {
@@ -148,6 +143,7 @@ label.label {
     background-color: #fff;
 	position: relative;
 	display: inline-block;
+	vertical-align: middle;
 	&:after {
 		color: $bluishgrey;
 		content: '\e252';

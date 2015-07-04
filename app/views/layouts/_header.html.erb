@@ -1,24 +1,25 @@
-<header class="header">
-  <div id="H_moduleArea">
-    <%= render 'layouts/module_box' %>
-    <nav class="subnav" data-priority="secondary" >
-      <div class="wrapper">  
-        <h2><%= yield(:breadcrum) %></h2>
-
-        <%= yield(:header_submenu) %>
-        
-        <%= form_tag "#{APP_CONFIG['crm-url']}/contacts", {:id => "H_searchForm", :method => :get} do -%>
-         <%= submit_tag "&nbsp;".html_safe, :class => "submit_search" -%>
-          <%= text_field_tag :q, nil, iD: 'sField' %>
-          
-          <div class="select">
-          <select name="scope">
-            <option value="local"><%= t('header-menu.search.locally') %></option>
-            <option value="global"><%= t('header-menu.search.globally') %></option>
-          </select> 
-         </div>
-        <%- end -%>
+<header id="header" role='banner'>
+  <%= render 'layouts/module_box' %>
+  <div class='breadcrumb'>
+    <div class='container'>
+      <div class='breadcrumb-inner'>
+        <div class='breadcrumb-nav'>
+          <div class='nav-item'><%= yield(:breadcrum) %></div>
+          <div class='nav-item'><%= yield(:header_submenu) %></div>
+        </div>
+        <div class='breadcrumb-form'>
+          <%= form_tag "#{APP_CONFIG['crm-url']}/contacts", {:class => 'form-inline', :id => "H_searchForm", :method => :get} do -%>
+            <div class="select">
+              <select name="scope">
+                <option value="local"><%= t('header-menu.search.locally') %></option>
+                <option value="global"><%= t('header-menu.search.globally') %></option>
+              </select>
+           </div>
+            <%= text_field_tag :q, nil, iD: 'sField', :class => 'form-control' %>
+            <%= submit_tag "&nbsp;".html_safe, :class => "submit_search search-btn" -%>
+          <%- end -%>
+        </div>
       </div>
-    </nav>
-  </div><!-- #H_moduleArea -->
-</header> <!-- .header -->
+    </div>
+  </div>
+</header>

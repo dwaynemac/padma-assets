@@ -1,7 +1,6 @@
 @charset "utf-8";
-/* CSS Document */
+/*
 
-/* Search Button */
 input[class="submit_search"] {
 	width: 25px;
 	height: 25px;
@@ -12,7 +11,6 @@ input[class="submit_search"] {
 
 nav.subnav input[class="submit_search"]{ border:none; height:22px;}
 
-/* Module Area Styles  */
 
 #H_moduleArea {
 	width:auto;
@@ -21,20 +19,15 @@ nav.subnav input[class="submit_search"]{ border:none; height:22px;}
 	font-family: 'Gotham-Medium';
 }
 
-
-/* Main Area Styles  */
-
 #H_mainArea {
 	overflow: visible;
 	height:38px;
 	background-color:#E5E5E5;
-	background: #f1f2f2; /* fallback */
-	background: -moz-linear-gradient(top, #FFF, #f1f2f2); /* FF3.6 en adelante*/
-	background: -webkit-gradient(linear,left top,left bottom,color-stop(0, #FFF),color-stop(1, #f1f2f2)); /* Saf4+, Chrome en adelante*/
-	-webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; /* CSS3 con -moz- & -webkit prefix for application on firefox + chrome */
+	background: #f1f2f2;
+	background: -moz-linear-gradient(top, #FFF, #f1f2f2);
+	background: -webkit-gradient(linear,left top,left bottom,color-stop(0, #FFF),color-stop(1, #f1f2f2));
+	-webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;
 }
-
-/* Logo Box Styles */
 
 #H_logoBox {
 	width:79px;
@@ -49,16 +42,14 @@ nav.subnav input[class="submit_search"]{ border:none; height:22px;}
 	background:url('logo_30px.png') no-repeat center center;
 }
 
-/* Scope Select Styles */
-
 #H_scopeSelect {
 	float:left;
 	width:32px;
 	height:24px;
 	border: 1px solid #CCC;
-	-webkit-border-radius: 5px 0px 0px 5px; -moz-border-radius: 5px 0px 0px 5px; border-radius: 5px 0px 0px 5px; /* CSS3 con -moz- & -webkit prefix for application on firefox + chrome */
+	-webkit-border-radius: 5px 0px 0px 5px; -moz-border-radius: 5px 0px 0px 5px; border-radius: 5px 0px 0px 5px;
 	list-style:none outside none; 
-	background-color:#F5F5F5; 	/* TODO: CSS3 Backround Color Gradient */
+	background-color:#F5F5F5;
 }
 
 #H_scopeSelect span {
@@ -80,8 +71,6 @@ nav.subnav input[class="submit_search"]{ border:none; height:22px;}
 	margin:0px 0px 7px 2px;
 	background:url('icon_sprite_grid_8px.png') -80px -8px no-repeat;
 }
-
-/* Scope List Styles */
 
 #H_scopeList {
 	display:none;
@@ -131,8 +120,6 @@ nav.subnav input[class="submit_search"]{ border:none; height:22px;}
 	background-color:red;
 }
 
-/* Search Field Classes */
-
 #H_searchForm input[id="searchField"] {
 	height:16px;
 	width:139px;
@@ -143,7 +130,6 @@ nav.subnav input[class="submit_search"]{ border:none; height:22px;}
 	margin-right:5px;
 }
 
-/* Dinamic Classes */
 
 #H_scopeList.show {
 		display:block;
@@ -157,92 +143,4 @@ nav.subnav input[class="submit_search"]{ border:none; height:22px;}
 	background:url('icon_sprite_grid_16px.png') -144px -80px no-repeat;
 }
 
-/* NEW HEADER */
-
-#H_logo.navbar-brand { background:url(<%= asset_path "logo-padma-w.png" %>) no-repeat scroll center left rgba(0, 0, 0, 0) ; height:47px; margin:0 10px 0 0; width:53px; padding:0!important;}
-nav.navbar{max-width:1200px; background:none; margin:0 auto;}
-#H_moduleArea .navbar-inverse .navbar-nav > li > a{ color:#ffffff; font-family: 'Gotham-Medium', verdana; font-weight:normal;font-size:11px; text-transform:uppercase; line-height:22px;}
-#H_moduleArea .navbar-inverse .navbar-nav > li > a:hover{ background:#25669e;}}
-.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:focus, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-nav li.current > a { font-weight:normal; background:#25669e;}
-.navbar-nav li.current > a, .navbar-nav li.current > a:hover{ background:#25669e; }
-.navbar-nav > li > a.tipsyS{ background:#1f9dd9; color:#ffffff; margin:0 10px 0 0; height:52px; line-height:52px !important; padding:0 10px !important; }
-.navbar-nav > li > a.tipsyS:hover{ background:#1d8ec4!important; color:#ffffff;}
-.navbar-static-top{ border-width:0 !important;}
-.dropdown-header{ border-bottom:1px solid #cccccc; color:#666; font-size:12px; overflow: hidden; padding:7.5px 20px; text-overflow: ellipsis; text-transform:uppercase; white-space: nowrap; }
-.navbar-toggle{ margin:24px 20px 0 0 !important;}
-.navbar-nav > li > .dropdown-menu{ max-height:400px; overflow-x: hidden; overflow-y: auto; text-transform:none; background:#ffffff; border:none;}
-.navbar-nav > li > .dropdown-menu a{ text-transform:none; font-size:11px; color:#333333; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; display: block; max-width: 260px; padding:10px 20px;}
-.navbar-nav > li > .dropdown-menu a:hover{ background:#f5f5f5; color:#000000;}
-#H_moduleArea  a#username{  padding:0 10px 0 30px; height:52px; line-height:50px; background-position: left center!important; text-transform:none; }
-#H_moduleArea .navbar-inverse .navbar-toggle{ border:none;-webkit-border-radius: 0px; -moz-border-radius: 0px; border-radius: 0px; }
-#H_moduleArea  .navbar-header{ border:none;}
-.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form{ border-color:none;}
-.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover{ background:none;}
-#H_moduleArea .navbar-inverse .navbar-toggle:hover{ background:#266397;}
-#H_moduleArea .navbar-right{margin-right:0;}
-.navbar-nav li:hover .dropdown-menu { display: block; }
-.navbar-nav li > a:hover{ background:#25669e;}
-
-nav.subnav{ background:none; font-family: 'Gotham-Medium', verdana; font-weight:normal; font-size:11px; background:#f5f5f5; height: 54px;}
-nav.subnav .wrapper{ max-width:1200px; margin:0 auto; overflow:hidden; position:relative;}
-nav.subnav h2, nav.subnav h2 a{ display:inline-block; font-size:11px; line-height:54px; float:left;text-transform:uppercase; color:#2d74b2; margin:0;  padding:0 10px; text-decoration:none;}
-nav.subnav h2 a {background:#eaeaea;}
-nav.subnav h2 a:hover{ background:#e0e0e0;}
-nav.subnav ul{ display:inline-block; margin:10px 0 0;}
-nav.subnav form{ display:inline-block; float:right; margin:10px 0 0;}
-nav.subnav input, nav.subnav select{ }
-#H_searchForm .select{ float:right; margin: 0 4px 0 0; color:#6f7b8a;}
-#H_searchForm .select > select{ padding:0 40px 0 12px; line-height:29px; height:29px; color:#6f7b8a;}
-#H_searchForm .select::after{ top:-2px; right:-4px;}
-#H_searchForm input{float:right;}
-#H_searchForm .submit_search{ margin:6px 0 0 10px;}
-
-nav.subnav  nav > li > a{ padding:8px;}
-.subnav .glyphicon{ font-size:18px;}
-.subnav a span{ color:#337ab7;}
-.subnav .s_search{ float:right; margin:4px 0 0 10px;}
-.subnav a span:hover{ color:25669e;}
-
-
-@media (max-width:1200px){
-	#H_logo.navbar-brand{ margin:0 0 0 10px;} 
-	nav.subnav .wrapper{ max-width:96%;}
-}
-@media (max-width:844px){ 
-.nav > li > a{ padding:10px 8px; }
-#H_moduleArea .navbar-inverse .navbar-nav > li > a {line-height:32px;}
-.navbar-nav > li > a.tipsyS {line-height:52px;}
-}
-
-@media (max-width:767px){ 
-#H_logo.navbar-brand{ margin:10px;} 
-.navbar-inverse .navbar-nav .open .dropdown-menu > li > a{ color:#ffffff; padding:14px 0; border:none!important;}
-.navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus, .navbar-inverse .navbar-nav .open .dropdown-menu > .dropdown-header{border:none!important;}
-.navbar-nav .open .dropdown-menu{ padding:0;}
-.navbar-nav{ margin:0!important}
-.navbar-nav li:hover .dropdown-menu { display: none; }
-.navbar-nav li.open:hover .dropdown-menu { display: block; }
-.navbar-nav > li > a.tipsyS{ margin:0; line-height:52px!important;}
-#H_moduleArea .navbar-inverse .navbar-nav > li > a{ text-align:center;}
-.navbar-collapse{ padding-right:0;}
-#H_moduleArea a#username{ background-position:42% 42% !important;}
-.nav > li:first-child > a{ border-top:none;}
-.nav > li > a{ padding:10px 0; border-top:1px solid #25669e;}
-.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:focus, .navbar-inverse .navbar-nav > .open > a:hover{   border-top:1px solid #25669e;}
-.nav > li.open:hover > a{ border-top:none;}
-#navbar{ width:100%; overflow:hidden; padding:0!important;}
-.navbar-inverse .navbar-nav .open .dropdown-menu > li > a{ max-width:100%; padding:14px 0; text-align:center;}
-.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form{ border-color:#1e5788!important;}
-.dropdown-header{ background:#1e5788; text-align:center; color:#ffffff;}
-li.dropdown-header:hover{ background:#1e5788!important;}
-.navbar-collapse{box-shadow:none;}
-.nav > li > a#username{ border:none;}
-.navbar-nav .open .dropdown-menu { background-color:#1c517f;}
-.dropdown-menu li:hover, .dropdown-menu li:active{ background:#1b4d78;}
-.dropdown-menu li.dropdown-header:hover, .dropdown-menu li.dropdown-header:active { background:#1c517f;}
-.navbar-nav > li > .dropdown-menu{ max-height:inherit;}
-}
-
-@media (max-width:520px){ 
-#H_moduleArea a#username{ background-position:33% 42% !important;}
-}
+*/
