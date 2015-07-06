@@ -18,8 +18,7 @@ body {
 
 a{
 	color: $linkcolor;
-	&:hover,
-	&:visited {
+	&:hover {
 		color: $linkcolor;
 	}
 	&:hover {
@@ -94,11 +93,6 @@ a.glyphicon {
 	color: $darkbgrey;
 }
 
-// ======= ???
-#avatar-image {
-	margin: 24px 0 10px;
-}
-
 // Lists
 .list-unstyled {
 	margin: 20px 0 0;
@@ -127,6 +121,15 @@ a.glyphicon {
 	}
 	margin: 0 4px 0 0;
 	padding: .4em .6em .4em;
+	.close {
+		float: none;
+		font: {
+			size: 16px;
+		}
+		line-height: inherit;
+		position: relative;
+		top: 1px;
+	}
 }
 
 .label-default {
@@ -216,7 +219,8 @@ a.glyphicon {
 	background-color: lighten($success, 30%);
 	border-color: $success;
 	color: darken($success, 16%);
-	.alert-link {
+	.alert-link,
+	strong {
 		color: darken($success, 16%);
 	}
 	a {
@@ -231,7 +235,8 @@ a.glyphicon {
 	background-color: lighten($error, 30%);
 	border-color: $error;
 	color: darken($error, 16%);
-	.alert-link {
+	.alert-link,
+	strong {
 		color: darken($error, 16%);
 	}
 	a {
@@ -246,7 +251,8 @@ a.glyphicon {
 	background-color: lighten($lightblue, 40%);
 	border-color: $lightblue;
 	color: darken($lightblue, 16%);
-	.alert-link {
+	.alert-link,
+	strong {
 		color: darken($lightblue, 16%);
 	}
 	a {
@@ -261,7 +267,8 @@ a.glyphicon {
 	background-color: lighten($warning, 40%);
 	border-color: $warning;
 	color: darken($warning, 30%);
-	.alert-link {
+	.alert-link,
+	strong {
 		color: darken($warning, 32%);
 	}
 	a {
