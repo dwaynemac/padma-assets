@@ -16,7 +16,7 @@ body {
 	font: 13px $font-stack;
 }
 
-a{
+a {
 	color: $linkcolor;
 	&:hover {
 		color: $linkcolor;
@@ -85,7 +85,7 @@ a.glyphicon {
 	color: darken($bluishgrey, 40%);
 	&:hover {
 		color: darken($bluishgrey, 80%);
-		text-decoration: underline;
+		text-decoration: none;
 	}
 }
 
@@ -276,6 +276,13 @@ a.glyphicon {
 			color: darken($warning, 36%);
 		}
 	}
+}
+
+// Well
+.well {
+	background-color: #f8f8f8;
+	border-color: #ccc;
+	box-shadow: none;
 }
 
 // Backgrounds

@@ -6,6 +6,13 @@
 	&:empty {
 		margin-bottom: 0;
 	}
+	.help,
+	.help-block {
+		color: #a7abb1;
+		font: {
+			size: 12px;
+		}
+	}
 }
 
 .form-horizontal {
@@ -95,22 +102,13 @@ fieldset[disabled] .form-control {
 .form-group label,
 label,
 label.label {
-	text-align:left;
 	color: $basicgrey;
+	display: block;
 	font: {
 		size: 14px;
 		weight: normal;
 	}
-}
-
-.form-group {
-	.help,
-	.help-block {
-		color: #a7abb1;
-		font: {
-			size: 12px;
-		}
-	}
+	text-align:left;
 }
 
 .form-label {
