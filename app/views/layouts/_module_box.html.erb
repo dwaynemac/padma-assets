@@ -12,8 +12,12 @@
     <ul class="nav navbar-nav">
       <li>
         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><%= t('header-menu.lists.title') %> <span class="caret"></span></a>
-        <ul class="dropdown-menu" role="menu">
-                 <%= render 'layouts/lists_list' %>
+        <ul id="lists-menu-drowpdown" class="dropdown-menu" role="menu">
+          <% if can?(:manage,:persistent_contact_searches) -%>
+             <%= render 'layouts/alpha_lists_list' %>
+          <% else -%>
+             <%= render 'layouts/lists_list' %>
+          <% end -%>
         </ul>
       </li>
       <li> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><%= t('header-menu.stats.title') %> <span class="caret"></span></a>
