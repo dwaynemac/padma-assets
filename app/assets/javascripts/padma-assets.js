@@ -4,5 +4,5 @@
 //= require notifications
 //= require cache
 //= require async_render
-//= require enable-menu-quickfilter
+//= require initialize-lists-menu
 //= require_tree 

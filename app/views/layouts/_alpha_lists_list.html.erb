@@ -1,19 +1,19 @@
-<li><%= link_to t('header-menu.lists.lists.new_list'), "#{APP_CONFIG['crm-url']}/contacts" %></li>
-<li><%= link_to t('header-menu.lists.lists.all_lists'), "#{APP_CONFIG['crm-url']}/persistent_contact_searches" %></li>
+  <li><%= link_to t('header-menu.lists.lists.new_list'), "#{APP_CONFIG['crm-url']}/contacts" %></li>
+  <li><%= link_to t('header-menu.lists.lists.all_lists'), "#{APP_CONFIG['crm-url']}/persistent_contact_searches" %></li>
 
-<li>
-  <input id="menu-lists-filter" class='form-control' type='text' placeholder='<%= t('header-menu.lists.lists.find_list') %>' />
-</li>
+  <li class="pull-right"><a id="refresh-lists-list-menu"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span></a></li>
+	<li class="dropdown-header"><%= t('header-menu.lists.lists.saved_lists') %></li>
+  <li>
+    <input id="menu-lists-filter" class='form-control' type='text' placeholder='<%= t('header-menu.lists.lists.find_list') %>' />
+  </li>
 <div id="all-available-lists-menu">
-  <li class="dropdown-header"><%= t('header-menu.lists.lists.saved_lists') %></li>
-
   <div id="menu-saved-lists"
        class="cached-async-render"
+       data-cache-expires-in="120"
        data-cache-key="saved-lists-for-<%= current_user.current_account.name%>"
        data-url="<%= APP_CONFIG['crm-url' ] %>/persistent_contact_searches/menu">
     <li><a><%= image_tag 'spinner.gif' %></a></li>
   </div>
-
 	<li class="dropdown-header"><%= t('header-menu.lists.lists.system_lists') %></li>
     <%- %W(students former_students prospects).each do |st| -%>
       <li>
