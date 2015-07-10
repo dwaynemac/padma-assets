@@ -4,6 +4,7 @@ class GeneralAbility
   def initialize(user)
     if alpha?(user)
       can :manage, :mailchimp
+      can :manage, :persistent_contact_searches
     end
   end
   

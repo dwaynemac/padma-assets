@@ -12,6 +12,13 @@ en:
       logout: Logout
     lists:
       title: Lists
+      lists:
+        new_list: New list
+        all_lists: All lists
+        find_list: Find list
+        saved_lists: Saved lists
+        system_lists: PADMA's lists
+        refresh: refresh lists
       contacts:
         title: Contacts
         all: All contacts

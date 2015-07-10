@@ -1,0 +1,41 @@
+# Usage
+#
+#   To a container element add css class 'async-render' and attribute data-url with url to be called.
+#   this will call url and replace elements content with returned html
+#     options are:
+#       data-url, data-success-callback
+#
+#   With class 'cached-async-render" html will be cached locally to avoid constant requests.
+#     options are:
+#         data-url , data-cache-key, data-cache-expires-in, data-success-callback
+#
+# Author: Dwayne Macgowan
+$(document).ready ->
+
+  cache = new Cache(-1, false, new Cache.LocalStorageCacheStorage())
+
+  $(".cached-async-render").each (i) ->
+    e = $(this)
+    cache_key = e.data('cache-key') || e.data('url')
+    expires_in = e.data('cache-expires-in') || 60 # default cache expiration to 1 min
+
+    cached_html = cache.getItem(cache_key)
+    if cached_html == null
+      $.ajax e.data('url'),
+        success: (html_response) ->
+          cache.setItem(cache_key,html_response,{expirantionSliding: expires_in})
+          e.html html_response
+          if e.data('success-callback')
+            eval e.data('success-callback')
+    else
+      e.html cached_html
+      if e.data('success-callback')
+        eval e.data('success-callback')
+
+  $(".async-render").each (i) ->
+    e = $(this)
+    $.ajax e.data('url'),
+      success: (html_response) ->
+        e.html html_response
+        if e.data('success-callback')
+          eval e.data('success-callback')

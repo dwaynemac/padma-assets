@@ -12,3 +12,6 @@
 //= require mixpanel
 //= require notifications
 //= require ux-events
+//= require cache
+//= require async_render
+//= require initialize-lists-menu

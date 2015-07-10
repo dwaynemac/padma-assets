@@ -12,6 +12,13 @@ pt-BR:
       logout: Encerrar sessāo
     lists:
       title: Listas
+      lists:
+        new_list: Nova lista
+        all_lists: Todas as listas
+        find_list: Buscar lista
+        saved_lists: Listas personalizadas
+        system_lists: Listas de PADMA
+        refresh: atualizar listas
       contacts:
         title: Contatos
         all_contacts: Todos os contatos
