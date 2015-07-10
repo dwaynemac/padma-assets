@@ -2,10 +2,14 @@
 #
 #   To a container element add css class 'async-render' and attribute data-url with url to be called.
 #   this will call url and replace elements content with returned html
+#     options are:
+#       data-url, data-success-callback
 #
 #   With class 'cached-async-render" html will be cached locally to avoid constant requests.
 #     options are:
-#         data-url , data-cache-key, data-cache-expires-in
+#         data-url , data-cache-key, data-cache-expires-in, data-success-callback
+#
+# Author: Dwayne Macgowan
 $(document).ready ->
 
   cache = new Cache(-1, false, new Cache.LocalStorageCacheStorage())
