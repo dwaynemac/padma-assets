@@ -9,6 +9,7 @@
 //= require jquery.stickyheader
 //= require jquery.tipsy
 //= require jquery.xdr-transport
+//= require jquery.quickfilter
 //= require mixpanel
 //= require notifications
 //= require ux-events
