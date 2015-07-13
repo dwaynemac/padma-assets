@@ -13,6 +13,9 @@ $bg-dropdown-responsive: #1e5788;
 	}
 	> li {
 		&.dropdown-form {
+			font: {
+				family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+			}
 			padding: 3px 10px;
 		}
 		+ .dropdown-header {
