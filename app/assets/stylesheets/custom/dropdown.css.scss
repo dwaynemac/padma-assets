@@ -12,6 +12,9 @@ $bg-dropdown-responsive: #1e5788;
 		}
 	}
 	> li {
+		&.dropdown-form {
+			padding: 3px 10px;
+		}
 		+ .dropdown-header {
 			margin-top: 6px;
 			@media (max-width: 767px) {

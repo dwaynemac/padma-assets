@@ -158,6 +158,44 @@ $bg-link-responsive-hover: #1b4d78;
 	}
 }
 
+@media (min-width: 768px) {
+	.navbar-inverse {
+		.navbar-nav {
+			.dropdown-menu {
+				li {
+					a {
+						color: #333;
+						display: block;
+						font: {
+							family: $font-navbar;
+							size: 11px;
+							weight: normal;
+						}
+  						line-height: 1.42857143;
+						max-width: 250px;
+						overflow: hidden;
+						padding: 3px 20px;
+						text-overflow: ellipsis;
+						white-space: nowrap;
+						&:hover {
+							background-color: #f5f5f5;
+							color: #333;
+							text-decoration: none;
+						}
+					}
+				}
+			}
+		}
+	}
+	#refresh-lists-list-menu {
+		line-height: 1.42857143;
+		margin-right: -20px;
+		padding: 1px;
+		text-align: center;
+		width: 20px;
+	}
+}
+
 .navbar-inverse {
 	.navbar-nav {
 		@media (max-width: 767px) {
