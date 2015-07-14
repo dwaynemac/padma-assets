@@ -11,7 +11,7 @@
        class="cached-async-render"
        data-cache-expires-in="120"
        data-cache-key="saved-lists-for-<%= current_user.current_account.name%>"
-       data-url="<%= APP_CONFIG['crm-url' ] %>/persistent_contact_searches/menu">
+       data-url="<%= APP_CONFIG['crm-url' ] %>/persistent_contact_searches/menu?account_name=<%= current_user.current_account.name %>">
     <li><a><%= image_tag 'spinner.gif' %></a></li>
   </div>
 	<li class="dropdown-header"><%= t('header-menu.lists.lists.system_lists') %></li>
