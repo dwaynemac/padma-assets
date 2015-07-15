@@ -17,6 +17,9 @@ $bg-dropdown-responsive: #1e5788;
 				family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 			}
 			padding: 3px 10px;
+			@media (max-width: 767) {
+				padding: 10px;
+			}
 		}
 		+ .dropdown-header {
 			margin-top: 6px;
