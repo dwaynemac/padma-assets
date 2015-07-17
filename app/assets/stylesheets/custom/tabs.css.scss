@@ -8,18 +8,18 @@
 		border-style: solid;
 		color:$basicblue;
 		border-radius:0;
-		color:#304269;
-		background:#f5f5f5;
+		color:#55606e;
+		background:$bluishgrey ;
 	}
 	& > li.active > a,
 	#users_article .nav-tabs > li.active > a:focus,
 	& > li.active > a:hover {
 		border-color: transparent;
-		background:$bluishgrey;
-		color:#55606e;
-		-webkit-box-shadow:1px 1px 1px rgba(0,0,0,0.1);
-		-moz-box-shadow:1px 1px 1px rgba(0,0,0,0.1);
-		box-shadow:1px 1px 1px rgba(0,0,0,0.1);
+		background:#f9f9f9;
+		color:#304269;
+		-webkit-box-shadow:1px 1px 1px rgba(0,0,0,0.2);
+		-moz-box-shadow:1px 1px 1px rgba(0,0,0,0.2);
+		box-shadow:1px 1px 1px rgba(0,0,0,0.2);
 		-webkit-border-bottom-right-radius:3px;
 		-webkit-border-top-right-radius:3px;
 		-moz-border-radius-bottom-right:3px;
@@ -40,10 +40,10 @@
 
 #users_article {
 	& h2 {
-		margin:0 0 10px;
+		margin:20px 0 10px;
 	}
 	& .tab-content {
-		background:$bluishgrey;
+		background:#f9f9f9;
 		min-height:200px;
 		margin: 0;
 		padding:10px;

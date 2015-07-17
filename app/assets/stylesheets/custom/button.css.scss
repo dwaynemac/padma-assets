@@ -83,6 +83,17 @@ $bg-btn-default-disabled: #f5f5f5;
 	}
 }
 
+.btn-warning {
+	color:#74511e!important;
+	border:none!important;
+	&.active,
+	&.focus,
+	&:active,
+	&:focus,
+	&:hover {
+		color:#74511e!important;
+	}
+}
 a {
 	&.btn-default {
 		color: darken($bluishgrey, 40%);
