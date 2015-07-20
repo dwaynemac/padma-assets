@@ -9,8 +9,13 @@ class GeneralAbility
   end
   
   private
-
+  
   def alpha?(user)
     user.account_tester_level == 'alpha'
+  end
+
+  def beta?(user)
+    tl = user.account_tester_level 
+    tl == 'alpha' || tl == 'beta'
   end
 end
