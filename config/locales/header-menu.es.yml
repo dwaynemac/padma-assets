@@ -7,7 +7,7 @@ es:
       fnz: Financiero
     user_menu:
       user_profile: Mi perfil
-      school_profile: Configuración Unidad
+      school_profile: Configuración Equipo
       billing: Pagos
       logout: Cerrar sessión
     lists:
