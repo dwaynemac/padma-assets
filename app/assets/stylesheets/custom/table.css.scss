@@ -99,8 +99,7 @@ table,
 // table-sticky js
 .sticky-wrap {
 	margin-bottom: 15px;
-	overflow-x: auto;
-	overflow-y: hidden;
+	overflow: hidden;
 	position: relative;
 	width: 100%;
 	.sticky-thead,
