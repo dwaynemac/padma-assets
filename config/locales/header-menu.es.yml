@@ -5,6 +5,7 @@ es:
     modules:
       title: Módulos
       fnz: Financiero
+      planning: Gestión de la rutina
     user_menu:
       user_profile: Mi perfil
       school_profile: Configuración Unidad

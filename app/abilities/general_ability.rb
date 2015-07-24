@@ -5,6 +5,7 @@ class GeneralAbility
     if alpha?(user)
       can :manage, :mailchimp
       can :manage, :persistent_contact_searches
+      can :manage, :planning
     end
   end
   
