@@ -14,10 +14,10 @@ es:
     lists:
       title: Listas
       lists:
-        new_list: Nueva lista
-        all_lists: Todas las listas
-        find_list: Encontrar lista
-        saved_lists: Listas personalizadas
+        new_list: Nueva búsqueda
+        all_lists: Listas y búsquedas
+        find_list: Encontrar búsqueda
+        saved_lists: Búsquedas guardadas
         system_lists: Listas de PADMA
         refresh: actualizar lista
       contacts:
