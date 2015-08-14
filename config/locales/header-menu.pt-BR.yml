@@ -13,6 +13,7 @@ pt-BR:
       logout: Encerrar sessāo
     lists:
       title: Listas
+      refresh_tipsy: Clic para atualizar este menu
       lists:
         new_list: Nova busca
         all_lists: Listas e buscas

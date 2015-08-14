@@ -12,6 +12,7 @@ en:
       logout: Logout
     lists:
       title: Lists
+      refresh_tipsy: Click here to refresh this menu
       lists:
         new_list: New list
         all_lists: All lists

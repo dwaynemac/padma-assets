@@ -13,6 +13,7 @@ es:
       logout: Cerrar sessión
     lists:
       title: Listas
+      refresh_tipsy: Click aquí para actualizar este menú
       lists:
         new_list: Nueva búsqueda
         all_lists: Listas y búsquedas
