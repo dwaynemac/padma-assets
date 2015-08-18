@@ -1,5 +1,6 @@
 // Import colors-ui
-@import "colors";
+@import "../custom/colors";
+@import "variables";
 
 // Declare new variables
 $font-headers-bold: Gotham-Bold, Helvetica, sans-serif;
@@ -12,21 +13,20 @@ $warning-border-color: #e4d045;
 $error-border-color: #d9534f;
 
 body {
-	color: $darkbgrey;
-	font: 13px $font-stack;
+	color: $text-color;
+	font: {
+		family: $font-family-base;
+	}
 }
 
 a {
-	color: $linkcolor;
+	color: $link-color;
 	&:hover {
-		color: $linkcolor;
-	}
-	&:hover {
-		text-decoration: underline;
+		color: darken($link-color, 5%);
 	}
 	&:active,
 	&:focus {
-		color: darken($linkcolor, 14%);
+		color: darken($linkcolor, 10%);
 	}
 }
 
@@ -37,6 +37,9 @@ h4,
 h5 {
 	font-family: $font-headers-bold;
 	margin: 10px 0;
+	&:first-child {
+		margin-top: 0;
+	}
 }
 
 h5,
@@ -44,7 +47,7 @@ h6 {
 	font-family: $font-headers-medium;
 }
 
-h1{
+h1 {
 	color: $basicblue;
 	font: {
 		size: 28px;
@@ -80,6 +83,11 @@ code {
 	white-space: pre-wrap;
 }
 
+p {
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
 
 a.glyphicon {
 	color: darken($bluishgrey, 40%);
@@ -89,27 +97,12 @@ a.glyphicon {
 	}
 }
 
-.glyphicon {
-	color: $darkbgrey;
-}
-
-.container{
-	max-width:1200px!important;
-	width:100%;
+.container {
+	max-width: 1200px!important;
+	width: 100%;
 }
 
 // Lists
-.list-unstyled {
-	margin: 20px 0 0;
-	li {
-		color: $basicgrey;
-		font: {
-			size: 1em;
-		}
-		margin: 4px 0;
-	}
-}
-
 .navbar-nav {
 	> li {
 		margin: 0;
@@ -120,18 +113,12 @@ a.glyphicon {
 // ======= Revisar
 .label {
 	cursor: default;
-	font: {
-		size: 1em;
-		weight: normal;
-	}
-	margin: 0 4px 0 0;
-	padding: .4em .6em .4em;
 	.close {
 		float: none;
 		font: {
 			size: 16px;
 		}
-		line-height: inherit;
+		line-height: normal;
 		position: relative;
 		top: 1px;
 	}
@@ -218,71 +205,6 @@ a.glyphicon {
 	}
 }
 
-// Alerts
-// alert-success
-.alert-success {
-	background-color: lighten($success, 30%);
-	border-color: $success;
-	color: darken($success, 16%);
-	.alert-link,
-	strong {
-		color: darken($success, 16%);
-	}
-	a {
-		&:hover {
-			color:darken($success, 26%);
-		}
-	}
-}
-
-// alert-danger
-.alert-danger {
-	background-color: lighten($error, 30%);
-	border-color: $error;
-	color: darken($error, 16%);
-	.alert-link,
-	strong {
-		color: darken($error, 16%);
-	}
-	a {
-		&:hover {
-			color: darken($error, 26%);
-		}
-	}
-}
-
-// alert-info
-.alert-info {
-	background-color: lighten($lightblue, 40%);
-	border-color: $lightblue;
-	color: darken($lightblue, 16%);
-	.alert-link,
-	strong {
-		color: darken($lightblue, 16%);
-	}
-	a {
-		&:hover {
-			color: darken($lightblue, 26%);
-		}
-	}
-}
-
-// alert-warning
-.alert-warning {
-	background-color: lighten($warning, 40%);
-	border-color: $warning;
-	color: darken($warning, 30%);
-	.alert-link,
-	strong {
-		color: darken($warning, 32%);
-	}
-	a {
-		&:hover {
-			color: darken($warning, 36%);
-		}
-	}
-}
-
 // Well
 .well {
 	background-color: #f8f8f8;
@@ -290,36 +212,29 @@ a.glyphicon {
 	box-shadow: none;
 }
 
-// Backgrounds
-.bg-primary,
-.bg-success,
-.bg-info,
-.bg-warning,
-.bg-danger {
-	padding: 4px 6px;
+@mixin offset-margin($margin, $value){
+        margin-#{$margin}: $value;
 }
 
-// Margins
-.mbottom-5 {
-	margin-bottom: 5px;
+@for $i from 1 through 10 {
+  @each $margin in top, bottom {
+
+    .margin-#{$margin}-#{$i}0{
+        @include offset-margin($margin, 10px * $i)
+    }
+
+  }
 }
 
-.mbottom-10 {
-	margin-bottom: 10px;
+.no-padding {
+	padding: 0;
 }
 
-.mbottom-15 {
-	margin-bottom: 15px;
-}
-
-.mtop-5 {
-	margin-top: 5px;
-}
-
-.mtop-10 {
-	margin-top: 10px;
-}
-
-.mtop-15 {
-	margin-top: 15px;
+.not-set {
+	color: $gray-light;
+	font: {
+		size: $font-size-base-sm;
+		style: italic;
+		weight: normal;
+	}
 }

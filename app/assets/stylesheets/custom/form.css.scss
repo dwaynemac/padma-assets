@@ -1,114 +1,12 @@
 // Import colors-ui
 @import "colors";
 
-
-.form-group {
-	&:empty {
-		margin-bottom: 0;
-	}
-	.help,
-	.help-block {
-		color: #a7abb1;
-		font: {
-			size: 12px;
-		}
-	}
-}
-
 .form-horizontal {
 	.multiselect-container {
 		.checkbox {
 			min-height: inherit;
 		}
 	}
-}
-
-.form-control {
-	&::-moz-placeholder {
-		color: #ccc;
-		font: {
-			family: $font-stack;
-			size: 1em;
-			weight: normal;
-		}
-		opacity: 1;
-	}
-	&:-moz-placeholder {
-		color: #ccc;
-		font: {
-			family: $font-stack;
-			size: 1em;
-			weight: normal;
-		}
-		opacity: 1;
-	}
-	&:-ms-input-placeholder {
-		color: #ccc;
-		font: {
-			family: $font-stack;
-			size: 1em;
-			weight: normal;
-		}
-	}
-	&::-webkit-input-placeholder {
-		color: #ccc;
-		font: {
-			family: $font-stack;
-			size: 1em;
-			weight: normal;
-		}
-	}
-}
-
-.form-control,
-input[type="text"],
-.uneditable-input,
-select,
-textarea,
-input[type="password"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="date"],
-input[type="month"],
-input[type="time"],
-input[type="week"],
-input[type="number"],
-input[type="email"],
-input[type="url"],
-input[type="search"],
-input[type="tel"],
-input[type="color"] {
-	border: 2px solid $bluishgrey;
-	border-radius: 4px;
-	box-shadow: 0 0 0 3px transparent;
-	color: $darkbgrey;
-	font: {
-		size: 13px;
-	}
-	padding: 6px 10px;
-	&:hover {
-		box-shadow: 0 0 0 3px #f5f5f5;
-	}
-}
-
-.form-control[disabled],
-.form-control[readonly],
-fieldset[disabled] .form-control {
-	background-color: lighten($bluishgrey, 4%);
-	border-color: lighten($bluishgrey, 4%);
-	box-shadow: none;
-}
-
-.form-group label,
-label,
-label.label {
-	color: $basicgrey;
-	display: block;
-	font: {
-		size: 14px;
-		weight: normal;
-	}
-	text-align:left;
 }
 
 .form-label {
@@ -122,11 +20,6 @@ label.label {
 	width: 32px;
 }
 
-// with label
-.has-feedback label ~ .form-control-feedback {
-	top: 21px;
-}
-
 .edit-form select {
 	-moz-appearance: window;
 	-webkit-appearance: none;
@@ -134,88 +27,4 @@ label.label {
 	-o-appearance: none;
 	appearance: none;
   	background-color: transparent;
-}
-
-// Select container
-.select {
-    background-color: #fff;
-	position: relative;
-	display: inline-block;
-	vertical-align: middle;
-	&:after {
-		color: $bluishgrey;
-		content: '\e252';
-		font: {
-			family: 'Glyphicons Halflings';
-			size: 10px;
-		}
-		height: 34px; /* height equal select */
-		position: absolute;
-		right: 0;
-		text-align: center;
-		top: 0;
-		width: 32px;
-		line-height: 36px; /* line height equal height select */
-	  	z-index: 1;
-	}
-	> select {
-		-moz-appearance: none;
-		-webkit-appearance: none;
-		-ms-appearance: none;
-		-o-appearance: none;
-		appearance: none;
-		background-color: transparent;
-		color: #6f7b8a;
-	  	cursor: pointer;
-		display: block;
-		font: 13px $font-stack;
-		height: 34px;
-		line-height: 1.42857143;
-		padding: 6px 40px 6px 12px;
-		position: relative;
-		-webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-		transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-		width: 100%;
-		z-index: 2;
-		&:focus {
-			border-color: #66afe9;
-			outline: 0;
-		}
-		&::-ms-expand {
-			display: none;
-		}
-	}
-}
-
-.ie8,
-.ie9 {
-	.select {
-		select {
-			padding-right: 12px;
-		}
-	}
-	&:after {
-		display: none;
-	}
-}
-
-// Improvement 0.0.1
-.input-file {
-	input[type='file'] {
-		display: none;
-		opacity: 0;
-	}
-	.file-name {
-		display: inline-block;
-		color: $darkbgrey;
-		font: {
-			size: 13px $font-stack;
-		}
-		margin-left: 10px;
-		max-width: 400px;
-		overflow: hidden;
-		text-overflow: ellipsis;
-		vertical-align: middle;
-		white-space: nowrap;
-	}
 }

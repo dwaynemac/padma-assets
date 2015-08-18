@@ -1,8 +1,28 @@
 .multiselect-container {
 	> li {
 		> a {
+			padding: 0;
 			.checkbox {
-				padding-top: 0;
+				input[type='checkbox'] {
+					margin-left: -20px;
+					margin-top: 4px;
+				}
+			}
+		}
+		&.active {
+			&,
+			&:hover,
+			&:hover:focus {
+				> a {
+				    background-color: #337ab7;
+				    color: #fff;
+				    text-decoration: none;
+				    outline: 0;
+				    .checkbox,
+				    .radio {
+				    	color: #fff;
+				    }
+				}
 			}
 		}
 	}

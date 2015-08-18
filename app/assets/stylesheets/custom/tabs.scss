@@ -1,0 +1,22 @@
+@import "colors";
+@import "../common/variables";
+
+.nav-tabs {
+	border-bottom:none;
+	margin:20px 0 0;
+}
+
+#users_article .tab-content {
+	height:220px;
+	overflow:scroll;
+}
+
+.tab-pane-footer {
+	background-color: $bg-panel;
+	color: $gray-dark;
+	font: {
+		size: $font-size-base-sm;
+	}
+	margin: 10px -10px -10px;
+	padding: 5px;
+}
