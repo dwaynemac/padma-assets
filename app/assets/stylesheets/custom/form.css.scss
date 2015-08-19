@@ -9,6 +9,13 @@
 	}
 }
 
+label.label, label, .label{
+	font-size: 100%;
+	}
+	
+.chosen-container-multi .chosen-choices li.search-choice .search-choice-close{
+	width:18px;
+	}
 .form-label {
 	margin-top: 2px;
 }
@@ -37,7 +44,7 @@
 	display: inline-block;
 	vertical-align: middle;
 	&:after {
-		color: $bluishgrey;
+		color: $bordergrey;
 		content: '\e252';
 		font: {
 			family: 'Glyphicons Halflings';
@@ -45,7 +52,7 @@
 		}
 		height: 34px; /* height equal select */
 		position: absolute;
-		right: 0;
+		right: 68px;
 		text-align: center;
 		top: 0;
 		width: 32px;
@@ -59,10 +66,10 @@
 		-o-appearance: none;
 		appearance: none;
 		background-color: transparent;
-		color: #6f7b8a;
+		color: #000000;
 	  	cursor: pointer;
 		display: block;
-		font: 13px $font-stack;
+		font: 100% $font-stack;
 		height: 34px;
 		line-height: 1.42857143;
 		padding: 6px 30px 6px 12px;
@@ -80,6 +87,11 @@
 		}
 	}
 }
+
+.contact_search_gender_input 
+	select:after{
+		margin:0 0 0 -42px;
+	}
 
 .ie8,
 .ie9 {
@@ -114,3 +126,25 @@
 	}
 
 }
+
+form {	
+	text-align:left;
+	}
+
+#new_contact_search fieldset li.select:after{
+	position:relative;
+	display:inline-block;
+	right:7%;
+	#local_status{
+		}
+	}
+
+
+#new_contact_search li.select:after{
+	position:relative;
+	display:inline-block;
+	right:14%;
+	#local_status{
+		}
+	}
+
