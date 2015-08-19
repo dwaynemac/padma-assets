@@ -10,7 +10,7 @@
         <div class='breadcrumb-form'>
           <%= form_tag "#{APP_CONFIG['crm-url']}/contacts", {:class => 'form-inline', :id => "H_searchForm", :method => :get} do -%>
             <div class="select">
-              <select name="scope">
+              <select name="scope" class='form-control'>
                 <option value="local"><%= t('header-menu.search.locally') %></option>
                 <option value="global"><%= t('header-menu.search.globally') %></option>
               </select>

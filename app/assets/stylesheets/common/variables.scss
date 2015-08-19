@@ -1,0 +1,67 @@
+// Screens
+
+// Screen small = tablet
+$screen-sm: 768px !default;
+$screen-sm-min: $screen-sm;
+
+// Screen medium = desktop
+$screen-md: 992px !default;
+$screen-md-min: $screen-md;
+
+// Screen lg = wide desktop
+$screen-lg: 768px !default;
+$screen-lg-min: $screen-lg;
+
+// Colors
+$gray-base: #000 !default;
+$gray-darker: lighten($gray-base, 13.5%) !default; // #222
+$gray-dark: lighten($gray-base, 20%) !default;   // #333
+$gray: lighten($gray-base, 33.5%) !default; // #555
+$gray-light: lighten($gray-base, 46.7%) !default; // #777
+$gray-lighter: lighten($gray-base, 93.5%) !default; // #eee
+$gray-font: #8c8c8c;
+$color-link: #428bcA;
+
+// Forms
+$border-form-control: #ebebeb;
+$bg-form-control-disabled: #f1f3f5;
+$border-form-control-disabled: $bg-form-control-disabled;
+$font-color-help-addon: #a7abb1;
+
+// buttons
+$bg-btn-primary: #1f9dd9; // button primary
+$bg-btn-success: #5bbd72; // button success
+$bg-btn-default: #ccc; // button default
+$bg-btn-secondary: #ebebeb; // button secondary
+$bg-btn-warning: #f0ad4e; // button warning
+$bg-btn-danger: #d14836; // button danger
+
+// Font
+$font-family-sans-serif: Arial, sans-serif !default;
+$font-family-base: $font-family-sans-serif;
+$font-line-height-default: 1.42857143;
+$font-line-height-xs: 1.5;
+$padding-base-btn-default: 9px 25px;
+$padding-base-btn-upper: 7.5px 12px;
+$padding-base-btn-sm: 6px 12px;
+$padding-base-btn-xs: 5px 10px;
+
+// Color
+$text-color: $gray-font;
+$link-color: $color-link;
+
+$font-size-base: 16px;
+$font-size-base-md: ceil($font-size-base - 2); // 14px
+$font-size-base-sm: ceil($font-size-base - 3); // 13px
+$font-size-base-xs: ceil($font-size-base - 5); // 11px
+
+// Background colors
+$bg-panel: #ebebeb;
+$bg-lightgrey: #f5f5f5;
+$bg-table-footer: $bg-btn-secondary;
+
+// Alerts
+$bg-alert-success: $bg-btn-success;
+$bg-alert-warning: #e4d045;
+$bg-alert-danger: #d9534f;
+$bg-alert-info: $bg-btn-primary;
