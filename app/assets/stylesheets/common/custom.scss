@@ -101,7 +101,7 @@ input[type="tel"],
 input[type="color"] {
     background-color: #fff;
     background-image: none;
-    border: 2px solid #ccc;
+    border: 2px solid $bordergrey;
     border-radius: 4px;
     box-shadow: 0 0 0 3px transparent;
     color: #555;
@@ -174,7 +174,7 @@ input[type="color"] {
 		-webkit-align-items: center;
 		-ms-flex-align: center;
 		align-items: center;
-		color: $font-color-select;
+		color: $bordergrey;
 		content: '\e252';
 		display: -webkit-box;
 		display: -webkit-flex;

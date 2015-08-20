@@ -31,10 +31,7 @@ a {
 }
 
 h1,
-h2,
-h3,
-h4,
-h5 {
+h2 {
 	font-family: $font-headers-bold;
 	margin: 10px 0;
 	&:first-child {
@@ -60,11 +57,13 @@ h2 {
 	}
 }
 h3 {
-	font: {
-		size: 12px;
+	font-weight:normal;
+	font-size: 100%;
+	color:#000;
 	}
-	text-transform: uppercase;
-}
+
+
+
 
 h4 {
 	font: {
@@ -90,9 +89,9 @@ p {
 }
 
 a.glyphicon {
-	color: darken($bluishgrey, 40%);
+	color: darken($bordergrey, 40%);
 	&:hover {
-		color: darken($bluishgrey, 80%);
+		color: darken($bordergrey, 80%);
 		text-decoration: none;
 	}
 }
