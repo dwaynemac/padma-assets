@@ -41,6 +41,7 @@ label {
 		color: $gray-dark;
 		display: block;
 		font: {
+			size: $font-size-base-md;
 			weight: normal;
 		}
 	}
@@ -589,5 +590,33 @@ $alerts: "success" $bg-alert-success,
 @each $v in (primary, success, info, warning, danger) {
 	.bg-#{$v} {
 		padding: 4px 6px;
+	}
+}
+
+// Modal
+.modal-footer {
+	.bt {
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+
+// Custom chosen-container plugin
+.chosen-container-multi {
+	ul.chosen-choices {
+		height: 34px !important;
+		min-height: inherit;
+ 		li.search-choice {
+ 			background-image: none;
+ 			border: none;
+ 			box-shadow: none;
+ 			padding: 3px 20px 6px 5px;
+ 			.search-choice-close {
+ 				background-position: -49px 1px;
+ 				&:hover {
+ 					background-position: -49px -10px;
+ 				}
+ 			}
+ 		}
 	}
 }

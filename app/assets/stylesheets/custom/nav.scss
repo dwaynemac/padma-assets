@@ -30,6 +30,9 @@ $nav-tab-border-bottom-hover: #ddd;
 				background-color: $nav-tab-default-hover;
 				border-bottom-color: $nav-tab-border-bottom-hover;
 			}
+			&.btn {
+				border-bottom-width: 1px;
+			}
 		}
 
 		// Active state, and its :hover to override normal :hover
