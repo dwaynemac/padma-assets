@@ -223,7 +223,6 @@ a.glyphicon {
 	-webkit-flex-direction: row;
 	-ms-flex-direction: row;
 	flex-direction: row;
-	overflow: hidden;
 	position: relative;
 	-webkit-user-select: none;
 	-moz-user-select: none;
@@ -246,7 +245,19 @@ a.glyphicon {
 	margin: 0 .5em 0 1em;
 	overflow: initial;
 	width: 25%;
+	@for $i from 1 through 4 {
+		&:nth-child(#{$i}) {
+			background-color: darken($bg-panel, (15% * $i));
+			&:before {
+				border-color: darken($bg-panel, (15% * $i)) darken($bg-panel, (15% * $i)) darken($bg-panel, (15% * $i)) transparent;
+			}
+			&:after {
+				border-left-color: darken($bg-panel, (15% * $i));
+			}
+		}
+	}
 	&:before {
+		bottom: 0;
 		content: "";
 	    position: absolute;
 	    top: 0;
@@ -270,12 +281,6 @@ a.glyphicon {
 			display: none;
 		}
 	}
-	&:last-child {
-		margin-right: 0;
-		&:after {
-			display: none;
-		}
-	}
 	&.active {
 		background-color: #fff;
 		&:before {
@@ -284,16 +289,22 @@ a.glyphicon {
 		&:after {
 			border-left-color: #fff;
 		}
+		.funnel-value,
+		.funnel-content:before,
+		.funnel-content a {
+			color: #8c8c8c;
+		}
 	}
 	.funnel-value {
+		color: #fff;
 		-webkit-box-flex: 0;
 		-webkit-flex: none;
 		-ms-flex: none;
 		flex: none;
-		margin-left: 20px;
 		font: {
 			size: 36px;
 		}
+		margin-left: 20px;
 	}
 	.funnel-content {
 		-webkit-box-flex: 1;
@@ -309,7 +320,7 @@ a.glyphicon {
 	position: relative;
 	$h: 20px;
 	&:before {
-		color: $gray-dark;
+		color: #fff;
 		content: '|';
 		height: $h;
 		left: 5px;
@@ -318,7 +329,7 @@ a.glyphicon {
 		top: 50%;
 	}
 	a {
-		color: $gray-dark;
+		color: #fff;
 		display: block;
 		overflow: hidden;
 		padding: 23.5px 30px 23.5px 15px;
@@ -326,7 +337,6 @@ a.glyphicon {
 		white-space: nowrap;
 		&:hover,
 		&:focus {
-			color: $gray-darker;
 			text-decoration: none;
 		}
 	}
