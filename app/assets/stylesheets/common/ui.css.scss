@@ -254,6 +254,15 @@ a.glyphicon {
 			&:after {
 				border-left-color: darken($bg-panel, (15% * $i));
 			}
+			&:hover {
+				background-color: darken($bg-panel, (10% * $i));
+				&:before {
+					border-color: darken($bg-panel, (10% * $i)) darken($bg-panel, (10% * $i)) darken($bg-panel, (10% * $i)) transparent;
+				}
+				&:after {
+					border-left-color: darken($bg-panel, (10% * $i));
+				}
+			}
 		}
 	}
 	&:before {
@@ -281,7 +290,8 @@ a.glyphicon {
 			display: none;
 		}
 	}
-	&.active {
+	&.active,
+	&.active:hover {
 		background-color: #fff;
 		&:before {
 			border-color: #fff #fff #fff transparent;
