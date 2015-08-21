@@ -156,6 +156,18 @@ $font-color-th-link: #2c69b8;
 	}
 }
 
+.table tbody tr > td {
+		padding:18px 0;
+		border:none;
+		}
+.table thead  tr > th {
+		padding-top:18px;
+		padding-bottom:18px;
+	}
+.table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th{
+	 border:none;
+}
+
 .sticky-thead {
 	> thead {
 		> tr {
