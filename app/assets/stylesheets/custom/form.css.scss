@@ -37,57 +37,6 @@ label.label, label, .label{
 
 }
 
-// Select container
-.select {
-    background-color: #fff;
-	position: relative;
-	display: inline-block;
-	vertical-align: middle;
-	&:after {
-		color: $bordergrey;
-		content: '\e252';
-		font: {
-			family: 'Glyphicons Halflings';
-			size: 10px;
-		}
-		height: 34px; /* height equal select */
-		position: absolute;
-		right: 68px;
-		text-align: center;
-		top: 0;
-		width: 32px;
-		line-height: 36px; /* line height equal height select */
-	  	z-index: 1;
-	}
-	> select {
-		-moz-appearance: none;
-		-webkit-appearance: none;
-		-ms-appearance: none;
-		-o-appearance: none;
-		appearance: none;
-		background-color: transparent;
-		color: #000000;
-	  	cursor: pointer;
-		display: block;
-		font: 100% $font-stack;
-		height: 34px;
-		line-height: 1.42857143;
-		padding: 6px 30px 6px 12px;
-		position: relative;
-		-webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-		transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-		width: 100%;
-		z-index: 2;
-		&:focus {
-			border-color: #66afe9;
-			outline: 0;
-		}
-		&::-ms-expand {
-			display: none;
-		}
-	}
-}
-
 .contact_search_gender_input 
 	select:after{
 		margin:0 0 0 -42px;

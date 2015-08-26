@@ -7,8 +7,10 @@ $font-color-select: #e5e9ec;
 // Forms
 .form-inline {
 	margin-bottom: 10px;
-	.select {
-		margin: 0;
+	.control-label {
+		display: inline-block;
+		padding-right: 10px;
+		vertical-align: middle;
 	}
 }
 
@@ -166,6 +168,7 @@ input[type="color"] {
 // Select container
 .select {
 	background-color: #fff;
+	border-radius: 4px;
 	position: relative;
 	display: inline-block;
 	vertical-align: middle;
@@ -590,6 +593,18 @@ $alerts: "success" $bg-alert-success,
 @each $v in (primary, success, info, warning, danger) {
 	.bg-#{$v} {
 		padding: 4px 6px;
+	}
+}
+
+// Label
+* {
+	&[class*='label-'] {
+		display: inline-block;
+		font: {
+			size: 80%;
+			weight: 700;
+		}
+		vertical-align: middle;
 	}
 }
 
