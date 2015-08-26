@@ -1,20 +1,26 @@
 $screen-sm-min: 768px;
 $screen-md-min: 992px;
 
-#fancybox-wrap,
-#fancybox-wrap * {
-	-moz-box-sizing: content-box;
-	-webkit-box-sizing: content-box;
-	-o-box-sizing: content-box;
-	-ms-box-sizing: content-box;
-	box-sizing: content-box;
-}
-
 .fancybox-modal {
 	@media (min-width: $screen-sm-min) {
 		min-width: 400px;
 	}
 	@media (min-width: $screen-md-min) {
 		min-width: 450px;
+	}
+}
+
+#fancybox-wrap {
+	&,
+	.fancybox-bg,
+	#fancybox-content,
+	#fancybox-modal,
+	#fancybox-close,
+	#fancybox-title {
+		-moz-box-sizing: content-box;
+		-webkit-box-sizing: content-box;
+		-o-box-sizing: content-box;
+		-ms-box-sizing: content-box;
+		box-sizing: content-box;
 	}
 }
