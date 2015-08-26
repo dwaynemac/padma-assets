@@ -420,11 +420,12 @@ $buttons: "primary" $bg-btn-primary,
 
 .btn-upper {
 	font: {
-		size: $font-size-base;
+		size: 14px;
 		weight: bold;
 	}
 	padding: $padding-base-btn-upper;
 	text-transform: uppercase;
+	color:#ffffff;
 }
 
 .btn-group {
@@ -621,6 +622,7 @@ $alerts: "success" $bg-alert-success,
 	ul.chosen-choices {
 		height: 34px !important;
 		min-height: inherit;
+		background:#ffffff;
  		li.search-choice {
  			background-image: none;
  			border: none;
