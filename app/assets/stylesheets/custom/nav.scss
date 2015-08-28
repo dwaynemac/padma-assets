@@ -31,19 +31,24 @@ $nav-tab-border-bottom-hover: #ddd;
 				border-bottom-color: $nav-tab-border-bottom-hover;
 			}
 			&.btn {
-				border-bottom-width: 1px;
+				border-bottom-width: 0;
 			}
 		}
 
 		// Active state, and its :hover to override normal :hover
+		&.active{
+		border-bottom: 1px solid #ffffff;
+		}
 		&.active > a {
 			&,
 			&:hover,
 			&:focus {
+				border-left:1px solid #ebebeb;
+				border-right:1px solid #ebebeb;
+				border-bottom:1px solid #ffffff;
 				background-color: $nav-tab-active-hover-bg;
-				border: none;
-				border-bottom: 6px solid;
-				border-bottom-color: $nav-tab-active;
+				border-top: 6px solid;
+				border-top-color: $nav-tab-active;
 				color: $gray-base;
 				cursor: default;
 				font: {
@@ -96,6 +101,7 @@ $nav-tab-border-bottom-hover: #ddd;
 }
 
 .tab-content {
+	border: 1px solid #ebebeb;
 	> .tab-pane {
 		padding: 10px;
 		position: relative;

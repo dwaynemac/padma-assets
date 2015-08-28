@@ -357,6 +357,9 @@ $buttons: "primary" $bg-btn-primary,
 .btn-default {
 	color: $font-color-default;
 }
+.btn-secondary {
+	margin:0 0 0 10px;
+}
 
 .btn-secondary,
 .btn-info {
