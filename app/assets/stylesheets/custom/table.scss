@@ -8,6 +8,15 @@ $font-color-th: #666;
 $font-color-th-link: #2c69b8;
 
 .table {
+	  > caption + thead > tr:first-child > td,
+	  > caption + thead > tr:first-child > th,
+	  > colgroup + thead > tr:first-child > td,
+	  > colgroup + thead > tr:first-child > th,
+	  > thead:first-child > tr:first-child > td,
+	  > thead:first-child > tr:first-child > th {
+		  border-bottom:1px solid #ebebeb;
+		  }
+	
 	> thead > tr > th,
 	> tbody > tr > th {
 		border-bottom-width: 1px;
@@ -240,6 +249,4 @@ $font-color-th-link: #2c69b8;
 	overflow-y: auto;
 	max-height: 50vh;
 }
-.table > caption + thead > tr:first-child > td, .table > caption + thead > tr:first-child > th, .table > colgroup + thead > tr:first-child > td, .table > colgroup + thead > tr:first-child > th, .table > thead:first-child > tr:first-child > td, .table > thead:first-child > tr:first-child > th{
-	border-bottom:1px solid #ebebeb;
-}
+

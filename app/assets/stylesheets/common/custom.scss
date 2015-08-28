@@ -357,7 +357,7 @@ $buttons: "primary" $bg-btn-primary,
 .btn-default {
 	color: $font-color-default;
 }
-.btn-secondary {
+.btn-default + .btn-primary {
 	margin:0 0 0 10px;
 }
 
@@ -640,3 +640,4 @@ $alerts: "success" $bg-alert-success,
  		}
 	}
 }
+
