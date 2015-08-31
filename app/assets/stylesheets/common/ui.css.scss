@@ -6,12 +6,6 @@
 $font-headers-bold: Gotham-Bold, Helvetica, sans-serif;
 $font-headers-medium: Gotham-Medium, Helvetica, sans-serif;
 
-$bg-label-default: #1f9dd9;
-$icon-label-default: #1a77a3;
-$icon-hover-label-default: #104a66;
-$warning-border-color: #e4d045;
-$error-border-color: #d9534f;
-
 body {
 	color: $text-color;
 	font: {
@@ -56,14 +50,12 @@ h2 {
 		size: 20px;
 	}
 }
+
 h3 {
-	font-weight:normal;
+	font-weight: normal;
 	font-size: 100%;
-	color:#000;
-	}
-
-
-
+	color: #000;
+}
 
 h4 {
 	font: {
@@ -88,16 +80,10 @@ p {
 	}
 }
 
+// Layout
 .container {
 	max-width: 1200px;
 	width: 100%;
-}
-
-// Lists
-.navbar-nav {
-	> li {
-		margin: 0;
-	}
 }
 
 // Labels
@@ -113,94 +99,6 @@ p {
 		position: relative;
 		top: 1px;
 	}
-}
-
-.label-default {
-	background-color: $bg-label-default;
-	a {
-		cursor: pointer;
-		text-decoration: none;
-		&.glyphicon {
-			color: $icon-label-default;
-			margin: 0;
-			top: 2px;
-			&:hover {
-				color: $icon-hover-label-default;
-			}
-		}
-	}
-}
-
-// Forms
-.has-feedback {
-	overflow: hidden;
-}
-
-// form-control has-success {}
-.has-success {
-	.checkbox,
-	.checkbox-inline,
-	.control-label,
-	.help-block,
-	.radio,
-	.radio-inline,
-	&.checkbox label,
-	&.checkbox-inline label,
-	&.radio label,
-	&.radio-inline label,
-	.form-control-feedback {
-		color: $success;
-	}
-	.form-control {
-		border-color: $success;
-	}
-}
-
-// form-control has-warning {}
-.has-warning {
-	.checkbox,
-	.checkbox-inline,
-	.control-label,
-	.help-block,
-	.radio,
-	.radio-inline,
-	&.checkbox label,
-	&.checkbox-inline label,
-	&.radio label,
-	&.radio-inline label,
-	.form-control-feedback {
-		color: $warning;
-	}
-	.form-control {
-		border-color: $warning-border-color;
-	}
-}
-
-// form-control has-error {}
-.has-error {
-	.checkbox,
-	.checkbox-inline,
-	.control-label,
-	.help-block,
-	.radio,
-	.radio-inline,
-	&.checkbox label,
-	&.checkbox-inline label,
-	&.radio label,
-	&.radio-inline label,
-	.form-control-feedback {
-		color: $error;
-	}
-	.form-control {
-		border-color: $error-border-color;
-	}
-}
-
-// Well
-.well {
-	background-color: #f8f8f8;
-	border-color: #ccc;
-	box-shadow: none;
 }
 
 // Funnel
@@ -396,4 +294,51 @@ p {
 		flex: 1;
 		padding-left: 10px;
     }
+}
+
+// Card
+// Declare new variables for Card
+$card-body-bg: #ebebeb;
+$card-body-font-color: #4d4d4d;
+$card-default-border-top: #999;
+$card-primary-border-top: #16acf2;
+
+.card {
+	background-color: $card-body-bg;
+	border-top: 8px solid transparent;
+	margin-bottom: 10px;
+	position: relative;
+}
+
+.card-default {
+	border-top-color: $card-default-border-top;
+}
+
+.card-primary {
+	border-top-color: $card-primary-border-top;
+}
+
+.card-title {
+	display: block;
+	margin: 0;
+	overflow: hidden;
+	padding: 5px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	@supports (display: -webkit-box) {
+	    display: -webkit-box;
+	    -webkit-box-orient: vertical;
+	    -webkit-line-clamp: 2;
+	}
+}
+
+.card-body {
+	color: $card-body-font-color;
+	min-height: 30px;
+	padding: 10px;
+	p {
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
 }

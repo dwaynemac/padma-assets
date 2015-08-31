@@ -1,47 +1,7 @@
 @import "colors";
 @import "../common/variables";
 
-.nav-tabs {
-	border-bottom:none;
-	margin:20px 0 0;
-}
-
 #users_article .tab-content {
 	height:220px;
 	overflow:scroll;
-}
-
-.tab-pane-footer {
-	background-color: $bg-panel;
-	color: $gray-dark;
-	font: {
-		size: $font-size-base-sm;
-	}
-	margin: 0;
-	padding: 5px;
-}
-
-.nav-tabs > li {
-	position: relative;
- 	a.del {
-		padding:0;
-		position: absolute;
-		right:4px;
-		top:11px;
-		visibility: hidden;
-	}
-	&:hover a{
-		background:#eeeeee;
-	}
-	&:hover a.del {
-		visibility: visible;
-		border: none;
-	}
-	a.custom{
-		padding:10px 20px 10px 15px;
-	}
-	&.active:hover a{
-		background:#eeeeee;
-		cursor: pointer;
-	}
 }
