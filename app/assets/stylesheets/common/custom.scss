@@ -633,6 +633,12 @@ $bg-dropdown-responsive: #1e5788;
 		> li {
 			> a {
 				padding: 0;
+				label {
+					&.checkbox,
+					&.radio {
+						padding: 3px 20px 3px 40px;
+					}
+				}
 				.checkbox {
 					input[type='checkbox'] {
 						margin-left: -20px;
@@ -946,12 +952,6 @@ $font-color-secondary-disabled: $bg-btn-default;
 	&:active:focus {
 		background-image: none;
 		box-shadow: inset 0 3px 5px rgba(#000, .125);
-	}
-	&.selectpicker {
-		background-color: #eee;
-		background-image: -webkit-linear-gradient(bottom,#eee,#fff);
-		background-image: -moz-linear-gradient(bottom,#eee,#fff);
-		background-image: linear-gradient(bottom,#eee,#fff);
 	}
 }
 
