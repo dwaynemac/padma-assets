@@ -299,6 +299,27 @@ $font-color-select: #e5e9ec;
 	}
 }
 
+.input-group {
+	> select {
+		&,
+		&.form-control {
+			display: inline-block;
+			float: left;
+			vertical-align: middle;
+			width: auto;
+			z-index: 1;
+			+ select,
+			+ select.form-control {
+				margin-left: -2px;
+			}
+			&:hover:not(:focus),
+			&:focus {
+				z-index: 2;
+			}
+		}
+	}
+}
+
 // Feedback states
 $warning-border-color: #e4d045;
 $error-border-color: #d9534f;
@@ -1160,7 +1181,14 @@ $alerts: "success" $bg-alert-success,
 }
 
 // Panels
+// Declare new variables for panel
+$card-body-bg: #ebebeb;
+$card-body-font-color: #4d4d4d;
+
 .panel {
+	border-radius: 0;
+	box-shadow: none;
+	margin-bottom: 10px;
 	position: relative;
 }
 
