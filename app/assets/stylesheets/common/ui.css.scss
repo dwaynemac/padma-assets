@@ -101,6 +101,7 @@ p {
 	}
 }
 
+$color-funnel-content: #4d4d4d;
 // Funnel
 .funnel,
 .funnel-nav-item {
@@ -135,26 +136,26 @@ p {
 	margin: 0 .5em 0 1em;
 	overflow: initial;
 	width: 25%;
-	@for $i from 1 through 4 {
-		&:nth-child(#{$i}) {
-			background-color: darken($bg-panel, (15% * $i));
-			&:before {
-				border-color: darken($bg-panel, (15% * $i)) darken($bg-panel, (15% * $i)) darken($bg-panel, (15% * $i)) transparent;
-			}
-			&:after {
-				border-left-color: darken($bg-panel, (15% * $i));
-			}
-			&:hover {
-				background-color: darken($bg-panel, (10% * $i));
-				&:before {
-					border-color: darken($bg-panel, (10% * $i)) darken($bg-panel, (10% * $i)) darken($bg-panel, (10% * $i)) transparent;
-				}
-				&:after {
-					border-left-color: darken($bg-panel, (10% * $i));
-				}
-			}
-		}
-	}
+	//@for $i from 1 through 4 {
+		//&:nth-child(#{$i}) {
+		//	background-color: darken($bg-panel, (15% * $i));
+		//	&:before {
+		//		border-color: darken($bg-panel, (15% * $i)) darken($bg-panel, (15% * $i)) darken($bg-panel, (15% * $i)) transparent;
+		//	}
+		//	&:after {
+		//		border-left-color: darken($bg-panel, (15% * $i));
+		//	}
+		//	&:hover {
+		//		background-color: darken($bg-panel, (10% * $i));
+		//		&:before {
+		//			border-color: darken($bg-panel, (10% * $i)) darken($bg-panel, (10% * $i)) darken($bg-panel, (10% * $i)) transparent;
+		//		}
+		//		&:after {
+		//			border-left-color: darken($bg-panel, (10% * $i));
+		//		}
+		//	}
+		//}
+	//}
 	&:before {
 		bottom: 0;
 		content: "";
@@ -196,7 +197,7 @@ p {
 		}
 	}
 	.funnel-value {
-		color: #fff;
+		color: #949494;
 		-webkit-box-flex: 0;
 		-webkit-flex: none;
 		-ms-flex: none;
@@ -220,7 +221,7 @@ p {
 	position: relative;
 	$h: 20px;
 	&:before {
-		color: #fff;
+		color: $color-funnel-content;
 		content: '|';
 		height: $h;
 		left: 5px;
@@ -229,7 +230,7 @@ p {
 		top: 50%;
 	}
 	a {
-		color: #fff;
+		color: $color-funnel-content;
 		display: block;
 		overflow: hidden;
 		padding: 23.5px 30px 23.5px 15px;
@@ -320,20 +321,29 @@ $card-primary-border-top: #16acf2;
 
 .card-title {
 	display: block;
-	margin: 0;
+	font: {
+		size: 12px;
+		weight: bold;
+	}
+	margin: 0 0 5px;
 	overflow: hidden;
-	padding: 5px;
+	padding: 5px 5px 0;
 	text-overflow: ellipsis;
+	text-transform: uppercase;
 	white-space: nowrap;
 	@supports (display: -webkit-box) {
 	    display: -webkit-box;
 	    -webkit-box-orient: vertical;
 	    -webkit-line-clamp: 2;
+	    white-space: normal;
 	}
 }
 
 .card-body {
 	color: $card-body-font-color;
+	font: {
+		family: $font-family-sans-serif;
+	}
 	min-height: 30px;
 	padding: 10px;
 	p {
