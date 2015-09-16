@@ -6,6 +6,7 @@ $font-color-th: #666;
 $font-color-th-link: #2c69b8;
 
 .table {
+	border-top: 4px solid #ebebeb;
 	> caption + thead > tr:first-child > td,
 	> caption + thead > tr:first-child > th,
 	> colgroup + thead > tr:first-child > td,
@@ -744,7 +745,7 @@ $nav-tab-border-bottom-hover: #ddd;
 		// Actual tabs (as links)
 		> a {
 			border: none;
-			border-top: 6px solid transparent;
+			border-top: 4px solid transparent;
 			border-radius: 0;
 			font: {
 				family: $font-family-base;
@@ -759,15 +760,27 @@ $nav-tab-border-bottom-hover: #ddd;
 			&.btn {
 				border-top-width: 0;
 			}
-			&.custom {
-				padding-right: 20px;
-			}
 			&.del {
 				padding: 0;
 				position: absolute;
 				right: 4px;
 				top: 11px;
 				visibility: hidden;
+			}
+			.badge {
+				-webkit-background-clip: padding-box;
+				background-clip: padding-box;
+				border-radius: 2px;
+				font: {
+					size: 11px;
+					weight: normal;
+				}
+				line-height: 15px;
+				min-height: 13px;
+				padding: 1px 3px;
+				text-shadow: 0 -1px 0 rgba(#000, .4);
+				vertical-align: text-top;
+				width: 15px;
 			}
 		}
 		&:hover {
@@ -780,7 +793,7 @@ $nav-tab-border-bottom-hover: #ddd;
 			> a,
 			> a:hover,
 			> a:focus {
-				border-top: 6px solid;
+				border-top: 4px solid;
 				border-color: $nav-tab-active #ebebeb #fff;
 				color: $gray-base;
 				cursor: default;
@@ -791,26 +804,38 @@ $nav-tab-border-bottom-hover: #ddd;
 		}
 	}
 	&.nav-justified {
-		display: -webkit-box;
-		display: -webkit-flex;
-		display: -ms-flexbox;
-		display: flex;
-		margin-left: -1px;
-		width: -webkit-calc(100% + 2px);
-		width: -moz-calc(100% + 1px);
+		display: table;
+		-webkit-margin-start: -1px;
+		table-layout: fixed;
 		> li {
-			display: block;
-			-webkit-box-flex: 1;
-		    -webkit-flex: 1;
-		    -ms-flex: 1;
-		    flex: 1;
+		    width: 100%;
 			> a {
-				border-top: 6px solid transparent;
+				border-top: 4px solid transparent;
 				border-radius: 0;
 				display: block;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
 				&:hover {
 					background-color: $nav-tab-default-hover;
 					border-top-color: $nav-tab-border-bottom-hover;
+				}
+				&.close {
+					background-color: transparent;
+					border: none;
+					cursor: pointer;
+					display: inline-block;
+					opacity: 0;
+					padding: 0;
+					position: absolute;
+					right: 5px;
+					text-align: center;
+					top: 15px;
+					-webkit-transform: scale(.6);
+					transform: scale(.6);
+					-webkit-transition: opacity .25s ease-in, transform .2s cubic-bezier(.1,.82,.25,1);
+					transition: opacity .25s ease-in, transform .2s cubic-bezier(.1,.82,.25,1);
+					width: 15px;
 				}
 			}
 			&.active > a {
@@ -818,12 +843,17 @@ $nav-tab-border-bottom-hover: #ddd;
 				&:hover,
 				&:focus {
 					background-color: $nav-tab-active-hover-bg;
-					border-top: 6px solid;
+					border-top: 4px solid;
 					border-color: $nav-tab-active #ebebeb #fff;
 					color: $gray-base;
 					cursor: default;
 					font: {
 						weight: bold;
+					}
+					&.close {
+						background-color: transparent;
+						border: none;
+						cursor: pointer;
 					}
 				}
 			}
@@ -1223,6 +1253,16 @@ $card-body-font-color: #4d4d4d;
 }
 
 // Modal
+.modal-body {
+	form {
+		.form-group {
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
 .modal-footer {
 	.bt {
 		display: inline-block;
