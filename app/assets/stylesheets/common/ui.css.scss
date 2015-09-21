@@ -33,8 +33,7 @@ h2 {
 	}
 }
 
-h5,
-h6 {
+h5 {
 	font-family: $font-headers-medium;
 }
 
@@ -306,6 +305,14 @@ $color-funnel-content: #4d4d4d;
 
 // Custom colors
 
+// Typography
+.bold {
+	font-weight: bold;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
 
 // Dl horizontal flex
 .dl-horizontal-flex {
