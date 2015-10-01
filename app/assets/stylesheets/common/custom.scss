@@ -1249,6 +1249,20 @@ $card-body-font-color: #4d4d4d;
 	padding: 10px;
 }
 
+// Popover
+.popover {
+	border-color: rgba(#000, .1);
+	border-radius: 3px;
+	min-width: 85px;
+}
+
+.popover-content {
+	.popover-footer {
+		border-top: 1px solid rgba(#000, .1);
+		margin: 5px -15px -9px;
+	}
+}
+
 // Background text
 @each $v in (primary, success, info, warning, danger) {
 	.bg-#{$v} {
