@@ -314,6 +314,10 @@ $color-funnel-content: #4d4d4d;
 	text-transform: uppercase;
 }
 
+.not-allowed {
+	cursor: not-allowed;
+}
+
 // Dl horizontal flex
 .dl-horizontal-flex {
 	display: -webkit-box;

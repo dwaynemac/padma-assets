@@ -129,6 +129,19 @@ $font-color-th-link: #2c69b8;
 	}
 }
 
+.table-bordered {
+	> thead,
+	> tbody,
+	> tfoot {
+		> tr {
+			> th,
+			> td {
+				border: 1px solid #ddd;
+			}
+		}
+	}
+}
+
 .table-noborder {
 	> thead,
 	> tbody,
@@ -1220,6 +1233,16 @@ $card-body-font-color: #4d4d4d;
 	box-shadow: none;
 	margin-bottom: 10px;
 	position: relative;
+}
+
+.panel-heading {
+	.btn-xs {
+		font: {
+			size: 11px;
+		}
+		line-height: normal;
+		padding: 4px 10px;
+	}
 }
 
 .panel-body {
