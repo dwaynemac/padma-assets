@@ -1445,3 +1445,88 @@ $card-body-font-color: #4d4d4d;
 		}
 	}
 }
+
+// Custom Datepicker
+$bg-day-active: #0971b7;
+.datepicker {
+	table {
+		thead {
+			> tr {
+				> th {
+					color: #333;
+					vertical-align: middle;
+					&.prev,
+					&.next {
+						font: normal normal normal 0px/1 'Glyphicons Halflings';
+						text-rendering: auto;
+	    				-webkit-font-smoothing: antialiased;
+	    				-moz-osx-font-smoothing: grayscale;
+	    				&:before {
+	    					font: {
+	    						size: 10px;
+	    					}
+	    				}
+					}
+					&.prev:before {
+						content: "\e079";
+					}
+					&.next:before {
+						content: "\e080";
+					}
+				}
+			}
+		}
+		tr {
+			td {
+				color: #333;
+				span {
+					height: 40px;
+					line-height: 40px;
+				}
+			}
+		}
+	}
+}
+
+.datepicker-days {
+	thead {
+		> tr {
+			&:last-child {
+				> th {
+					font: {
+						size: 10px;
+						weight: normal;
+					}
+					height: 20px;
+					padding: 0;
+					text-transform: uppercase;
+				}
+			}
+		}
+	}
+	tbody {
+		> tr {
+			.day {
+				&.today {
+					background-color: $bg-lightgrey;
+					&:hover,
+					&:focus,
+					&:active {
+						&:hover {
+							background-color: darken($bg-lightgrey, 5%);
+						}
+					}
+				}
+				&.active,
+				&.today {
+					&.active {
+						&:hover,
+						&:focus {
+							background-color: $bg-day-active;
+						}
+					}
+				}
+			}
+		}
+	}
+}
