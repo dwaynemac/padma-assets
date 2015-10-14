@@ -8,7 +8,7 @@ es:
       planning: Gestión de la rutina
     user_menu:
       user_profile: Mi perfil
-      school_profile: Configuración Equipo
+      school_profile: Configuración Escuela
       billing: Pagos
       logout: Cerrar sessión
     lists:
