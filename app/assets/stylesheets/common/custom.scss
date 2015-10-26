@@ -1287,6 +1287,33 @@ $card-body-font-color: #4d4d4d;
 }
 
 // Modal
+.modal {
+	&.modal-fixed-footer {
+		.modal-dialog {
+			height: 70%;
+			left: 10px;
+			margin: auto;
+			position: absolute;
+			right: 10px;
+			top: 10%;
+		}
+		.modal-content {
+			height: 100%;
+			position: relative;
+			.modal-body {
+				height: calc(100% - 121px);
+				overflow-y: auto;
+				position: absolute;
+				width: 100%;
+			}
+		}
+		.modal-footer {
+			bottom: 0;
+			position: absolute;
+			width: 100%;
+		}
+	}
+}
 .modal-body {
 	form {
 		.form-group {
