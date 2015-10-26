@@ -1290,12 +1290,12 @@ $card-body-font-color: #4d4d4d;
 .modal {
 	&.modal-fixed-footer {
 		.modal-dialog {
-			height: 70%;
+			height: 85%;
 			left: 10px;
 			margin: auto;
 			position: absolute;
 			right: 10px;
-			top: 10%;
+			top: 30px;
 		}
 		.modal-content {
 			height: 100%;
