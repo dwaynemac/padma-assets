@@ -6,7 +6,7 @@ $(function () {
             hide: 100
     	}
   	})
-  	$('[data-toggle="popover"').popover({
+  	$('[data-toggle="popover"]').popover({
   		
   	})
 })
