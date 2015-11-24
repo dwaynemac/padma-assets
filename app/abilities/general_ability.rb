@@ -7,8 +7,8 @@ class GeneralAbility
       can :manage, :planning
     end
     if beta?(user)
-      can :manage, :persistent_contact_searches
     end
+    can :manage, :persistent_contact_searches
   end
   
   private
