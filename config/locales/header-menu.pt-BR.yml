@@ -13,13 +13,14 @@ pt-BR:
       logout: Encerrar sessāo
     lists:
       title: Listas
+      refresh_tipsy: Clic para atualizar este menu
       lists:
-        new_list: Nova lista
-        all_lists: Todas as listas
-        find_list: Buscar lista
-        saved_lists: Listas personalizadas
+        new_list: Nova busca
+        all_lists: Listas e buscas
+        find_list: Encontrar busca
+        saved_lists: Buscas guardadas
         system_lists: Listas de PADMA
-        refresh: atualizar listas
+        refresh: atualizar
       contacts:
         title: Contatos
         all_contacts: Todos os contatos

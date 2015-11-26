@@ -6,7 +6,10 @@ class GeneralAbility
       can :manage, :mailchimp
       can :manage, :planning
     end
-    can :manage, :persistent_contact_searches
+
+    if beta?(user)
+    end
+
   end
   
   private

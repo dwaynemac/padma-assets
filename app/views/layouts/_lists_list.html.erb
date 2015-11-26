@@ -1,24 +1,42 @@
-<li class="dropdown-header"><%= t('header-menu.lists.contacts.title') %></li>
-<li><%= link_to t('header-menu.lists.contacts.all_contacts'), "#{APP_CONFIG['crm-url']}/contacts" %></li>
-<%- %W(students former_students prospects).each do |st| -%>
-  <li>
-    <%= link_to t("header-menu.lists.contacts.#{st}"), "#{APP_CONFIG['crm-url']}/contacts/#{st}"  %>
+  <li><%= link_to t('header-menu.lists.lists.new_list'), "#{APP_CONFIG['crm-url']}/contacts/search" %></li>
+  <li><%= link_to t('header-menu.lists.lists.all_lists'), "#{APP_CONFIG['crm-url']}/persistent_contact_searches" %></li>
+
+  <li class='dropdown-form'>
+    <input id="menu-lists-filter" class='form-control' type='text' placeholder='<%= t('header-menu.lists.lists.find_list') %>' />
   </li>
-<%- end -%>
-<li>
-<%= link_to t('header-menu.lists.contacts.current_month_birthdays'), "#{APP_CONFIG['crm-url']}/contacts?contact_search%5Bchosen_columns%5D%5B%5D=full_name&contact_search%5Bchosen_columns%5D%5B%5D=birthday&contact_search%5Bdate_attribute%5D%5Bcategory%5D=birthday&contact_search%5Bdate_attribute%5D%5Bmonth%5D=#{Time.zone.now.month}&column=birthday&direction=asc" %>
-</li>
-<li class="dropdown-header"><%= t('header-menu.lists.subscription_changes.title') %></li>
-<li><%= link_to t('header-menu.lists.subscription_changes.enrollments'), "#{APP_CONFIG['crm-url']}/enrollments" %></li>
-<li><%= link_to t('header-menu.lists.subscription_changes.dropouts'), "#{APP_CONFIG['crm-url']}/drop_outs" %></li>
-<li class="dropdown-header"><%= t('header-menu.lists.communications.title') %></li>
-<li><%= link_to t('header-menu.lists.communications.all'), "#{APP_CONFIG['crm-url']}/communications" %></li>
-<li><%= link_to t('header-menu.lists.communications.visits'), "#{APP_CONFIG['crm-url']}/communications/interviews" %></li>
-<li><%= link_to t('header-menu.lists.communications.phonecalls'), "#{APP_CONFIG['crm-url']}/communications/phone_calls" %></li>
-<li><%= link_to t('header-menu.lists.communications.emails'), "#{APP_CONFIG['crm-url']}/communications/emails" %></li>
-<li><%= link_to t('header-menu.lists.communications.web'), "#{APP_CONFIG['crm-url']}/communications/web" %></li>
-<li class="dropdown-header"><%= t('header-menu.lists.comments.title') %></li>
-<li><%= link_to t('header-menu.lists.comments.all'), "#{APP_CONFIG['crm-url']}/comments" %></li>
-<% %W(FollowUp Gestion Revisacion Reunion).each do |t| -%>
-  <li><%= link_to t("header-menu.lists.comments.#{t}"), "#{APP_CONFIG['crm-url']}/comments?comment_search%5Bcomment_types%5D%5B%5D=#{t}" %></li>
-<% end -%>
+  <li class="dropdown-header">
+    <a id="refresh-lists-list-menu" class='pull-right tipsyS' original-title="<%= t('header-menu.lists.refresh_tipsy') %>"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span></a>
+    <%= t('header-menu.lists.lists.saved_lists') %>
+  </li>
+<div id="all-available-lists-menu">
+  <div id="menu-saved-lists"
+       class="cached-async-render"
+       data-cache-expires-in="120"
+       data-cache-key="saved-lists-for-<%= current_user.current_account.name%>"
+       data-url="<%= APP_CONFIG['crm-url' ] %>/persistent_contact_searches/menu?account_name=<%= current_user.current_account.name %>">
+       <li><a><%= image_tag 'spinner.gif' %></a></li>
+  </div>
+  <li class="dropdown-header"><%= t('header-menu.lists.lists.system_lists') %></li>
+  <%- %W(students former_students prospects).each do |st| -%>
+    <li>
+      <%= link_to t("header-menu.lists.contacts.#{st}"), "#{APP_CONFIG['crm-url']}/contacts/#{st}"  %>
+    </li>
+  <%- end -%>
+  <li>
+    <%= link_to t('header-menu.lists.contacts.current_month_birthdays'), "#{APP_CONFIG['crm-url']}/contacts?contact_search%5Bchosen_columns%5D%5B%5D=full_name&contact_search%5Bchosen_columns%5D%5B%5D=birthday&contact_search%5Bdate_attribute%5D%5Bcategory%5D=birthday&contact_search%5Bdate_attribute%5D%5Bmonth%5D=#{Time.zone.now.month}&column=birthday&direction=asc" %>
+  </li>
+  <li class="dropdown-header"><%= t('header-menu.lists.subscription_changes.title') %></li>
+  <li><%= link_to t('header-menu.lists.subscription_changes.enrollments'), "#{APP_CONFIG['crm-url']}/enrollments" %></li>
+  <li><%= link_to t('header-menu.lists.subscription_changes.dropouts'), "#{APP_CONFIG['crm-url']}/drop_outs" %></li>
+  <li class="dropdown-header"><%= t('header-menu.lists.communications.title') %></li>
+  <li><%= link_to t('header-menu.lists.communications.all'), "#{APP_CONFIG['crm-url']}/communications" %></li>
+  <li><%= link_to t('header-menu.lists.communications.visits'), "#{APP_CONFIG['crm-url']}/communications/interviews" %></li>
+  <li><%= link_to t('header-menu.lists.communications.phonecalls'), "#{APP_CONFIG['crm-url']}/communications/phone_calls" %></li>
+  <li><%= link_to t('header-menu.lists.communications.emails'), "#{APP_CONFIG['crm-url']}/communications/emails" %></li>
+  <li><%= link_to t('header-menu.lists.communications.web'), "#{APP_CONFIG['crm-url']}/communications/web" %></li>
+  <li class="dropdown-header"><%= t('header-menu.lists.comments.title') %></li>
+  <li><%= link_to t('header-menu.lists.comments.all'), "#{APP_CONFIG['crm-url']}/comments" %></li>
+  <% %W(FollowUp Gestion Revisacion Reunion).each do |t| -%>
+    <li><%= link_to t("header-menu.lists.comments.#{t}"), "#{APP_CONFIG['crm-url']}/comments?comment_search%5Bcomment_types%5D%5B%5D=#{t}" %></li>
+  <% end -%>
+</div>
