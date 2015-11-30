@@ -615,6 +615,39 @@ select {
 	white-space: nowrap;
 }
 
+// Pagination
+.pagination {
+	margin-bottom: 15px;
+	margin-top: 15px;
+	> li {
+		display: inline-block;
+		vertical-align: middle;
+		> a,
+		> span {
+			border: none;
+			display: inline-block;
+			float: none;
+			&:focus,
+			&:hover {
+				background-color: $bg-lightgrey;
+			}
+		}
+		&.active {
+			> a,
+			> span {
+				&,
+				&:focus,
+				&:hover {
+					background-color: $bg-btn-primary;
+					font: {
+						weight: bold;
+					}
+				}
+			}
+		}
+	}
+}
+
 // Dropdown
 // Declare new variables for Dropdown
 $bg-dropdown-responsive: #1e5788;
