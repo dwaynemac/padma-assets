@@ -409,7 +409,7 @@ $error-border-color: #d9534f;
 label {
 	&,
 	&.label {
-		color: $gray-dark;
+		color: $font-color-base;
 		display: block;
 		font: {
 			size: $font-size-base-md;
@@ -535,57 +535,39 @@ input[type="color"] {
 }
 
 // Select container
+select {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	-ms-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+	background-repeat: no-repeat;
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wseCx8GwMZRrQAAAKBJREFUSMft1dEOgjAMheG/A2GJKO//mMpENLP1AQyYCUKMO9cn+ZI2acXMWDOqSggBWRsGiDFuAwM4NkqGM5zh34fLlLLFK93lZjpx7MR59gcvpSwIS1lTFwPd8BhpFPi24h36wagdddPK0RcjaEuzc/KlHTuqFzwNBeZ8J+UeTnYeSEZnwgCGKrg0cwk4H5AMZzjD/wLHGNeHVZW+73kCVHo70xteukkAAAAASUVORK5CYII=);
+	background-position: right center;
+	padding-right: 30px;
+}
 .select {
 	background-color: #fff;
 	border-radius: 4px;
 	position: relative;
 	display: inline-block;
 	vertical-align: middle;
-	&:after {
-		-webkit-box-align: center;
-		-webkit-align-items: center;
-		-ms-flex-align: center;
-		align-items: center;
-		color: $bordergrey;
-		content: '\e252';
-		display: -webkit-box;
-		display: -webkit-flex;
-		display: -ms-flexbox;
-		display: flex;
-		font: {
-			family: 'Glyphicons Halflings';
-			size: 10px;
-		}
-		-webkit-box-pack: center;
-		-webkit-justify-content: center;
-		-ms-flex-pack: center;
-		justify-content: center;
-		height: 100%;
-		position: absolute;
-		right: 0;
-		text-align: center;
-		top: 0;
-		width: 32px;
-	  	z-index: 1;
-	}
 	&[class*='col-'] {
 		float: none;
 		padding-left: 0;
 		padding-right: 0;
 	}
 	> select {
-		-moz-appearance: none;
-		-webkit-appearance: none;
-		-ms-appearance: none;
-		-o-appearance: none;
-		appearance: none;
 		background-color: transparent;
 	  	line-height: normal;
-		padding-right: 40px;
+		padding-right: 30px;
 		position: relative;
 		-webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 		transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 		width: 100%;
+		background-repeat: no-repeat;
+		background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wseCx8GwMZRrQAAAKBJREFUSMft1dEOgjAMheG/A2GJKO//mMpENLP1AQyYCUKMO9cn+ZI2acXMWDOqSggBWRsGiDFuAwM4NkqGM5zh34fLlLLFK93lZjpx7MR59gcvpSwIS1lTFwPd8BhpFPi24h36wagdddPK0RcjaEuzc/KlHTuqFzwNBeZ8J+UeTnYeSEZnwgCGKrg0cwk4H5AMZzjD/wLHGNeHVZW+73kCVHo70xteukkAAAAASUVORK5CYII=);
+		background-position: right center;
 		z-index: 2;
 		&:focus {
 			border-color: #66afe9;

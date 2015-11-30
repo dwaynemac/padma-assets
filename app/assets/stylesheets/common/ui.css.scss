@@ -402,3 +402,87 @@ $card-primary-border-top: #16acf2;
 	background-color: transparent;
 	border: none;
 }
+
+// Filters
+.formtastic {
+	li {
+		&.input {
+			display: table;
+			table-layout: fixed;
+			width: 100%;
+			+ li.input {
+				margin-top: 10px;
+			}
+			&.hidden {
+				display: none;
+			}
+		}
+		&.select {
+			legend,
+			label {
+				&.label {
+					float: left;
+				}
+			}
+			> select {
+				display: inline-block;
+				vertical-align: middle;
+				width: auto;
+			}
+		}
+	}
+	legend,
+	label {
+		&.label {
+			border: none;
+			display: table-cell;
+			font: {
+				size: 14px;
+				weight: normal;
+			}
+			line-height: normal;
+			margin: 0;
+			padding: 4.5px 15px 4.5px 0;
+			text-align: right;
+			vertical-align: middle;
+			width: 35%;
+		}
+	}
+	legend.label {
+		float: left;
+	}
+	.fragments-group {
+		display: inline-block;
+		vertical-align: middle;
+		.fragment {
+			label {
+				display: none;
+			}
+		}
+	}
+	// checkbox
+	.choices-group {
+		.choice {
+			+ .choice {
+				margin-left: 5px;
+			}
+			> label,
+			> legend {
+				border: none;
+				font: {
+					weight: normal;
+				}
+				margin: 0;
+				padding: 0;
+			}
+			input[type='checkbox'],
+			input[type='radio'] {
+				margin-right: 3px;
+			}
+			input[type='radio'] {
+				margin-top: 0;
+				position: static;
+			}
+		}
+	}
+}
