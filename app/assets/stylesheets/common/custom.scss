@@ -1569,3 +1569,10 @@ $bg-day-active: #0971b7;
 		}
 	}
 }
+
+// Custom Select2 plugin
+.select2-dropdown {
+	border-color: rgba(#000, .1);
+	border-radius: 0;
+	box-shadow: 0 6px 12px rgba(#000, .175); // Add box shadow
+}
