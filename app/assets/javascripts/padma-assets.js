@@ -17,3 +17,4 @@
 //= require cache
 //= require async_render
 //= require initialize-lists-menu
+//= require bootstrap-multiselect
