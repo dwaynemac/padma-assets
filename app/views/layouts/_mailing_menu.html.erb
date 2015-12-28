@@ -1,22 +1,4 @@
-    <li>
-      <%= link_to t('header-menu.mailing.templates'),
-                  "#{APP_CONFIG['mailing-url']}/templates" %>
-    </li>
-    <li>
-      <%= link_to t('header-menu.mailing.triggers'),
-                  "#{APP_CONFIG['mailing-url']}/triggers" %>
-    </li>
-    <li>
-      <%= link_to t('header-menu.mailing.scheduled_mails_all'),
-                  "#{APP_CONFIG['mailing-url']}/scheduled_mails/history" %>
-    </li>
-    <li>
-      <%= link_to t('header-menu.mailing.scheduled_mails_future'),
-                  "#{APP_CONFIG['mailing-url']}/scheduled_mails/pending" %>
-    </li>
-    <% if can?(:manage, :mailchimp) -%>
-    <li>
-     <%= link_to t('header-menu.mailing.mailchimp_configuration'),
-                       "#{APP_CONFIG['mailing-url']}/mailchimp/configuration" %>
-    </li>
-    <% end -%>
+<li><%= link_to t('header-menu.mailing.templates'), "#{APP_CONFIG['mailing-url']}/templates" %></li>
+<li><%= link_to t('header-menu.mailing.triggers'), "#{APP_CONFIG['mailing-url']}/triggers" %></li>
+<li><%= link_to t('header-menu.mailing.scheduled_mails_all'), "#{APP_CONFIG['mailing-url']}/scheduled_mails/history" %></li>
+<li><%= link_to t('header-menu.mailing.scheduled_mails_future'), "#{APP_CONFIG['mailing-url']}/scheduled_mails/pending" %></li>

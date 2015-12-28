@@ -48,6 +48,9 @@
           <ul class="dropdown-menu" role="menu">
             <li><%= link_to t('header-menu.modules.fnz'), APP_CONFIG['fnz-url'] %></li>
             <li><%= link_to t('header-menu.modules.planning'), APP_CONFIG['planning-url'] %></li>
+            <% if can?(:manage, :mailchimp) -%>
+              <li><%= link_to t('header-menu.mailing.mailchimp_configuration'), "#{APP_CONFIG['mailing-url']}/mailchimp/configuration" %></li>
+            <% end -%>
           </ul>
         </li>
       </ul>
