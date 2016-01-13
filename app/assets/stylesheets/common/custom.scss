@@ -201,6 +201,7 @@ $font-color-th-link: #2c69b8;
 }
 
 .sticky-thead {
+	z-index: -1;
 	> thead {
 		> tr {
 			> th,
