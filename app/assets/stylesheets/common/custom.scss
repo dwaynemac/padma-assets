@@ -201,6 +201,7 @@ $font-color-th-link: #2c69b8;
 }
 
 .sticky-thead {
+	z-index: -1;
 	> thead {
 		> tr {
 			> th,
@@ -1608,4 +1609,40 @@ $bg-day-active: #0971b7;
 	border-color: rgba(#000, .1);
 	border-radius: 0;
 	box-shadow: 0 6px 12px rgba(#000, .175); // Add box shadow
+}
+
+// Custom Selectize plugin
+.selectize-control {
+	&.multi .selectize-input,
+	.selectize-input {
+		border-color: #ebebeb;
+		border-radius: 4px;
+		border-width: 2px;
+		color: #555;
+		input[type='text'] {
+			height: auto;
+		}
+		&:focus,
+		&:focus:active,
+		&.input-active {
+			border-color: #66afe9;
+			box-shadow: inset 0 1px 1px rgba(#000, .075), 0 0 8px rgba(102, 175, 233, .6);
+			-webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+			transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+		}
+		> div { // tag
+			background-color: #ebebeb;
+			border-radius: 3px;
+			color: #525252;
+			font: {
+				size: 11px;
+				weight: bold;
+			}
+			margin: 0 3px 3px 0;
+			padding: 1px 5px;
+			&.active {
+				background-color: #0971b7;
+			}
+		}
+	}
 }
