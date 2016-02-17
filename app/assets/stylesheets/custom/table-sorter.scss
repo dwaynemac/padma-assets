@@ -1,0 +1,159 @@
+// Custom TableSorter
+.tablesorter-blue {
+	.header,
+	.tablesorter-header {
+		background-image: url(data:image/gif;base64,R0lGODlhFQAJAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAkAAAIXjI+AywnaYnhUMoqt3gZXPmVg94yJVQAAOw==); // black (unsorted) double arrow
+		background-repeat: no-repeat;
+		background-position: center right;
+		cursor: pointer;
+		padding-right: 18px;
+		white-space: normal;
+	}
+
+	.headerSortUp,
+	.tablesorter-headerSortUp,
+	.tablesorter-headerAsc {
+		background-image: url(data:image/gif;base64,R0lGODlhFQAEAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAQAAAINjI8Bya2wnINUMopZAQA7); // black asc arrow
+		color: #000;
+	}
+
+	.headerSortDown,
+	.tablesorter-headerSortDown,
+	.tablesorter-headerDesc {
+		background-image: url(data:image/gif;base64,R0lGODlhFQAEAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAQAAAINjB+gC+jP2ptn0WskLQA7); // black desc arrow
+		color: #000;
+	}
+
+	thead {
+		.sorter-false {
+			background-image: none;
+			cursor: default;
+		}
+	}
+
+	tfoot {
+		.tablesorter-headerSortUp,
+		.tablesorter-headerSortDown,
+		.tablesorter-headerAsc,
+		.tablesorter-headerDesc {
+			background-image: none; // remove sort arrows from footer
+		}
+	}
+
+	caption {
+		background-color: #fff;
+	}
+
+	// table processing indicator
+	.tablesorter-processing {
+		background-position: center center !important;
+		background-repeat: no-repeat !important;
+		background-image: url(data:image/gif;base64,R0lGODlhFAAUAKEAAO7u7lpaWgAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh+QQBCgACACwAAAAAFAAUAAACQZRvoIDtu1wLQUAlqKTVxqwhXIiBnDg6Y4eyx4lKW5XK7wrLeK3vbq8J2W4T4e1nMhpWrZCTt3xKZ8kgsggdJmUFACH5BAEKAAIALAcAAAALAAcAAAIUVB6ii7jajgCAuUmtovxtXnmdUAAAIfkEAQoAAgAsDQACAAcACwAAAhRUIpmHy/3gUVQAQO9NetuugCFWAAAh+QQBCgACACwNAAcABwALAAACE5QVcZjKbVo6ck2AF95m5/6BSwEAIfkEAQoAAgAsBwANAAsABwAAAhOUH3kr6QaAcSrGWe1VQl+mMUIBACH5BAEKAAIALAIADQALAAcAAAIUlICmh7ncTAgqijkruDiv7n2YUAAAIfkEAQoAAgAsAAAHAAcACwAAAhQUIGmHyedehIoqFXLKfPOAaZdWAAAh+QQFCgACACwAAAIABwALAAACFJQFcJiXb15zLYRl7cla8OtlGGgUADs=) !important;
+	}
+
+	// filters
+	.tablesorter-filter {
+		background-color: #fff;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		border: 1px solid #bbb;
+		color: #333;
+		height: auto;
+		margin: 0;
+		padding: 4px;
+		-webkit-transition: height .1s ease;
+		-moz-transition: height .1s ease;
+		-o-transition: height .1s ease;
+		transition: height .1s ease;
+		width: 98%;
+	}
+
+	// filter widget
+	.tablesorter-filter-row {
+		td {
+			background-color: #eee;
+			line-height: normal;
+			text-align: center; // center the input
+			-webkit-transition: line-height .1s ease;
+			-moz-transition: line-height .1s ease;
+			-o-transition: line-height .1s ease;
+			transition: line-height .1s ease;
+			.disabled { // optional disabled input styling
+				cursor: not-allowed;
+				opacity: 0.5;
+				filter: alpha(opacity=50);
+			}
+		}
+		&.hideme,
+		&.hidden {
+			td {
+				// change this padding to modify the thickness
+				// of the closed filter row (height = padding x 2)
+				cursor: pointer;
+				line-height: 0;
+				margin: 0;
+				padding: 2px;
+			}
+			.tablesorter-filter {
+				border: 0;
+				height: 1px;
+				margin: 0;
+				min-height: 0;
+				opacity: 0; // don't use visibility: hidden because it disables tabbing
+				filter: alpha(opacity=0);
+				padding: 0;
+			}
+		}
+	}
+
+	// Zebra widget - column sort colors
+	tr.odd td.primary,
+	td.primary {
+		background-color: #b0b0b0;
+	}
+
+	tr.even td.primary,
+	tr.odd td.secondary,
+	td.secondary {
+		background-color: #ccc;
+	}
+
+	tr.odd td,
+	tr.even td.tertiary {
+		background-color: #f5f5f5;
+	}
+
+	tr.even td.secondary,
+	tr.odd td.tertiary,
+	td.tertiary {
+		background-color: #d9d9d9;
+	}
+}
+
+// tbody
+// hovered row colors
+// you'll need to add additional lines for
+// rows with more than 2 child rows
+.tablesorter-blue tbody > tr:hover > td,
+.tablesorter-blue tbody > tr:hover + tr.tablesorter-childRow > td,
+.tablesorter-blue tbody > tr:hover + tr.tablesorter-childRow + tr.tablesorter-childRow > td,
+.tablesorter-blue tbody > tr.even:hover > td,
+.tablesorter-blue tbody > tr.even:hover + tr.tablesorter-childRow > td,
+.tablesorter-blue tbody > tr.even:hover + tr.tablesorter-childRow + tr.tablesorter-childRow > td {
+	background: #f5f5f5;
+}
+.tablesorter-blue tbody > tr.odd:hover > td,
+.tablesorter-blue tbody > tr.odd:hover + tr.tablesorter-childRow > td,
+.tablesorter-blue tbody > tr.odd:hover + tr.tablesorter-childRow + tr.tablesorter-childRow > td {
+	background: #bfbfbf;
+}
+
+// ajax error row
+.tablesorter {
+	.tablesorter-errorRow td {
+		background-color: #e6bf99;
+		cursor: pointer;
+		text-align: center;
+	}
+}
