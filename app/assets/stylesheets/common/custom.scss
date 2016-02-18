@@ -640,13 +640,8 @@ select {
 	margin-bottom: 15px;
 	margin-top: 15px;
 	> li {
-		display: inline-block;
-		vertical-align: middle;
 		> a,
 		> span {
-			border: none;
-			display: inline-block;
-			float: none;
 			&:focus,
 			&:hover {
 				background-color: $bg-lightgrey;
@@ -658,11 +653,60 @@ select {
 				&,
 				&:focus,
 				&:hover {
-					background-color: $bg-btn-primary;
+					background-color: $bg-base-blue;
 					font: {
 						weight: bold;
 					}
 				}
+			}
+		}
+	}
+}
+
+// Custom pagination-area
+.pagination_area {
+	float: right;
+	.pagination_nav {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		li {
+			display: inline;
+			&.page,
+			& > a,
+			& > span {
+				background-color: #fff;
+				border: 1px solid #ddd;
+				float: left;
+				font: {
+					family: $font-family-sans-serif;
+					size: 13.5px;
+				}
+				line-height: $font-line-height-default;
+				margin-left: -1px;
+				padding: $padding-base-btn-sm;
+				position: relative;
+			}
+			&.page:first-child,
+			&:first-child > a,
+			&:first-child > span {
+				border-radius: 4px 0 0 4px;
+			}
+			&.page:last-child,
+			&:last-child > a,
+			&:last-child > span {
+				border-radius: 0 4px 4px 0;
+			}
+			&.current,
+			&.current > a,
+			&.current > span {
+				background-color: $bg-base-blue;
+				border-color: $bg-base-blue;
+				color: #fff;
+				font: {
+					weight: bold;
+				}
+				z-index: 1;
 			}
 		}
 	}
