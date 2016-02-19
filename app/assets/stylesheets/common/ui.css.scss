@@ -366,14 +366,13 @@ $card-primary-border-top: #16acf2;
 .card-title {
 	display: block;
 	font: {
-		size: 12px;
+		size: 14px;
 		weight: bold;
 	}
 	margin: 0 0 5px;
 	overflow: hidden;
 	padding: 5px 5px 0;
 	text-overflow: ellipsis;
-	text-transform: uppercase;
 	white-space: nowrap;
 	@supports (display: -webkit-box) {
 	    display: -webkit-box;
@@ -482,6 +481,35 @@ $card-primary-border-top: #16acf2;
 			input[type='radio'] {
 				margin-top: 0;
 				position: static;
+			}
+		}
+	}
+}
+
+// Filters
+#filter-container {
+	background-color: #fff;
+	border-top: 4px solid $bg-panel;
+	margin-top: 20px;
+	padding: 10px 0;
+	position: relative;
+	.filter-criteria {
+		border: 1px solid $bg-panel;
+		padding-top: 10px;
+		position: relative;
+	}
+	.modal-footer {
+		background-color: $bg-lightgrey;
+		border: none;
+		width: 100%;
+		ul,
+		ol {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			li {
+				display: inline-block;
+				vertical-align: middle;
 			}
 		}
 	}
