@@ -6,6 +6,7 @@ pt-BR:
       title: Módulos
       fnz: Financeiro
       planning: Gestāo da Rutina
+      mailchimp_integration: Integraçāo com Mailchimp
     user_menu:
       user_profile: Meu perfil
       school_profile: Configuraçāo Unidade
@@ -58,6 +59,7 @@ pt-BR:
       triggers: Disparadores automáticos
       scheduled_mails_all: Histórico de e-mails
       scheduled_mails_future: e-mails programados
+      mailchimp_configuration: Configuraçāo Mailchimp
     stats:
       title: Estatísticas
       pdg_report: Resumo mensal

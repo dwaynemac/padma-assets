@@ -5,6 +5,7 @@ en:
     modules:
       title: Modules
       fnz: Finances
+      mailchimp_integration: Mailchimp integration
     user_menu:
       user_profile: My profile
       school_profile: School configuration
@@ -57,6 +58,7 @@ en:
       triggers: Triggers
       scheduled_mails_all: Scheduled Mails
       scheduled_mails_future: Future mails
+      mailchimp_configuration: Mailchimp configuration
     stats:
       title: Statistics
       pdg_report: Month summary

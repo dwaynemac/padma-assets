@@ -6,6 +6,7 @@ es:
       title: Módulos
       fnz: Financiero
       planning: Gestión de la rutina
+      mailchimp_integration: Integración con Mailchimp
     user_menu:
       user_profile: Mi perfil
       school_profile: Configuración Escuela
@@ -58,6 +59,7 @@ es:
       triggers: Disparadores automáticos
       scheduled_mails_all: Histórico de mails
       scheduled_mails_future: Mails programados
+      mailchimp_configuration: Configuración Mailchimp
     stats:
       title: Estadísticas
       pdg_report: Resumen mensual
