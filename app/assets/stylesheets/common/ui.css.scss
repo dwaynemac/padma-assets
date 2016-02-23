@@ -514,3 +514,30 @@ $card-primary-border-top: #16acf2;
 		}
 	}
 }
+
+#slide_dialogs {
+	.slide_dialog {
+		border: none;
+		border-top: 4px solid $bg-panel;
+		padding: 10px 0;
+		.formtastic {
+			border: 1px solid $bg-panel;
+			padding-top: 10px;
+		}
+	}
+	.modal-footer {
+		background-color: $bg-lightgrey;
+		border: none;
+		width: 100%;
+		ul,
+		ol {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			li {
+				display: inline-block;
+				vertical-align: middle;
+			}
+		}
+	}
+}
