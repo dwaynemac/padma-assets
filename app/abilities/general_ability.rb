@@ -18,11 +18,13 @@ class GeneralAbility
   private
 
   def in_country?(user,country_name)
-    name = user.current_account.name
-    @country = Rails.cache.fetch("countryfor#{name}") do
-      user.current_account.padma.country
+    name = user.current_account.try(:name)
+    if name
+      @country = Rails.cache.fetch("countryfor#{name}") do
+        user.current_account.padma.country
+      end
+      @country == country_name
     end
-    @country == country_name
   end
   
   def alpha?(user)
