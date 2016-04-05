@@ -10,9 +10,20 @@ class GeneralAbility
     if beta?(user)
     end
 
+    if in_country?(user,'Argentina')
+      can :manage, :derose_events
+    end
   end
   
   private
+
+  def in_country?(user,country_name)
+    name = user.current_account.name
+    @country = Rails.cache.fetch("countryfor#{name}") do
+      user.current_account.padma.country
+    end
+    @country == country_name
+  end
   
   def alpha?(user)
     user.account_tester_level == 'alpha'

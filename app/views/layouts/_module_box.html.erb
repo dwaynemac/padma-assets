@@ -53,6 +53,9 @@
             <% if can?(:manage, :mailchimp) -%>
               <li><%= link_to t('header-menu.modules.mailchimp_integration'), "#{APP_CONFIG['mailing-url']}/mailchimp/subscription" %></li>
             <% end -%>
+            <% if can?(:manage, :derose_events) -%>
+              <li><%= link_to t('header-menu.modules.derose_events'), "http://www.derose.events/admin", target: '_blank' %></li>
+            <% end -%>
           </ul>
         </li>
       </ul>
