@@ -3,7 +3,10 @@ class GeneralAbility
 
   def initialize(user)
     if alpha?(user)
-      can :manage, :mailchimp
+      can :see, :mailchimp
+      if petal_enabled?(user,'mailchimp')
+        can :configure, :mailchimp
+      end
       can :manage, :planning
     end
 
@@ -33,6 +36,10 @@ class GeneralAbility
     else
       user.current_account.padma
     end
+  end
+
+  def petal_enabled?(user,petal_name)
+    petal_name.in?(padma_account(user).enabled_petals||[])
   end
   
   def alpha?(user)
