@@ -21,9 +21,17 @@ class GeneralAbility
     name = user.current_account.try(:name)
     if name
       @country = Rails.cache.fetch("countryfor#{name}") do
-        user.current_account.padma.country
+        padma_account(user).try(:country)
       end
       @country == country_name
+    end
+  end
+
+  def padma_account(user)
+    if user.current_account.is_a?(PadmaAccount)
+      user.current_account
+    else
+      user.current_account.padma
     end
   end
   
