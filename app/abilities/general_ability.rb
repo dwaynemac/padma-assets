@@ -31,10 +31,10 @@ class GeneralAbility
   end
 
   def padma_account(user)
-    if user.current_account.is_a?(PadmaAccount)
-      user.current_account
-    else
+    if user.current_account.respond_to?(:padma)
       user.current_account.padma
+    else
+      user.current_account
     end
   end
 
