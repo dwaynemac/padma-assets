@@ -19,7 +19,7 @@ es:
       refresh_tipsy: Click aquí para actualizar este menú
       lists:
         new_list: Nueva búsqueda
-        all_lists: Listas y búsquedas
+        all_lists: Listas, etiquetas y búsquedas
         find_list: Encontrar búsqueda
         saved_lists: Búsquedas guardadas
         system_lists: Listas de PADMA

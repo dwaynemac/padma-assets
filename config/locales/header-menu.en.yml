@@ -17,7 +17,7 @@ en:
       refresh_tipsy: Click here to refresh this menu
       lists:
         new_list: New list
-        all_lists: All lists
+        all_lists: Lists, tags and searches
         find_list: Find list
         saved_lists: Saved lists
         system_lists: PADMA's lists

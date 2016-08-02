@@ -3,10 +3,6 @@ class GeneralAbility
 
   def initialize(user)
     if alpha?(user)
-      can :see, :mailchimp
-      if petal_enabled?(user,'mailchimp')
-        can :configure, :mailchimp
-      end
       can :manage, :planning
     end
 
@@ -15,6 +11,11 @@ class GeneralAbility
 
     if in_country?(user,'Argentina')
       can :manage, :derose_events
+    end
+
+    can :see, :mailchimp
+    if petal_enabled?(user,'mailchimp')
+      can :configure, :mailchimp
     end
   end
   
