@@ -8,6 +8,7 @@ es:
       planning: Gestión de la rutina
       mailchimp_integration: Integración con Mailchimp
       derose_events: Eventos DeROSE 
+      wordpress_plugin: Plugin Wordpress
     user_menu:
       user_profile: Mi perfil
       school_profile: Configuración Escuela

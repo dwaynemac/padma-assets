@@ -6,6 +6,7 @@ en:
       title: Modules
       fnz: Finances
       mailchimp_integration: Mailchimp integration
+      wordpress_plugin: Wordpress Plugin
     user_menu:
       user_profile: My profile
       school_profile: School configuration
