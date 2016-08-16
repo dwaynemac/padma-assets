@@ -11,6 +11,7 @@ class GeneralAbility
 
     if in_country?(user,'Argentina')
       can :manage, :derose_events
+      can :manage, :office_argentina
     end
 
     can :see, :mailchimp
