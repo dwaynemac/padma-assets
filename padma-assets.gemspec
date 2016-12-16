@@ -13,5 +13,5 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = '0.2.17'
   gem.add_dependency "railties", ">= 3.1"
-  gem.add_dependency "accounts_client", ">= 0.2.27"
+  gem.add_dependency "accounts_client", ">= 0.2.28"
 end
