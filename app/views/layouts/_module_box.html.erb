@@ -68,7 +68,11 @@
       <ul class="nav navbar-nav navbar-right">
         <%= yield :top_right_navigation_menu %>
         <li>
-          <%= link_to t('header-menu.new_contact'), "#{APP_CONFIG['crm-url']}/contacts/new", class: 'new-contact tipsyS' %>
+          <% if content_for?(:main_call_to_action) %>
+            <%= yield(:main_call_to_action) %>
+          <% else %>
+            <%= link_to t('header-menu.new_contact'), "#{APP_CONFIG['crm-url']}/contacts/new", class: 'new-contact tipsyS' %>
+          <% end %>
         </li>
         <li>
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"  id="username">
