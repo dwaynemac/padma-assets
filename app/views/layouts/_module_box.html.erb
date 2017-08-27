@@ -63,8 +63,10 @@
             <li><%= link_to t('header-menu.user_menu.help_center'), 'http://help.padm.am', target: '_blank' %></li>
           </ul>
         </li>
+        <%= yield :top_left_navigation_menu %>
       </ul>
       <ul class="nav navbar-nav navbar-right">
+        <%= yield :top_right_navigation_menu %>
         <li>
           <%= link_to t('header-menu.new_contact'), "#{APP_CONFIG['crm-url']}/contacts/new", class: 'new-contact tipsyS' %>
         </li>
