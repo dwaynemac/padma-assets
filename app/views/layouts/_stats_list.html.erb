@@ -1,4 +1,5 @@
-<% if current_user.current_account -%>
+<% curacc = current_user.current_account %>
+<% if curacc && !curacc.name.blank? -%>
   <li>
     <%= link_to t("header-menu.stats.pdg_report"),
                 "#{APP_CONFIG['overmind-url']}/schools/#{current_user.current_account.name}/reports/pedagogic/#{Date.today.year}/#{Date.today.month}" %>
