@@ -65,7 +65,7 @@ es:
       mailchimp_configuration: Configuración Mailchimp
     stats:
       title: Estadísticas
-      pdg_report: Resumen mensual
+      pdg_report: Resumen pedagógico
       overmind: Histórico anual (todos los índices)
       marketing_methods_rankings: Métodos de Marketing
       reasons_ranking: Motivos de evasión

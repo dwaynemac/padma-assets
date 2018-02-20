@@ -62,7 +62,7 @@ en:
       mailchimp_configuration: Mailchimp configuration
     stats:
       title: Statistics
-      pdg_report: Month summary
+      pdg_report: Pedagogic summary
       overmind: Anual report (all indexes)
       marketing_methods_rankings: Marketing Methods
     search:
