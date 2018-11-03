@@ -31,6 +31,11 @@ $bg-link-responsive-hover: #1b4d78;
 		}
 	}
 }
+@media (max-width: 884px) {
+  #sField {
+    font-size: 16px;
+  }
+}
 
 .navbar-brand {
 	@media (max-width: 767px) {
