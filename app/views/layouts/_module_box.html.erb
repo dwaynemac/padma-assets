@@ -48,6 +48,9 @@
           <ul class="dropdown-menu" role="menu">
             <li><%= link_to t('header-menu.modules.fnz'), APP_CONFIG['fnz-url'], target: '_blank' %></li>
             <li><%= link_to '+Friends', 'http://friends.derose.co/admin' %></li>
+            <% if can?(:manage,:asana_com) %>
+              <li><%= link_to t('header-menu.modules.asana_com'), "#{APP_CONFIG['crm-url']}/asana_clients"  %></li>
+            <% end %>
             <% if can?(:manage,:planning) -%>
               <li><%= link_to t('header-menu.modules.planning'), APP_CONFIG['planning-url'] %></li>
             <% end -%>

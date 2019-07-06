@@ -6,6 +6,7 @@ es:
       title: Módulos
       fnz: Financiero
       planning: Gestión de la rutina
+      asana_com: Integración con Asana.com
       mailchimp_integration: Integración con Mailchimp
       derose_events: Eventos DeROSE 
       wordpress_plugin: Plugin Wordpress

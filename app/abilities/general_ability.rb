@@ -4,6 +4,7 @@ class GeneralAbility
   def initialize(user)
     if alpha?(user)
       can :manage, :planning
+      can :manage, :asana_com
     end
 
     if beta?(user)
