@@ -7,7 +7,6 @@ class GeneralAbility
     end
 
     if beta?(user)
-      can :manage, :asana_com
     end
 
     if in_country?(user,'Argentina')
@@ -15,6 +14,7 @@ class GeneralAbility
       can :manage, :office_argentina
     end
 
+    can :manage, :asana_com
     can :see, :mailchimp
     if petal_enabled?(user,'mailchimp')
       can :configure, :mailchimp
