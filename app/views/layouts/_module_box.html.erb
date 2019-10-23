@@ -1,3 +1,4 @@
+<% posts_workplace_url = "https://derosemethod.workplace.com/search/posts/?q=padma&epa=FILTERS&filters=eyJ7XCJuYW1lXCI6XCJycF9jaHJvbm9fc29ydFwiLFwibGFiZWxcIjpcInJwX2Nocm9ub19zb3J0XCJ9Ijoie1wibmFtZVwiOlwiY2hyb25vc29ydFwiLFwiYXJnc1wiOlwiXCJ9Iiwie1wibmFtZVwiOlwiY29tbWVudHNcIixcImxhYmVsXCI6XCJjb21tZW50c1wifSI6IntcIm5hbWVcIjpcInNlYXJjaF9jb21tZW50c1wiLFwiYXJnc1wiOlwiZmFsc2VcIn0iLCJ7XCJuYW1lXCI6XCJycF9ncm91cFwiLFwibGFiZWxcIjpcIkJ1cmVhdSBIZWxwZGVza1wifSI6IntcIm5hbWVcIjpcImdyb3VwX3Bvc3RzXCIsXCJhcmdzXCI6XCIxODM3MTAwNzYzMjE0MTU0XCJ9Iiwie1wibmFtZVwiOlwicnBfYXV0aG9yXCIsXCJsYWJlbFwiOlwiSnVsaWV0YSBXZXJ0aGVpbWVyXCJ9Ijoie1wibmFtZVwiOlwiYXV0aG9yXCIsXCJhcmdzXCI6XCIxMDAwMTUxODAzMTYxMjlcIn0ifQ%4D%3D" %>
 <nav class="navbar navbar-inverse">
   <div class='container'>
     <div class="navbar-header">
@@ -50,9 +51,6 @@
             <% if can?(:manage,:asana_com) %>
               <li><%= link_to t('header-menu.modules.asana_com'), "#{APP_CONFIG['crm-url']}/asana_clients"  %></li>
             <% end %>
-            <% if can?(:manage,:planning) -%>
-              <li><%= link_to t('header-menu.modules.planning'), APP_CONFIG['planning-url'] %></li>
-            <% end -%>
             <% if can?(:see, :mailchimp) -%>
               <li><%= link_to t('header-menu.modules.mailchimp_integration'), "#{APP_CONFIG['mailing-url']}/mailchimp/subscription" %></li>
             <% end -%>
@@ -63,7 +61,7 @@
               <li><%= link_to "Office Argentina", "http://officear.padm.am", target: '_blank' %></li>
             <% end -%>
             <li><%= link_to t('header-menu.modules.wordpress_plugin'), 'http://github.com/dwaynemac/padma-wordpress-plugin', target: '_blank' %></li>
-            <li><%= link_to t('header-menu.user_menu.help_center'), 'http://help.padm.am', target: '_blank' %></li>
+            <li><%= link_to t('header-menu.user_menu.help_center'), posts_workplace_url, target: '_blank' %></li>
           </ul>
         </li>
         <%= yield :top_left_navigation_menu %>
@@ -88,7 +86,7 @@
             <% end -%>
             <li><%= link_to t('header-menu.user_menu.billing'), "#{APP_CONFIG['accounts-url']}/accounts/#{current_user.current_account.name}/invoices/pending" %></li>
             <li><%= link_to "Secretaria Virtual", "http://www.metododerose.org/secretariavirtual", target: "_blank" %></li>
-            <li><%= link_to t('header-menu.user_menu.help_center'), 'http://help.padm.am', target: '_blank' %></li>
+            <li><%= link_to t('header-menu.user_menu.help_center'), posts_workplace_url, target: '_blank' %></li>
             <li><%= link_to t('header-menu.user_menu.logout'), logout_url %></li></ul>
         </li>
       </ul>
