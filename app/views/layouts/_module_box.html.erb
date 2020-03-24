@@ -54,9 +54,7 @@
             <% if can?(:see, :mailchimp) -%>
               <li><%= link_to t('header-menu.modules.mailchimp_integration'), "#{APP_CONFIG['mailing-url']}/mailchimp/subscription" %></li>
             <% end -%>
-            <% if can?(:manage, :derose_events) -%>
-              <li><%= link_to t('header-menu.modules.derose_events'), "http://www.derose.events/admin", target: '_blank' %></li>
-            <% end -%>
+            <li><%= link_to "DeROSE Learn", "https://learn.derose.co", target: '_blank' %></li>
             <% if can?(:manage, :office_argentina) -%>
               <li><%= link_to "Office Argentina", "http://officear.padm.am", target: '_blank' %></li>
             <% end -%>
