@@ -8,6 +8,7 @@ es:
       planning: Gestión de la rutina
       asana_com: Integración con Asana.com
       mailchimp_integration: Integración con Mailchimp
+      hubspot_integration: Integración con HubSpot
       derose_events: Eventos DeROSE 
       wordpress_plugin: Plugin Wordpress
     user_menu:

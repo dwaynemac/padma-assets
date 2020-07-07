@@ -3,7 +3,7 @@ class GeneralAbility
 
   def initialize(user)
     if alpha?(user)
-      can :manage, :planning
+      can :manage, :hubspot
     end
 
     if beta?(user)

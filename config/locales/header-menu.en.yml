@@ -7,6 +7,7 @@ en:
       fnz: Finances
       mailchimp_integration: Mailchimp integration
       asana_com: Asana.com integration
+      hubspot_integration: HubSpot integration
       wordpress_plugin: Wordpress Plugin
     user_menu:
       user_profile: My profile
