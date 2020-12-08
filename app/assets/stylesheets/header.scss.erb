@@ -41,7 +41,7 @@ $bg-link-responsive-hover: #1b4d78;
 	@media (max-width: 767px) {
 		margin: 10px;
 	}
-	background: url("/assets/logo-padma-w.png") no-repeat scroll center left;
+	background: url('<%= asset_path("logo-padma-w.png")%>') no-repeat scroll center left;
 	height: 47px;
 	margin: 0 10px 0 0;
 	padding: 0;
@@ -327,7 +327,7 @@ $bg-link-responsive-hover: #1b4d78;
 		margin-bottom: 0;
 	}
 	.search-btn {
-		background: url('search.svg') 0 0 no-repeat;
+		background: url('<%= asset_path("search.svg")%>') 0 0 no-repeat;
 		border: none;
 		display: inline-block;
 		height: 25px;
