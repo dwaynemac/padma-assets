@@ -14,6 +14,7 @@ class GeneralAbility
       can :manage, :office_argentina
     end
 
+    can :manage, :notion
     can :manage, :asana_com
     can :see, :mailchimp
     if petal_enabled?(user,'mailchimp')

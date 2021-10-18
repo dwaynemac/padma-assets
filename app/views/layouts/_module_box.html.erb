@@ -52,6 +52,9 @@
             <% if can?(:manage,:asana_com) %>
               <li><%= link_to t('header-menu.modules.asana_com'), "#{APP_CONFIG['crm-url']}/asana_clients"  %></li>
             <% end %>
+            <% if can?(:manage, :notion) %>
+              <li><%= link_to t('header-menu.modules.notion'), "#{APP_CONFIG['crm-url']}/notion/syncs"  %></li>
+            <% end %>
             <% if can?(:see, :mailchimp) -%>
               <li><%= link_to t('header-menu.modules.mailchimp_integration'), "#{APP_CONFIG['mailing-url']}/mailchimp/subscription" %></li>
             <% end -%>
