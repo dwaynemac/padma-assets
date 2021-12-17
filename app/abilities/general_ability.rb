@@ -3,10 +3,10 @@ class GeneralAbility
 
   def initialize(user)
     if alpha?(user)
-      can :manage, :hubspot
     end
 
     if beta?(user)
+      can :manage, :hubspot
     end
 
     if in_country?(user,'Argentina')
