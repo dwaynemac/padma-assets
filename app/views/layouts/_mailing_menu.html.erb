@@ -3,5 +3,6 @@
 <li><%= link_to t('header-menu.mailing.scheduled_mails_all'), "#{APP_CONFIG['mailing-url']}/scheduled_mails/history" %></li>
 <li><%= link_to t('header-menu.mailing.scheduled_mails_future'), "#{APP_CONFIG['mailing-url']}/scheduled_mails/pending" %></li>
 <% if can? :configure, :mailchimp -%>
-  <li><%= link_to t('header-menu.mailing.mailchimp_configuration'), "#{APP_CONFIG['mailing-url']}/mailchimp/configuration" %></li>
+  <li><%= link_to "OLD - "+t('header-menu.mailing.mailchimp_configuration'), "#{APP_CONFIG['mailing-url']}/mailchimp/configuration" %></li>
 <% end -%>
+<li><%= link_to "NEW - "+t('header-menu.mailing.mailchimp_configuration'), "#{APP_CONFIG['crm-url']}/mailchimp/syncs" %></li>
