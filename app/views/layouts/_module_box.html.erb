@@ -56,10 +56,7 @@
               <li><%= link_to t('header-menu.modules.notion'), "#{APP_CONFIG['crm-url']}/notion/syncs"  %></li>
             <% end %>
             <% if can?(:see, :mailchimp) -%>
-              <li><%= link_to "OLD - "+t('header-menu.modules.mailchimp_integration'), "#{APP_CONFIG['mailing-url']}/mailchimp/subscription" %></li>
-            <% end -%>
-            <% if can?(:see, :mailchimp) -%>
-              <li><%= link_to "NEW - "+t('header-menu.modules.mailchimp_integration'), "#{APP_CONFIG['crm-url']}/mailchimp/syncs" %></li>
+              <li><%= link_to t('header-menu.modules.mailchimp_integration'), "#{APP_CONFIG['crm-url']}/mailchimp/syncs" %></li>
             <% end -%>
             <% if can?(:manage, :hubspot) %>
               <li><%= link_to t("header-menu.modules.hubspot_integration"), "#{APP_CONFIG['crm-url']}/hubspot" %></li>
