@@ -12,6 +12,7 @@ es:
       hubspot_integration: Integración con HubSpot
       derose_events: Eventos DeROSE 
       wordpress_plugin: Plugin Wordpress
+      integrations: Todas las integraciones
     user_menu:
       user_profile: Mi perfil
       school_profile: Configuración Escuela

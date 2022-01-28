@@ -10,6 +10,7 @@ en:
       notion: Notion integration
       hubspot_integration: HubSpot integration
       wordpress_plugin: Wordpress Plugin
+      integrations: All integrations
     user_menu:
       user_profile: My profile
       school_profile: School configuration
