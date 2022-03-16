@@ -57,6 +57,7 @@ en:
       time_slots: Time Slots
       trial_lessons: Trial Lessons
       stats: Attendance report
+      attendances_by_teacher: Leassons given
     mailing:
       title: Mailing
       templates: Templates
