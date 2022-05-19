@@ -1,4 +1,3 @@
-<% posts_workplace_url = "https://derosemethod.workplace.com/groups/395273144964377" %>
 <nav class="navbar navbar-inverse">
   <div class='container'>
     <div class="navbar-header">
@@ -76,7 +75,7 @@
               <li><%= link_to t('header-menu.user_menu.school_profile'), "#{APP_CONFIG['accounts-url']}/accounts/#{current_user.current_account.name}" %></li>
             <% end -%>
             <li><%= link_to t('header-menu.user_menu.billing'), "#{APP_CONFIG['accounts-url']}/accounts/#{current_user.current_account.name}/invoices/pending" %></li>
-            <li><%= link_to t('header-menu.user_menu.help_center'), posts_workplace_url, target: '_blank' %></li>
+            <li><%= link_to t('header-menu.user_menu.help_center'), "https://help.derose.app", target: '_blank' %></li>
             <li><%= link_to t('header-menu.user_menu.logout'), logout_url %></li></ul>
         </li>
       </ul>
