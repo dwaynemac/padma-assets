@@ -7,8 +7,10 @@ en:
       fnz: Finances
       mailchimp_integration: Mailchimp integration
       asana_com: Asana.com integration
+      notion: Notion integration
       hubspot_integration: HubSpot integration
       wordpress_plugin: Wordpress Plugin
+      integrations: All integrations
     user_menu:
       user_profile: My profile
       school_profile: School configuration
@@ -55,6 +57,7 @@ en:
       time_slots: Time Slots
       trial_lessons: Trial Lessons
       stats: Attendance report
+      attendances_by_teacher: Leassons given
     mailing:
       title: Mailing
       templates: Templates

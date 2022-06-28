@@ -7,10 +7,12 @@ es:
       fnz: Financiero
       planning: Gestión de la rutina
       asana_com: Integración con Asana.com
+      notion: Integración con Notion
       mailchimp_integration: Integración con Mailchimp
       hubspot_integration: Integración con HubSpot
       derose_events: Eventos DeROSE 
       wordpress_plugin: Plugin Wordpress
+      integrations: Todas las integraciones
     user_menu:
       user_profile: Mi perfil
       school_profile: Configuración Escuela
@@ -58,6 +60,7 @@ es:
       time_slots: Horarios de clase
       trial_lessons: Clases de prueba
       stats: Reporte de participación
+      attendances_by_teacher: Clases ministradas
     mailing:
       title: Mailing
       templates: Modelos de mail

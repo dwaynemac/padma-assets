@@ -9,8 +9,10 @@ pt-BR:
       mailchimp_integration: Integraçāo com Mailchimp
       hubspot_integration: Integração com HubSpot
       asana_com: Integraçāo com Asana.com
+      notion: Integração com Notion
       derose_events: Eventos DeROSE 
       wordpress_plugin: Plugin Wordpress
+      integrations: Todas as integrações
     user_menu:
       user_profile: Meu perfil
       school_profile: Configuraçāo Unidade
@@ -58,6 +60,7 @@ pt-BR:
       time_slots: Turmas
       trial_lessons: Aula experimental
       stats: Relatório de participaçāo
+      attendances_by_teacher: Aulas ministradas
     mailing:
       title: Mailing
       templates: Modelos de e-mail

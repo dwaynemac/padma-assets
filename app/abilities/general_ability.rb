@@ -3,10 +3,10 @@ class GeneralAbility
 
   def initialize(user)
     if alpha?(user)
-      can :manage, :hubspot
     end
 
     if beta?(user)
+      can :manage, :hubspot
     end
 
     if in_country?(user,'Argentina')
@@ -14,6 +14,7 @@ class GeneralAbility
       can :manage, :office_argentina
     end
 
+    can :manage, :notion
     can :manage, :asana_com
     can :see, :mailchimp
     if petal_enabled?(user,'mailchimp')
