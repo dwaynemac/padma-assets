@@ -1,21 +1,42 @@
 <% curacc = current_user.current_account %>
+<% alpha = (current_account.padma.tester_level == 'alpha') %>
 <% if curacc && !curacc.name.blank? -%>
   <li>
-    <%= link_to t("header-menu.stats.pdg_report"),
+    <% if alpha %>
+      <%= link_to t("header-menu.stats.pdg_report"),
+                "#{APP_CONFIG['crm-url']}/statistics/accounts/#{curacc.padma.vanity_name}/reports/pedagogic/#{Date.today.year}/#{Date.today.month}" %>
+    <% else %>
+      <%= link_to t("header-menu.stats.pdg_report"),
                 "#{APP_CONFIG['overmind-url']}/schools/#{current_user.current_account.name}/reports/pedagogic/#{Date.today.year}/#{Date.today.month}" %>
+    <% end %>
   </li>
   <li>
-    <%= link_to t("header-menu.stats.overmind"),
+    <% if alpha %>
+      <%= link_to t("header-menu.stats.overmind"),
+                "#{APP_CONFIG['crm-url']}/statistics/accounts/#{curacc.padma.vanity_name}" %>
+    <% else %>
+      <%= link_to t("header-menu.stats.overmind"),
                 "#{APP_CONFIG['overmind-url']}/schools/pa/#{current_user.current_account.name}" %>
+    <% end %>
   </li>
   <li>
-    <%= link_to t("header-menu.stats.teacher_ranking"),
+    <% if alpha %>
+      <%= link_to t("header-menu.stats.teacher_ranking"),
+                "#{APP_CONFIG['crm-url']}/statistics/accounts/#{curacc.padma.vanity_name}/user_rankings" %>
+    <% else %>
+      <%= link_to t("header-menu.stats.teacher_ranking"),
                 "#{APP_CONFIG['overmind-url']}/schools/#{current_user.current_account.name}/teacher_ranking" %>
+    <% end %>
   </li>
 <% end -%>
 <li>
-  <%= link_to t("header-menu.stats.schools_ranking"),
+    <% if alpha %>
+      <%= link_to t("header-menu.stats.schools_ranking"),
+                "#{APP_CONFIG['crm-url']}/statistics/rankings" %>
+    <% else %>
+      <%= link_to t("header-menu.stats.schools_ranking"),
               "#{APP_CONFIG['overmind-url']}/ranking" %>
+    <% end %>
 </li>
 <li>
   <%= link_to t('header-menu.stats.marketing_methods_rankings'),
