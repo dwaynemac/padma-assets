@@ -1,5 +1,5 @@
 <% curacc = current_user.current_account %>
-<% alpha = (current_account.padma.tester_level == 'alpha') %>
+<% alpha = (curacc.padma.tester_level == 'alpha') %>
 <% if curacc && !curacc.name.blank? -%>
   <li>
     <% if alpha %>
