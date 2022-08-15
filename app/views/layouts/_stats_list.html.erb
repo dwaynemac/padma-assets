@@ -1,8 +1,8 @@
 <% curacc = current_user.current_account %>
-<% alpha = curacc.respond_to?(:tester_level) ? (curacc.tester_level == 'alpha') : (curacc.padma.tester_level == 'alpha') %>
+<% beta = curacc.respond_to?(:tester_level) ? (curacc.tester_level.in?(%W(alpha beta))) : (curacc.padma.tester_level.in?(%W(alpha beta)) %>
 <% if curacc && !curacc.name.blank? -%>
   <li>
-    <% if alpha %>
+    <% if beta %>
       <%= link_to t("header-menu.stats.pdg_report"),
                 "#{APP_CONFIG['crm-url']}/statistics/accounts/#{curacc.padma.vanity_name}/reports/pedagogic/#{Date.today.year}/#{Date.today.month}" %>
     <% else %>
@@ -11,7 +11,7 @@
     <% end %>
   </li>
   <li>
-    <% if alpha %>
+    <% if beta %>
       <%= link_to t("header-menu.stats.overmind"),
                 "#{APP_CONFIG['crm-url']}/statistics/accounts/#{curacc.padma.vanity_name}" %>
     <% else %>
@@ -20,7 +20,7 @@
     <% end %>
   </li>
   <li>
-    <% if alpha %>
+    <% if beta %>
       <%= link_to t("header-menu.stats.teacher_ranking"),
                 "#{APP_CONFIG['crm-url']}/statistics/accounts/#{curacc.padma.vanity_name}/user_rankings" %>
     <% else %>
@@ -30,7 +30,7 @@
   </li>
 <% end -%>
 <li>
-    <% if alpha %>
+    <% if beta %>
       <%= link_to t("header-menu.stats.schools_ranking"),
                 "#{APP_CONFIG['crm-url']}/statistics/rankings" %>
     <% else %>
