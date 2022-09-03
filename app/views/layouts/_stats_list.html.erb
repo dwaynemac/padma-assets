@@ -2,41 +2,21 @@
 <% beta = curacc.respond_to?(:tester_level) ? (curacc.tester_level.in?(%W(alpha beta))) : (curacc.padma.tester_level.in?(%W(alpha beta))) %>
 <% if curacc && !curacc.name.blank? -%>
   <li>
-    <% if beta %>
-      <%= link_to t("header-menu.stats.pdg_report"),
-                "#{APP_CONFIG['crm-url']}/statistics/accounts/#{curacc.padma.vanity_name}/reports/pedagogic/#{Date.today.year}/#{Date.today.month}" %>
-    <% else %>
-      <%= link_to t("header-menu.stats.pdg_report"),
-                "#{APP_CONFIG['overmind-url']}/schools/#{current_user.current_account.name}/reports/pedagogic/#{Date.today.year}/#{Date.today.month}" %>
-    <% end %>
+    <%= link_to t("header-menu.stats.pdg_report"),
+              "#{APP_CONFIG['crm-url']}/statistics/accounts/#{curacc.padma.vanity_name}/reports/pedagogic/#{Date.today.year}/#{Date.today.month}" %>
   </li>
   <li>
-    <% if beta %>
-      <%= link_to t("header-menu.stats.overmind"),
-                "#{APP_CONFIG['crm-url']}/statistics/accounts/#{curacc.padma.vanity_name}" %>
-    <% else %>
-      <%= link_to t("header-menu.stats.overmind"),
-                "#{APP_CONFIG['overmind-url']}/schools/pa/#{current_user.current_account.name}" %>
-    <% end %>
+    <%= link_to t("header-menu.stats.overmind"),
+              "#{APP_CONFIG['crm-url']}/statistics/accounts/#{curacc.padma.vanity_name}" %>
   </li>
   <li>
-    <% if beta %>
-      <%= link_to t("header-menu.stats.teacher_ranking"),
-                "#{APP_CONFIG['crm-url']}/statistics/accounts/#{curacc.padma.vanity_name}/user_rankings" %>
-    <% else %>
-      <%= link_to t("header-menu.stats.teacher_ranking"),
-                "#{APP_CONFIG['overmind-url']}/schools/#{current_user.current_account.name}/teacher_ranking" %>
-    <% end %>
+    <%= link_to t("header-menu.stats.teacher_ranking"),
+              "#{APP_CONFIG['crm-url']}/statistics/accounts/#{curacc.padma.vanity_name}/user_rankings" %>
   </li>
 <% end -%>
 <li>
-    <% if beta %>
-      <%= link_to t("header-menu.stats.schools_ranking"),
-                "#{APP_CONFIG['crm-url']}/statistics/rankings" %>
-    <% else %>
-      <%= link_to t("header-menu.stats.schools_ranking"),
-              "#{APP_CONFIG['overmind-url']}/ranking" %>
-    <% end %>
+    <%= link_to t("header-menu.stats.schools_ranking"),
+              "#{APP_CONFIG['crm-url']}/statistics/rankings" %>
 </li>
 <li>
   <%= link_to t('header-menu.stats.marketing_methods_rankings'),
