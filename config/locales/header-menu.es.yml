@@ -10,6 +10,7 @@ es:
       notion: Integración con Notion
       mailchimp_integration: Integración con Mailchimp
       hubspot_integration: Integración con HubSpot
+      sendin_blue_integration: Integración con SendinBlue 
       derose_events: Eventos DeROSE 
       wordpress_plugin: Plugin Wordpress
       integrations: Todas las integraciones

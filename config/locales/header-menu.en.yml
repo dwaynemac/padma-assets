@@ -6,6 +6,7 @@ en:
       title: Modules
       fnz: Finances
       mailchimp_integration: Mailchimp integration
+      sendin_blue_integration: SendinBlue integration
       asana_com: Asana.com integration
       notion: Notion integration
       hubspot_integration: HubSpot integration
