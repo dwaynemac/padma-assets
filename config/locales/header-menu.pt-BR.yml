@@ -69,6 +69,7 @@ pt-BR:
       scheduled_mails_all: Histórico de e-mails
       scheduled_mails_future: e-mails programados
       mailchimp_configuration: Configuraçāo Mailchimp
+      sendin_blue_configuration: Configuraçāo SendinBlue
     stats:
       title: Estatísticas
       pdg_report: Resumo pedagógico
