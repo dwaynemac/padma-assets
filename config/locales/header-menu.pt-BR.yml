@@ -65,6 +65,7 @@ pt-BR:
     mailing:
       title: Mailing
       templates: Modelos de e-mail
+      addresses: Endereços de e-mail
       triggers: Disparadores automáticos
       scheduled_mails_all: Histórico de e-mails
       scheduled_mails_future: e-mails programados

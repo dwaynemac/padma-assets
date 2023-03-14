@@ -1,6 +1,7 @@
 <% local_mailing = current_user.current_account.respond_to?(:padma)? current_user.current_account.padma.local_mailing : current_user.current_account.local_mailing %>
 <% mailing_url = (local_mailing)? "#{APP_CONFIG['crm-url']}/mailing" : APP_CONFIG['mailing-url'] %>
 <li><%= link_to t('header-menu.mailing.templates'), "#{mailing_url}/templates" %></li>
+<li><%= link_to t('header-menu.mailing.addresses'), "#{mailing_url}/addresses" %></li>
 <li><%= link_to t('header-menu.mailing.triggers'), "#{mailing_url}/triggers" %></li>
 <li><%= link_to t('header-menu.mailing.scheduled_mails_all'), "#{mailing_url}/scheduled_mails/history" %></li>
 <li><%= link_to t('header-menu.mailing.scheduled_mails_future'), "#{mailing_url}/scheduled_mails/pending" %></li>
