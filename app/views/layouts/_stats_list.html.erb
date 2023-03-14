@@ -1,5 +1,4 @@
 <% curacc = current_user.current_account %>
-<% beta = curacc.respond_to?(:tester_level) ? (curacc.tester_level.in?(%W(alpha beta))) : (curacc.padma.tester_level.in?(%W(alpha beta))) %>
 <% if curacc && !curacc.name.blank? -%>
   <li>
     <%= link_to t("header-menu.stats.pdg_report"),
