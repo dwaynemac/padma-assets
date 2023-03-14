@@ -1,16 +1,17 @@
 <% curacc = current_user.current_account %>
+<% vanity_name = curacc.try(:vanity_name) || curacc.try(:padma).try(:vanity_name) || curacc.name %>
 <% if curacc && !curacc.name.blank? -%>
   <li>
     <%= link_to t("header-menu.stats.pdg_report"),
-              "#{APP_CONFIG['crm-url']}/statistics/accounts/#{curacc.padma.vanity_name}/reports/pedagogic/#{Date.today.year}/#{Date.today.month}" %>
+              "#{APP_CONFIG['crm-url']}/statistics/accounts/#{vanity_name}/reports/pedagogic/#{Date.today.year}/#{Date.today.month}" %>
   </li>
   <li>
     <%= link_to t("header-menu.stats.overmind"),
-              "#{APP_CONFIG['crm-url']}/statistics/accounts/#{curacc.padma.vanity_name}" %>
+              "#{APP_CONFIG['crm-url']}/statistics/accounts/#{vanity_name}" %>
   </li>
   <li>
     <%= link_to t("header-menu.stats.teacher_ranking"),
-              "#{APP_CONFIG['crm-url']}/statistics/accounts/#{curacc.padma.vanity_name}/user_rankings" %>
+              "#{APP_CONFIG['crm-url']}/statistics/accounts/#{vanity_name}/user_rankings" %>
   </li>
 <% end -%>
 <li>
