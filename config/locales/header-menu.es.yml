@@ -65,6 +65,7 @@ es:
     mailing:
       title: Mailing
       templates: Modelos de mail
+      addresses: Direcciones de envío 
       triggers: Disparadores automáticos
       scheduled_mails_all: Histórico de mails
       scheduled_mails_future: Mails programados
