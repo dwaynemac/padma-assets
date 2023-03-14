@@ -62,6 +62,7 @@ en:
     mailing:
       title: Mailing
       templates: Templates
+      addresses: Mailing addresses
       triggers: Triggers
       scheduled_mails_all: Scheduled Mails
       scheduled_mails_future: Future mails
