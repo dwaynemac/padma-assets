@@ -55,6 +55,10 @@ es:
         Gestion: Gestiones evolutivas
         Revisacion: Revisaciones Médicas
         Reunion: Reuniones con el director
+    learn_attendance:
+      agenda: Agenda checkins y reservas
+      report: Análisis checkins
+      checkins_distribution: Reporte Distribución checkins
     attendance:
       title: Clases
       attendances: Asistencias

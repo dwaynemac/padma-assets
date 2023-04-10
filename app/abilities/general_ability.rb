@@ -2,11 +2,13 @@ class GeneralAbility
   include CanCan::Ability
 
   def initialize(user)
+    cannot :manage, :hubspot
+
     if alpha?(user)
     end
 
     if beta?(user)
-      can :manage, :hubspot
+      can :manage, :learn_agenda
     end
 
     if in_country?(user,'Argentina')

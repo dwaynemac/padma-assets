@@ -52,6 +52,10 @@ en:
         Gestion: Gestion Evolutiva
         Revisacion: Medical Check
         Reunion: Meet with director
+    learn_attendance:
+      agenda: Agenda (checkins and bookings)
+      report: Checkins report
+      checkins_distribution: Checkins distribution
     attendance:
       title: Lessons
       attendances: Attendance

@@ -55,6 +55,10 @@ pt-BR:
         Gestion: Gestōes evolutivas
         Revisacion: Exames Médicos
         Reunion: Reuniōes com o diretor
+    learn_attendance:
+      agenda: Agenda checkins e reservas
+      report: Análise checkins
+      checkins_distribution: Reporte Distribuição checkins
     attendance:
       title: Aulas
       attendances: Presenças
