@@ -28,32 +28,32 @@
 	background:image-url('ie-spacer.gif'); /* ie7/8 fix */
 }
 .gritter-top {
-	background:image-url(gritter.png) no-repeat left -30px;
+	background:image-url('gritter.png') no-repeat left -30px;
 	height:10px;
 }
 .success .gritter-top {
-	background:image-url(gritter-green.png) no-repeat left -30px;
+	background:image-url('gritter-green.png') no-repeat left -30px;
 	height:10px;
 }
 .alert .gritter-top {
-	background:image-url(gritter-red.png) no-repeat left -30px;
+	background:image-url('gritter-red.png') no-repeat left -30px;
 	height:10px;
 }
 .hover .gritter-top {
 	background-position:right -30px;
 }
 .gritter-bottom {
-	background:image-url(gritter.png) no-repeat left bottom;
+	background:image-url('gritter.png') no-repeat left bottom;
 	height:8px;
 	margin:0;
 }
 .success .gritter-bottom {
-	background:image-url(gritter-green.png) no-repeat left bottom;
+	background:image-url('gritter-green.png') no-repeat left bottom;
 	height:8px;
 	margin:0;
 }
 .alert .gritter-bottom {
-	background:image-url(gritter-red.png) no-repeat left bottom;
+	background:image-url('gritter-red.png') no-repeat left bottom;
 	height:8px;
 	margin:0;
 }
@@ -63,7 +63,7 @@
 
 .gritter-item  {
 	display:block;
-	background:image-url(gritter.png) no-repeat left -40px;
+	background:image-url('gritter.png') no-repeat left -40px;
 	color:#eee;
 	padding:2px 11px 8px 11px;
 	font-size: 11px;
@@ -73,7 +73,7 @@
 .success .gritter-item {
 	display:block;
 	color:#eee;
-    background:image-url(gritter-green.png) no-repeat left -40px;
+    background:image-url('gritter-green.png') no-repeat left -40px;
 	padding:2px 11px 8px 11px;
 	font-size: 11px;
 	font-family:verdana;
@@ -82,7 +82,7 @@
 .alert .gritter-item {
 	display:block;
 	color:#eee;
-    background:image-url(gritter-red.png) no-repeat left -40px;
+    background:image-url('gritter-red.png') no-repeat left -40px;
 	padding:2px 11px 8px 11px;
 	font-size: 11px;
 	font-family:verdana;
@@ -99,7 +99,7 @@
 	position:absolute;
 	top:5px;
 	left:3px;
-	background:image-url(gritter-red.png) no-repeat left top;
+	background:image-url('gritter-red.png') no-repeat left top;
 	cursor:pointer;
 	width:30px;
 	height:30px;
