@@ -14,7 +14,7 @@
 
 #LB_menu li{
 	border-bottom:1px solid #CFCFCF;
-	background:url('menubox_body_background_01.png') repeat-x; /* TODO: CSS3 Background */
+	background:image-url('menubox_body_background_01.png') repeat-x; /* TODO: CSS3 Background */
 	background-color:#E5E5E5;
 } /* a:1 b:0 c:1 = 101 */
 
@@ -41,7 +41,7 @@
 	height:16px;
 	margin-left:5px;
 	margin-top:7px;
-	background:url('icon_sprite_grid_16px.png') -128px -16px no-repeat;
+	background:image-url('icon_sprite_grid_16px.png') -128px -16px no-repeat;
 }
 
 #LB_menu a  span:last-child {
@@ -56,11 +56,11 @@
 
 #LB_menu a:hover span:first-child {
 	color:#09F;
-	background:url('icon_sprite_grid_16px.png') -128px -32px no-repeat;
+	background:image-url('icon_sprite_grid_16px.png') -128px -32px no-repeat;
 }
 
 #LB_menu a:active span:first-child {
-	background:url('icon_sprite_grid_16px.png') -128px -48px no-repeat;
+	background:image-url('icon_sprite_grid_16px.png') -128px -48px no-repeat;
 }
 
 #LB_menu a:hover span:last-child {
@@ -81,7 +81,7 @@
 #LB_menu ul li {
 	border-bottom:1px solid #CFCFCF;
 	border:none;
-	background:url('menubox_body_background_02.png') repeat-x;
+	background:image-url('menubox_body_background_02.png') repeat-x;
 	background-color:#C0C0C0;
 } /* a:1 b:0 c:2 = 102 */
 
@@ -101,12 +101,12 @@
 /* Dinamic Classes */
 
 #LB_menu .selected a span:first-child {
-	background:url('icon_sprite_grid_16px.png') -144px -32px no-repeat;
+	background:image-url('icon_sprite_grid_16px.png') -144px -32px no-repeat;
 } /* Target Priority a:1 b:1 c:1 = 111 */
 
 #LB_menu a.selected:hover span:first-child {
 	color:#0071BC;
-	background:url('icon_sprite_grid_16px.png') -144px -32px no-repeat;
+	background:image-url('icon_sprite_grid_16px.png') -144px -32px no-repeat;
 }
 
 #LB_menu .selected a span:last-child {

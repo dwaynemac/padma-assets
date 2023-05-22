@@ -559,7 +559,7 @@ select {
 		-o-appearance: none;
 		appearance: none;
 		background-repeat: no-repeat;
-		background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wseCx8GwMZRrQAAAKBJREFUSMft1dEOgjAMheG/A2GJKO//mMpENLP1AQyYCUKMO9cn+ZI2acXMWDOqSggBWRsGiDFuAwM4NkqGM5zh34fLlLLFK93lZjpx7MR59gcvpSwIS1lTFwPd8BhpFPi24h36wagdddPK0RcjaEuzc/KlHTuqFzwNBeZ8J+UeTnYeSEZnwgCGKrg0cwk4H5AMZzjD/wLHGNeHVZW+73kCVHo70xteukkAAAAASUVORK5CYII=);
+		background-image: image-url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wseCx8GwMZRrQAAAKBJREFUSMft1dEOgjAMheG/A2GJKO//mMpENLP1AQyYCUKMO9cn+ZI2acXMWDOqSggBWRsGiDFuAwM4NkqGM5zh34fLlLLFK93lZjpx7MR59gcvpSwIS1lTFwPd8BhpFPi24h36wagdddPK0RcjaEuzc/KlHTuqFzwNBeZ8J+UeTnYeSEZnwgCGKrg0cwk4H5AMZzjD/wLHGNeHVZW+73kCVHo70xteukkAAAAASUVORK5CYII=);
 		background-position: right center;
 		line-height: normal;
 		padding-right: 30px;
@@ -586,7 +586,7 @@ select {
 		transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 		width: 100%;
 		background-repeat: no-repeat;
-		background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wseCx8GwMZRrQAAAKBJREFUSMft1dEOgjAMheG/A2GJKO//mMpENLP1AQyYCUKMO9cn+ZI2acXMWDOqSggBWRsGiDFuAwM4NkqGM5zh34fLlLLFK93lZjpx7MR59gcvpSwIS1lTFwPd8BhpFPi24h36wagdddPK0RcjaEuzc/KlHTuqFzwNBeZ8J+UeTnYeSEZnwgCGKrg0cwk4H5AMZzjD/wLHGNeHVZW+73kCVHo70xteukkAAAAASUVORK5CYII=);
+		background-image: image-url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wseCx8GwMZRrQAAAKBJREFUSMft1dEOgjAMheG/A2GJKO//mMpENLP1AQyYCUKMO9cn+ZI2acXMWDOqSggBWRsGiDFuAwM4NkqGM5zh34fLlLLFK93lZjpx7MR59gcvpSwIS1lTFwPd8BhpFPi24h36wagdddPK0RcjaEuzc/KlHTuqFzwNBeZ8J+UeTnYeSEZnwgCGKrg0cwk4H5AMZzjD/wLHGNeHVZW+73kCVHo70xteukkAAAAASUVORK5CYII=);
 		background-position: right center;
 		z-index: 2;
 		&:focus {
@@ -1271,12 +1271,12 @@ $buttons: "primary" $bg-btn-primary,
 		max-width: 100%;
 	}
 	> .male {
-		background-image: url('../images/userphoto_default_male.png');
+		background-image: image-url('../images/userphoto_default_male.png');
 		background-repeat: no-repeat;
 		background-position: center center;
 	}
 	> .female {
-		background-image: url('../images/female_placeholder.jpg');
+		background-image: image-url('../images/female_placeholder.jpg');
 		background-repeat: no-repeat;
 		background-position: center center;
 	}
