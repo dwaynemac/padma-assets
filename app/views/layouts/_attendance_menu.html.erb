@@ -1,17 +1,15 @@
-<% if can?(:manage, :learn_agenda) %>
-  <li>
-    <%= link_to t('header-menu.learn_attendance.agenda'),
-      "https://learn.derose.app/teacher_panel/agenda" %>
-  </li>
-  <li>
-    <%= link_to t('header-menu.learn_attendance.report'),
-      "https://learn.derose.app/admin/check_ins?as=report" %>
-  </li>
-  <li>
-    <%= link_to t('header-menu.learn_attendance.checkins_distribution'),
-      "https://learn.derose.app/admin/check_ins_distribution_report" %>
-  </li>
-<% end %>
+<li>
+  <%= link_to t('header-menu.learn_attendance.agenda'),
+    "https://learn.derose.app/teacher_panel/agenda" %>
+</li>
+<li>
+  <%= link_to t('header-menu.learn_attendance.report'),
+    "https://learn.derose.app/admin/check_ins?as=report" %>
+</li>
+<li>
+  <%= link_to t('header-menu.learn_attendance.checkins_distribution'),
+    "https://learn.derose.app/admin/check_ins_distribution_report" %>
+</li>
 
 <li>
   <%= link_to t('header-menu.attendance.attendances'),
