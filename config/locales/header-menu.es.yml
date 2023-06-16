@@ -10,7 +10,7 @@ es:
       notion: Integración con Notion
       mailchimp_integration: Integración con Mailchimp
       hubspot_integration: Integración con HubSpot
-      sendin_blue_integration: Integración con SendinBlue 
+      sendin_blue_integration: Integración con Brevo 
       derose_events: Eventos DeROSE 
       wordpress_plugin: Plugin Wordpress
       integrations: Todas las integraciones
@@ -74,7 +74,7 @@ es:
       scheduled_mails_all: Histórico de mails
       scheduled_mails_future: Mails programados
       mailchimp_configuration: Configuración Mailchimp
-      sendin_blue_configuration: Configuración SendinBlue
+      sendin_blue_configuration: Configuración Brevo
     stats:
       title: Estadísticas
       pdg_report: Resumen pedagógico

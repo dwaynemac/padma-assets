@@ -6,7 +6,7 @@ en:
       title: Modules
       fnz: Finances
       mailchimp_integration: Mailchimp integration
-      sendin_blue_integration: SendinBlue integration
+      sendin_blue_integration: Brevo integration
       asana_com: Asana.com integration
       notion: Notion integration
       hubspot_integration: HubSpot integration
@@ -71,7 +71,7 @@ en:
       scheduled_mails_all: Scheduled Mails
       scheduled_mails_future: Future mails
       mailchimp_configuration: Mailchimp configuration
-      sendin_blue_configuration: SendinBlue configuration
+      sendin_blue_configuration: Brevo configuration
     stats:
       title: Statistics
       pdg_report: Pedagogic summary

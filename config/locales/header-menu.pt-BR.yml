@@ -7,7 +7,7 @@ pt-BR:
       fnz: Financeiro
       planning: Gestāo da Rutina
       mailchimp_integration: Integraçāo com Mailchimp
-      sendin_blue_integration: Integraçāo com SendinBlue 
+      sendin_blue_integration: Integraçāo com Brevo 
       hubspot_integration: Integração com HubSpot
       asana_com: Integraçāo com Asana.com
       notion: Integração com Notion
@@ -74,7 +74,7 @@ pt-BR:
       scheduled_mails_all: Histórico de e-mails
       scheduled_mails_future: e-mails programados
       mailchimp_configuration: Configuraçāo Mailchimp
-      sendin_blue_configuration: Configuraçāo SendinBlue
+      sendin_blue_configuration: Configuraçāo Brevo
     stats:
       title: Estatísticas
       pdg_report: Resumo pedagógico
