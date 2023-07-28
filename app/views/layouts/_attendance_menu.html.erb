@@ -1,29 +1,29 @@
 <li>
-  <%= link_to t('header-menu.learn_attendance.agenda'),
+  <%= link_to "#{t('header-menu.learn_attendance.agenda')}<span class='migration-badge recommended'>new</span>".html_safe,
     "https://learn.derose.app/teacher_panel/agenda" %>
 </li>
 <li>
-  <%= link_to t('header-menu.learn_attendance.report'),
+  <%= link_to "#{t('header-menu.learn_attendance.report')}<span class='migration-badge recommended'>new</span>".html_safe,
     "https://learn.derose.app/admin/check_ins?as=report" %>
 </li>
 <li>
-  <%= link_to t('header-menu.learn_attendance.checkins_distribution'),
+  <%= link_to "#{t('header-menu.learn_attendance.checkins_distribution')}<span class='migration-badge recommended'>new</span>".html_safe,
     "https://learn.derose.app/admin/check_ins_distribution_report" %>
 </li>
 
 <li>
-  <%= link_to t('header-menu.attendance.attendances'),
+  <%= link_to "#{t('header-menu.attendance.attendances')}<span class='migration-badge legacy'>antigo</span>".html_safe,
               "#{APP_CONFIG['attendance-url']}/attendances" %>
 </li>
 <li>
-  <%= link_to t('header-menu.attendance.time_slots'),
+  <%= link_to "#{t('header-menu.attendance.time_slots')}<span class='migration-badge legacy'>antigo</span>".html_safe,
               "#{APP_CONFIG['attendance-url']}/time_slots" %>
 </li>
 <li>
-  <%= link_to t('header-menu.attendance.trial_lessons'),
+  <%= link_to "#{t('header-menu.attendance.trial_lessons')}<span class='migration-badge legacy'>antigo</span>".html_safe,
               "#{APP_CONFIG['attendance-url']}/trial_lessons" %>
 </li>
 <li>
-  <%= link_to t('header-menu.attendance.stats'),
+  <%= link_to "#{t('header-menu.attendance.stats')}<span class='migration-badge legacy'>antigo</span>".html_safe,
               "#{APP_CONFIG['attendance-url']}/stats" %>
 </li>
